@@ -1,7 +1,7 @@
 # Git Instructions
 
 ## Clone the repo as a first step 
-- git clone https://github.com/shraddhabhatt/Project-3.git -b 'branchname'
+- git clone https://github.com/shraddhabhatt/YOUism.git -b 'branchname'
 
 ## Switch Branches
 - git checkout 'branchname'
