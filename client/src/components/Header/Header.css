@@ -1,0 +1,29 @@
+header {
+    background-color: black;
+    position: fixed; 
+    width: 100%;
+    height: 50px; 
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    margin-top: -20px;
+
+    /*display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;*/
+  /*float: right;*/
+  /*height: 100%;*/
+ 
+}
+h3 {
+    list-style-type: none;
+    display: inline;
+    float: right;
+    padding: 20px;
+    margin: 5px;
+    font-size: 15px;
+
+}
+
+h3:hover {
+     font-size: 25px;
+}
