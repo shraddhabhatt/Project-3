@@ -7,23 +7,36 @@ import Grid from "../../components/Grid/Grid.js";
 import Footer  from "../../components/Footer";
 
 import { Modal } from 'react-bootstrap';
-import { Input, TextArea, FormBtn , Postevent } from "../../components/Form";
+import { Input, TextArea, FormBtn , Postevent, EventsList } from "../../components/Form";
 //sets state to 0 or empty
 class Events extends Component {
+  
+  constructor(props) {
+    super(props); 
 
-  state = {
-        isActive:false
-    }
-   
-     componentWillMount(){
-        // Modal.setAppElement('body');
-     }
+      this.state = {
+        isActive:false,
+        isToggleOn: false
+      }
+  
+    this.handleEvents = this.handleEvents.bind(this); 
 
-     toggleModal = () => {
+  }
+
+    toggleModal = () => {
         this.setState({
-            isActive:!this.state.isActive
+            isActive: !this.state.isActive
         })
-     }
+      }
+
+    handleEvents = () => {
+
+      this.setState(function(prevState) {
+        return {isToggleOn: !prevState.isToggleOn};
+      });
+
+    }
+    
 
 //the order of components to be rendered: navbar, jumbotron, friendcard, footer 
   render() {
@@ -61,7 +74,9 @@ class Events extends Component {
                 <Postevent />
                    </Modal>
 
-                <button type="button" className="btn btn-primary btn-lg btn-block"><strong>FIND EVENTS HERE</strong></button>
+                <button onClick={this.handleEvents} type="button" className="btn btn-primary btn-lg btn-block"><strong>FIND EVENTS HERE</strong>
+                  {this.state.isToggleOn ? <EventsList /> : null}
+                </button>
                 
                 </div>
               </div>
