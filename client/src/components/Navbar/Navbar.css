@@ -14,23 +14,25 @@
   background: white;
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
   /*margin-top: -20px;*/
-  height: 100px;
+  height: 130px;
   width: 100%;
   position: fixed ; 
   margin-top: 0;
+  z-index: 4;
   }
 
 .navbar-brand{
-  width: 25%;
+  width: 350px;
   height: 110px;
-  padding-top: 25px;
+  padding-top: 0px;
+  margin-top: 20px;
 }
 
 li {
   color: black;
   padding: 15px 15px 15px 15px;
 }
- ul{
+.ulNavbar{
   padding-top: 30px;
  }
 
@@ -38,7 +40,7 @@ body {
   font-size: 20px;
    font-family: "Arvo", Times, serif;
 }
-a{
+a {
   font-size: 19px;
 }
 

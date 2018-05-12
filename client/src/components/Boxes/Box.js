@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 
 
-const num_boxes = 36;
+const num_boxes = 4;
 
 //create stateless functional component
 const Box = ({color}) => {
 	const style = {
-		width: "35px",
-		height: "25px",
+		width: "25%",
+		height: "30px",
 		display: "inline-block",
 		border: "1px solid black",
 		backgroundColor: color,
@@ -34,7 +34,7 @@ class Boxes extends Component {
 			boxes[randomIndex] = this.getRandom();
 			this.setState({boxes});
 
-		}, 300)
+		}, 1000)
 	}
 
 	getRandom() {
@@ -63,10 +63,8 @@ class Boxes extends Component {
 }
 
 Boxes.defaultProps = {
-	colorsArray: ["AliceBlue", "AntiqueWhite", "Aqua", "Aquamarine", "Azure", "Blue", "BlueViolet", "Brown", "BurlyWood", "CadetBlue", "Chartreuse",
-				"Crimson", "Cyan", "DarkBlue", "DarkCyan", "DarkMagenta", "DarkOrange", "DarkViolet", "DeepPink", "FireBrick", 
-				"Gold", "HotPink", "LightCoral", "LightGreen", "Lime", "OrangeRed", "SeaGreen", "SlateBlue", "Violet", "YellowGreen",
-				"SpringGreen"]
+	colorsArray: ["DarkBlue", "DarkCyan", "LightGreen", "Lime","SeaGreen", "SlateBlue","YellowGreen", "White", 
+				"SpringGreen", "White"]
 
 }
 
