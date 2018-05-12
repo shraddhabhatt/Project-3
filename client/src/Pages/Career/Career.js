@@ -87,9 +87,8 @@ class Career extends Component {
                       <label for="exampleFormControlTextarea1">Job Description</label>
                       <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
-  <button type="submit" className="btn btn-primary">Submit</button>
-    
-  </div>
+                 <button type="submit" className="btn btn-primary">Submit</button>
+              </div>
               </Modal>
 
               <button type="button" className="btn btn-primary btn-lg btn-block"><strong>FIND JOBS HERE</strong></button>
