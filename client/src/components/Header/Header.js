@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import "./Header.css";
-// import Modal from "react-modal";
-// import "./Modal";
 import Form from '../../components/Form';
 import { Modal } from 'react-bootstrap';
 import { Input, TextArea, FormBtn , Login , Signup} from "../../components/Form";

@@ -5,45 +5,36 @@ import Navbar from "../../components/Navbar";
 import Header from "../../components/Header/Header.js";
 import Grid from "../../components/Grid/Grid.js";
 import Footer  from "../../components/Footer";
-// import "./Career.css";
-
+import Imagegrid  from "../../components/Imagegrid";
 import { Modal } from 'react-bootstrap';
-import { Input, TextArea, FormBtn , Postjob } from "../../components/Form";
-
+import { Input, TextArea, FormBtn  } from "../../components/Form";
 
 class Career extends Component {
-
   state = {
-        isActive:false
+      isActive:false
     }
    
-     componentWillMount(){
+   componentWillMount(){
         // Modal.setAppElement('body');
-     }
+    }
 
-     toggleModal = () => {
-        this.setState({
-            isActive:!this.state.isActive
-        })
-     }
+    toggleModal = () => {
+      this.setState({
+      isActive:!this.state.isActive
+     })
+    }
 
-
-
-
-//the order of components to be rendered: navbar, jumbotron, friendcard, footer 
   render() {
+    // inline sty
      const imagesetting = {
       "width" : "100%",
        "marginTop": "-150px",
       "height" : "auto"
-
-      
-      }
-
-       const jumbotronsetting = {
-        "background-color" : "white"
-        
-      }
+    }
+    
+    const jumbotronsetting = {
+      "background-color" : "white"
+    }
     
 
     return (
@@ -58,32 +49,47 @@ class Career extends Component {
               <div className="jumbotron jumbotron-fluid" style={jumbotronsetting}>
             <div className="container">
               <h2 className="display-4">Connecting People.Improving Skills.</h2><hr/>
+
               <p className="lead">Youtism is a non-profit organization that exists to educate and connect
                individuals and families to answers that matter: information and resources that help them make more informed decisions, 
                build and strengthen relationships, and more importantly, thrive. Together, we’ll help you connect the pieces.</p>
 
-                <div className="container text-center">    
-                  
-                  <div className="row">
-                    <div className="col-sm-4">
-                      <img src={require("../../images/career1.jpg")} className="img-responsive" width="100%" height="200px" alt="Image"/>
-                      
-                    </div>
-                    <div className="col-sm-4"> 
-                      <img src={require("../../images/career2.jpg")} className="img-responsive" width="100%" height="200px" alt="Image"/>
-                      
-                    </div>
-                    <div className="col-sm-4">
-                      <img src={require("../../images/career3.jpg")} className="img-responsive" width="100%" height="200px" alt="Image"/>
-                    </div>
-                  </div>
-                </div><br/>
+        
+              <Imagegrid/>
 
                 
                
                 <button type="button" className="btn btn-dark btn-lg btn-block" onClick={this.toggleModal}><strong>POST JOBS HERE</strong></button>
                 <Modal show={this.state.isActive} onHide={this.toggleModal}>
-                <Postjob/>
+                    <div className="form-group Modalsetting" >
+                      <div className="input-group mb-3">
+                        <div className="input-group-prepend">
+                          <span className="input-group-text" id="inputGroup-sizing-default">Job Title</span>
+                        </div>
+                          <input type="text" className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
+                      </div>
+                      
+                        <div className="input-group input-group-sm mb-3">
+                        <div className="input-group-prepend">
+                          <span className="input-group-text" id="inputGroup-sizing-sm">Qualification</span>
+                        </div>
+                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      </div>
+
+                      <div className="input-group">
+                        <div className="input-group-prepend">
+                          <span className="input-group-text" id="">Location</span>
+                        </div>
+                         <input type="text" className="form-control"/>
+                      </div>
+
+                    <div className="form-group">
+                      <label for="exampleFormControlTextarea1">Job Description</label>
+                      <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+  <button type="submit" className="btn btn-primary">Submit</button>
+    
+  </div>
               </Modal>
 
               <button type="button" className="btn btn-primary btn-lg btn-block"><strong>FIND JOBS HERE</strong></button>
