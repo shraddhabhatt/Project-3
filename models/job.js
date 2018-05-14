@@ -22,7 +22,8 @@ module.exports = function(sequelize, Sequelize) {
            notEmpty: true
        },
        description: {
-           type: Sequelize.TEXT
+           type: Sequelize.TEXT,
            notEmpty: true
        }
    });
+}
