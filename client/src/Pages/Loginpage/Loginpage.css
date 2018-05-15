@@ -1,0 +1,25 @@
+	.front{
+		/*overflow:hidden;*/
+
+	}
+
+	.bgimage{
+		background-image: url("../../images/login.jpg");
+		background-size: cover;
+		top: 0;
+		/*height: 100%;*/
+		overflow-y: hidden;
+		background-attachment: fixed;
+
+	}
+
+	.textjumbo{
+		width: 300px;
+		margin-left: 900px;
+		margin-bottom: 250px;
+		border-radius: 50px;
+		position: fixed;
+		
+	}
+
+	.size1{ width: 200px; }

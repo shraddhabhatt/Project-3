@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+    padding-left: 25px;
+    text-align: center;
+    /*background-attachment: fixed;*/
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+ }
+
+.one {
+	background-image: url("../../images/volunteer.png");
+	background-repeat: no-repeat; 
+	background-size: cover;
+	color: #800000;
+	padding-top: 80px;
+}
+
+.two {
+	background-image: url("../../images/donate.jpg");
+	background-repeat: no-repeat; 
+	background-size: cover;
+	color: white;
+	padding-top: 80px;
+
+}
+
+
+.parallaxImage {
+    background-image: url("../../images/parallax.png");
+    background-repeat: no-repeat; 
+    background-size: cover;
+    color: #800000;
+    padding-top: 80px;
+    height: 150px;
+    background-attachment: fixed;
+
+}
