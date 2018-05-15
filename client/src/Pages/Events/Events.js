@@ -85,15 +85,14 @@ class Events extends Component {
 
     return (
       <div>
-        <Header />  
+          
         <Navbar/>
          <div className="row">
 
             <div className="col-4 imageside">
               <img  alt="Events picture" src={require("../../images/events4.jpg")} style={imagesetting}/>
             </div>
-            <Navtrial />
-
+            
             <div className="col-8 jobDetailSide">
               <div className="jumbotron jumbotron-fluid" style={jumbotronsetting}>
                 <div className="container">

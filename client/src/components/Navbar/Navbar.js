@@ -1,30 +1,26 @@
-//sets up the reusable Navbar component
 import React, { Component } from "react";
 import "./Navbar.css";
 
 class Navbar extends Component {
   render() {
     return (
-     
-      <nav className="navbar navbar-default ">
+      <nav className="navbar navbar-expand-lg ">
         <div className="row "> 
+         {/*logo Image*/}
           <img className="navbar-brand" alt="logo" src={require("../../images/logo.png")}/>
-           <ul className="ulNavbar">
+        {/*Nav links*/}
+           <ul className=" nav ">
 
-              <li className="itemRight "><a href="/Events">EVENTS</a></li>
+              <li ><a href="/Events">EVENTS</a></li>
 
-              <li className="itemRight "><a href="/Activities">ACTIVITIES</a></li>
+              <li ><a href="/Activities">ACTIVITIES</a></li>
 
-              <li className="itemRight  "><a href="/Career">CAREERS</a></li>
+              <li ><a href="/Career">CAREERS</a></li>
 
-              <li className="itemRight  "><a href="/Home">HOME</a></li>
-
-              <li className="itemRight  "><a href="/">Login</a></li>
+              <li ><a href="/Home">HOME</a></li>
           </ul>
         </div>
       </nav>
-
-      
     );
   }
 }
