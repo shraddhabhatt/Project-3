@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import "./Header.css";
 import Form from '../../components/Form';
 import { Modal } from 'react-bootstrap';
-import { Input, TextArea, FormBtn , Login , Signup} from "../../components/Form";
+import { Input, TextArea, FormBtn , Signup} from "../../components/Form";
 
 
 class Header extends Component {
@@ -32,7 +32,7 @@ class Header extends Component {
               <h3><button className=" btn-primary" onClick={() => this.setState({ showModal2:true, showModal1:false})} >SIGN UP</button></h3>
 
               <Modal show={this.state.showModal1} onHide={() => this.setState({ showModal1:false})}>
-                 <Login/>
+              
               </Modal>
 
               <Modal show={this.state.showModal2} onHide={() => this.setState({ showModal2:false})}>

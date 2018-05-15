@@ -1,9 +1,12 @@
 //imports dependencies and files
 import React, { Component } from "react";
 import "./Loginpage.css";
-import { Input, TextArea, FormBtn , Login , Signup} from "../../components/Form";
+import { Input, TextArea, FormBtn} from "../../components/Form";
 import Form from '../../components/Form';
 import { Modal } from 'react-bootstrap';
+import Login from "../../components/Login/Login.js";
+import Register from "../../components/Register/Register.js";
+
 
 //sets state to 0 or empty
 class Loginpage extends Component {
@@ -17,11 +20,8 @@ class Loginpage extends Component {
             isActive:!this.state.isActive
         })
      }
-
-
  
   render() {
-
 
     return(
       	
@@ -45,11 +45,11 @@ class Loginpage extends Component {
 								    
 								    {/*Modal for Login*/}
 								    <Modal show={this.state.showModal1} onHide={() => this.setState({ showModal1:false})}>
-					                    <Login/>
+					                    <Login />
 					                </Modal>
 									{/*Modal for Sign up */}
 					                <Modal show={this.state.showModal2} onHide={() => this.setState({ showModal2:false})}>
-					                 	<Signup/>
+					                 	<Register />
 					                </Modal>
 							</div>
 				 	
