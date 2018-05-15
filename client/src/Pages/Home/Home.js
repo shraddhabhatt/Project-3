@@ -22,7 +22,7 @@ render() {
   return (
     <div>
       <Navbar/>
-      <Header/>
+     
       <img  alt="image1" src={require("../../images/img1.jpg")} style={imagesetting}/>
       <Grid/>
       <div className="jumbotron jumbotron-fluid" style={jumbotronsetting}>

@@ -17,7 +17,9 @@ class Navbar extends Component {
 
               <li className="itemRight  "><a href="/Career">CAREERS</a></li>
 
-              <li className="itemRight  "><a href="/">HOME</a></li>
+              <li className="itemRight  "><a href="/Home">HOME</a></li>
+
+              <li className="itemRight  "><a href="/">Login</a></li>
           </ul>
         </div>
       </nav>

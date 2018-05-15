@@ -90,7 +90,7 @@ class Career extends Component {
                 <button type="button" className="btn btn-dark btn-lg btn-block" onClick={this.toggleModal}><strong>POST JOBS HERE</strong></button>
                 
                 <Modal show={this.state.isActive} onHide={this.toggleModal}>
-                
+
                       <form onSubmit={this.handleSubmit}>
                         <label for="jobTitle"> Job Title </label>
                           <Input 
@@ -128,6 +128,7 @@ class Career extends Component {
                         <FormBtn type="submit"> Post job </FormBtn>
                       </form>
                 </Modal>
+
 
               <button type="button" className="btn btn-primary btn-lg btn-block"><strong>FIND JOBS HERE</strong></button>
              </div>
