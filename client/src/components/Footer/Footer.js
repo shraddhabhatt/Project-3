@@ -6,7 +6,8 @@ import Background from "../../images/footer7.png";
 var footerStyle = {
   width: "100%",
   height: "200px",
-  backgroundImage: `url(${Background})` 
+  backgroundImage: `url(${Background})` ,
+  
 
 }
 class Footer extends Component {
