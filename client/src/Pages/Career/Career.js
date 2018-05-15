@@ -42,23 +42,21 @@ class Career extends Component {
         <Header/>
         <Navbar/>
         <div className="row">
+
             <div className="col-4 imageside">
               <img  alt="image2" src={require("../../images/career.jpg")} style={imagesetting}/>
             </div>
+
             <div className="col-8 jobDetailSide">
               <div className="jumbotron jumbotron-fluid" style={jumbotronsetting}>
             <div className="container">
               <h2 className="display-4">Connecting People.Improving Skills.</h2><hr/>
-
               <p className="lead">Youtism is a non-profit organization that exists to educate and connect
                individuals and families to answers that matter: information and resources that help them make more informed decisions, 
                build and strengthen relationships, and more importantly, thrive. Together, we’ll help you connect the pieces.</p>
 
-        
               <Imagegrid/>
-
-                
-               
+            
                 <button type="button" className="btn btn-dark btn-lg btn-block" onClick={this.toggleModal}><strong>POST JOBS HERE</strong></button>
                 <Modal show={this.state.isActive} onHide={this.toggleModal}>
                     <div className="form-group Modalsetting" >

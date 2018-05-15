@@ -9,7 +9,7 @@ class Navbar extends Component {
       <nav className="navbar navbar-default ">
         <div className="row "> 
           <img className="navbar-brand" alt="logo" src={require("../../images/logo.png")}/>
-           <ul >
+           <ul className="ulNavbar">
 
               <li className="itemRight "><a href="/Events">EVENTS</a></li>
 
