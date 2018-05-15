@@ -1,0 +1,1 @@
+import {default}  from "./Register.js";
