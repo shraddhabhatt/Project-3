@@ -1,0 +1,9 @@
+.imageside  {
+    /*position: relative;*/
+    width: 100%;
+    padding: 75px;
+    /*text-align: center;*/
+    height: auto;
+    background-image: cover;
+
+}
