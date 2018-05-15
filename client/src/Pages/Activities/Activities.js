@@ -19,11 +19,10 @@ class Activities extends Component {
       "height" : "600px"
     }
 
-
-       const jumbotronsetting = {
-        "background-color" : "white"
+    const jumbotronsetting = {
+      "background-color" : "white"
         
-      }
+    }
 
     return (
       <div>
@@ -36,7 +35,7 @@ class Activities extends Component {
               <div className="jumbotron jumbotron-fluid" style={jumbotronsetting}>
                 <div className="container">
                     <h2 className="display-4">
-                        Connecting People.Improving Skills.
+                        Connecting People. Improving Skills.
                     </h2><hr/>
                     <p className="lead">
                         Youtism is a non-profit organization that exists to educate and connect
@@ -47,39 +46,45 @@ class Activities extends Component {
               </div>
             </div>
 
-            
-             
+      <div className="container">
+        <div className="row">
+          <div className="container">
 
-
-                    <div className="j">
-         <div className="container-fluid text-center">
-          <h2>Teams</h2>
-          <br/>
-          <div className="row">
-            <div className="col-lg-4">
-              <h4> Youth Club</h4>
-              <img src="https://photos-images.active.com/file/1/305/3054961/optimized/c0c05b07-e66c-4d92-9363-f453573b267a.jpg" alt="..." className="img-thumbnail"/>
+            <div className="col-lg-6">
+              <div className="card">
+                  <img className="card-img-top img-responsive" src={require("../../images/rox1.jpg")} alt="Card image cap" />
+              </div>  
             </div>
-            <div className="col-sm-4">
-              <h4> Teen Premier</h4>
-                <img src="http://cdn.teenink.com/artwork/Jun10/regular/f11801_1276897376.jpg" alt="soccer" className = "img-thumbnail"/>
-             </div>
-             <div className="col-sm-4">
-              <h4> Adult Academy</h4>
-                <img src ="https://si.wsj.net/public/resources/images/WK-BC350_SP_COL_G_20120621165541.jpg" alt="..." className ="img-thumbnail"/>
-             </div>
-         </div>
+
+            <div className="col-lg-6">
+              <div className="card ">
+                <img className="card-img-top img-responsive" src={require("../../images/rox.jpg")} alt="Card image cap" />
+              </div>  
+            </div>
+          </div>  
+
+        </div> 
       </div>
+      
+       <div className="container">
+        <div className="row">
+          <div className="container">
+
+            <div className="col-lg-6">
+              <div className="card">
+                  <img className="card-img-top img-responsive" src={require("../../images/rox2.jpg")} alt="Card image cap" />
+              </div>  
+            </div>
+
+            <div className="col-lg-6">
+              <div className="card">
+                <img className="card-img-top img-responsive" src={require("../../images/rox4.jpg")} alt="Card image cap" />
+              </div>  
+            </div>
+
+          </div>  
+        </div> 
       </div>
-                
-
-
-
-
-
-
-
-        
         
     
       <Footer/>

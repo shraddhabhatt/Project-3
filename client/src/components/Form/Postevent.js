@@ -33,7 +33,7 @@ export const Postevent = props => (
           </div>
 
           <div className="form-row">
-            <div class="form-group col-md-6">
+            <div className="form-group col-md-6">
               <label for="inputCity">City</label>
               <input type="text" className="form-control" id="inputCity" />
             </div>
