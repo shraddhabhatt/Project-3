@@ -1,48 +1,48 @@
-module.exports = function (sequelize, Sequelize) {
+module.exports = function (sequelize, DataTypes) {
+    var User = sequelize.define('User', {
+        id: {
+            type: DataTypes.INTEGER,
+            autoIncrement: true,
+            primaryKey: true
+        },
+        authType: {
+            type: DataTypes.ENUM('google', 'twitter', 'facebook'),
+            notEmpty: true,
+        },
+        oauthId: {
+            type: DataTypes.STRING,
+            notEmpty: true,
+        },
+        userName: {
+            type: DataTypes.STRING,
+            notEmpty: true
+        },
+        email: {
+            type: DataTypes.STRING,
+            validate: {
+                isEmail: true
+            },
+            notEmpty: false,
+        },
+        password: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        last_login: {
+            type: DataTypes.DATE
+        },
+        status: {
+            type: DataTypes.ENUM('active', 'inactive'),
+            defaultValue: 'active'
+        }
+    });
 
-   var User = sequelize.define('User', {
+    User.associate = function (models) {
+        User.hasMany(models.Event, {
+            onDelete: "cascade"
+        });
+    };
 
-       authType: {
-           type: Sequelize.ENUM('google', 'twitter', 'facebook'),
-           notEmpty: true,
-       },
-       oauthId: {
-           type: Sequelize.STRING,
-           notEmpty: true,
-       },
-       userName: {
-           type: Sequelize.STRING,
-           notEmpty: true
-       },
-       email: {
-           type: Sequelize.STRING,
-           validate: {
-               isEmail: true
-           },
-           notEmpty: false,
-       },
-       password: {
-           type: Sequelize.STRING,
-           allowNull: false
-       },
-       last_login: {
-           type: Sequelize.DATE
-       },
-       status: {
-           type: Sequelize.ENUM('active', 'inactive'),
-           defaultValue: 'active'
-       }
-   });
-
-   User.associate = function (models) {
-
-       User.hasMany(models.Event, {
-           onDelete: "cascade"
-       });
-   };
-
-   return User;
+    return User;
 
 }
-
-*** this is for register userr
