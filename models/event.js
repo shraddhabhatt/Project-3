@@ -1,56 +1,58 @@
-module.exports = function(sequelize, Sequelize) {
+module.exports = function (sequelize, DataTypes) {
+    var Event = sequelize.define('Event', {
+        id: {
+            type: DataTypes.INTEGER,
+            autoIncrement: true,
+            primaryKey: true
+        },
+        name: {
+            type: DataTypes.STRING,
+            notEmpty: true
+        },
+        date: {
+            type: DataTypes.STRING,
+            notEmpty: true
+        },
 
-   var Event = sequelize.define('Event', {
-       name: {
-           type: Sequelize.STRING,
-           notEmpty: true
-       },
-       date: {
-           type: Sequelize.STRING,
-           notEmpty: true
-       },
+        address1: {
+            type: DataTypes.STRING,
+            notEmpty: true
+        },
 
-       address1: {
-           type: Sequelize.STRING,
-           notEmpty: true
-       },
- 
-       address2: {
-           type: Sequelize.STRING,
-           notEmpty: true
-       },
-       city: {
-           type: Sequelize.STRING,
-           notEmpty: true
-       },
-       state: {
-           type: Sequelize.STRING,
-           notEmpty: true
-       },
-       zip: {
-           type: Sequelize.STRING,
-           notEmpty: true
-       },
-       
-       description: {
-           type: Sequelize.TEXT
-       },
+        address2: {
+            type: DataTypes.STRING,
+            notEmpty: true
+        },
+        city: {
+            type: DataTypes.STRING,
+            notEmpty: true
+        },
+        state: {
+            type: DataTypes.STRING,
+            notEmpty: true
+        },
+        zip: {
+            type: DataTypes.STRING,
+            notEmpty: true
+        },
 
-       link: {
-           type: Sequelize.STRING
-       },
+        description: {
+            type: DataTypes.TEXT
+        },
 
-     
-   });
+        link: {
+            type: DataTypes.STRING
+        },
 
-   Event.associate = function(models) {
-   Event.belongsTo(models.User, {
-     foreignKey: {
-       allowNull: false
-     }
-   });
- };
 
-   return Event;
+    });
 
+    Event.associate = function (models) {
+        Event.belongsTo(models.User, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+    };
+    return Event;
 }

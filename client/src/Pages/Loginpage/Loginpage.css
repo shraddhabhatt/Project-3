@@ -23,3 +23,9 @@
 	}
 
 	.size1{ width: 200px; }
+
+	.nohover:hover {
+    /* here copy default .btn class styles */
+    	size: default !important;
+    /* or something like that */
+}

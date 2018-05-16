@@ -60,6 +60,7 @@ class Login extends Component {
 
  
                          <FormBtn type="submit"> Log In </FormBtn>
+                         
           </form>               
 
       );

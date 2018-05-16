@@ -1,29 +1,34 @@
-module.exports = function(sequelize, Sequelize) {
-
-   var Job = sequelize.define('Job', {
-       jobtitle: {
-           type: Sequelize.STRING,
-           notEmpty: true
-       },
-       companyname: {
-           type: Sequelize.STRING,
-           notEmpty: true
-       },
-       city: {
-           type: Sequelize.STRING,
-           notEmpty: true
-       },
-       state: {
-           type: Sequelize.STRING,
-           notEmpty: true
-       },
-       zip: {
-           type: Sequelize.STRING,
-           notEmpty: true
-       },
-       description: {
-           type: Sequelize.TEXT,
-           notEmpty: true
-       }
-   });
+module.exports = function (sequelize, DataTypes) {
+    var Job = sequelize.define('Job', {
+        id: {
+            type: DataTypes.INTEGER,
+            autoIncrement: true,
+            primaryKey: true
+        },
+        jobtitle: {
+            type: DataTypes.STRING,
+            notEmpty: true
+        },
+        companyname: {
+            type: DataTypes.STRING,
+            notEmpty: true
+        },
+        city: {
+            type: DataTypes.STRING,
+            notEmpty: true
+        },
+        state: {
+            type: DataTypes.STRING,
+            notEmpty: true
+        },
+        zip: {
+            type: DataTypes.STRING,
+            notEmpty: true
+        },
+        description: {
+            type: DataTypes.TEXT,
+            notEmpty: true
+        }
+    });
+    return Job;
 }

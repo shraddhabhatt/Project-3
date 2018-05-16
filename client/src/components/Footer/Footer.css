@@ -4,7 +4,7 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    color: black;
+    color: white;
     text-align: center;
     font-weight: bold;
     height: 300px;
@@ -28,8 +28,9 @@ footer {
 }
 
 .footer-logo {
-    margin: -35px 50px 25px 25px;
+    margin-left: 368px;
     height: 100px;
+    float: left;
 }
 .boxesContainer {
     bottom: 0;

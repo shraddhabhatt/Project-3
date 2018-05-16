@@ -80,6 +80,7 @@ class Register extends Component {
                             onChange={this.registerChange} />
  
                          <FormBtn type="submit"> Register </FormBtn>
+                         
           </form>               
 
       );

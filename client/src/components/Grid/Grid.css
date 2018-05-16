@@ -39,12 +39,12 @@
 
 
 .parallaxImage {
-    background-image: url("../../images/parallax.png");
+    background-image: url("../../images/p1.jpg");
     background-repeat: no-repeat; 
     background-size: cover;
     color: #800000;
     padding-top: 80px;
-    height: 150px;
+    height: 250px;
     background-attachment: fixed;
 
 }
