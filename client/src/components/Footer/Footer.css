@@ -1,0 +1,51 @@
+
+footer {
+   /* position: fixed;*/
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    height: 300px;
+    box-shadow: 0px 0px 20px 5px grey;
+    font-size: 30px;
+    font-family: "Arvo", Times, serif;
+    z-index: 4;
+}
+
+.left .right {
+    list-style-type: none;
+    color: black;
+    margin: 15px 0px -25px 0px;
+    font-size: 15px;
+}
+.left {
+  text-align: right;
+}
+.right {
+  text-align: left;
+}
+
+.footer-logo {
+    margin: -35px 50px 25px 25px;
+    height: 100px;
+}
+.boxesContainer {
+    bottom: 0;
+    width: 100%;
+    margin: 0px;
+}
+
+.logoFooter {
+  height: 100px;
+}
+
+.space {
+  height: 50px;
+}
+.copyright {
+  font-size: 15px;
+  margin-bottom: -20px;
+  text-align: center;
+}
