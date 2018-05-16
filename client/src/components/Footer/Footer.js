@@ -6,7 +6,8 @@ import Background from "../../images/footer7.png";
 var footerStyle = {
   width: "100%",
   height: "200px",
-  backgroundImage: `url(${Background})` 
+  backgroundImage: `url(${Background})` ,
+  
 
 }
 class Footer extends Component {
@@ -15,33 +16,33 @@ class Footer extends Component {
             <footer>
             	
 	            <div className="section" style={footerStyle}>
-	            		<div className="row space"><div className="col-12"></div></div> 
+	            	<div className="row space"><div className="col-12"></div></div> 
 
 						<div className="row logoFooter">
 							<div className="footer-display">
-							
-									<div className='col-lg-2'>
-										<ul className="left">	
-											<h4>Activities</h4>
-											<h4>Events</h4>
-											<h4>Careers</h4>				
-										</ul>
-									</div>
-								
+									
+								<div className='col-lg-3'>
 
-									<div className="col-lg-2">
-										<ul className="right">	
-											<h4>Donate</h4>											
-											<h4>Our Story</h4>	
-											<h4>Contact Us</h4>			
-										</ul>
-									</div>	
+									<ul className="left">	
+										<br/>					
+										<h4>ROXANA MILEA   </h4>
+									    <h4>RUPALI MESHRAM</h4>						
+									</ul>
+								</div>
+								
+								<div className="col-lg-3">
+									<ul className="right">	
+										<br/>
+										<h4>SHRADHHA BHATT</h4>
+										<h4>ANITHA SHRIDHARAN</h4>			
+									</ul>
+								</div>	
 
 							    <div className="col-lg-5"></div>
 
-								<div className="col-lg-3">
+								<div className="col-lg-6">
 									<img alt="logo" src={require("../../images/logo.png")} className="footer-logo img-fluid" />
-									</div>
+								</div>
 							</div>						
 					    </div>
 				
@@ -49,7 +50,7 @@ class Footer extends Component {
 							<div className="col-3"></div>
 							<div className="col-6"></div>
 								<div className="copyright">
-									<p>&copy; Copyright 2018, The Surprise Team</p>
+									<p></p>
 								</div>	
 							<div className="col-3"></div>
 						</div>		

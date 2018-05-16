@@ -1,0 +1,11 @@
+.homejumboforimage{
+	background-attachment: fixed;
+	background-image: url("../../images/parallax2.jpg");
+	background-image: cover;
+
+}
+
+*{
+   overflow-x: hidden;
+}
+

@@ -12,6 +12,7 @@
 
 .navbar {
   background: white;
+  /*background: #212F3D;*/
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
   /*margin-top: -20px;*/
   height: 100px;
@@ -19,6 +20,7 @@
   position: fixed ; 
   margin-top: 0;
   z-index: 4;
+  overflow: hidden;
   /*opacity: 0.9;*/
   }
 
@@ -45,10 +47,10 @@ a {
   font-size: 19px;
 }
 
-a:hover{
+ a:hover {
   text-decoration: none;
   font-size: 20px;
-  color: #8E44AD;
+  color: white;
   /*background-color: teal;*/
   text-decoration: all;
   padding: 10px;
@@ -56,4 +58,8 @@ a:hover{
 
 }
 
+.navbar > .row > .nav > li > a:hover {
+
+background-color: #666666;
+}
 
