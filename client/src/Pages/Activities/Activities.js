@@ -1,25 +1,24 @@
 //imports dependencies and files
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "./Activities.css";
 import Navbar from "../../components/Navbar";
 import Header from "../../components/Header/Header.js";
 import Grid from "../../components/Grid/Grid.js";
 import Footer  from "../../components/Footer";
+import "./Activities.css";
 
 class Activities extends Component {
 
   render() {
+    // inline style
     const imagesetting = {
       "width" : "100%",
        "marginTop": "-150px",
       "height" : "600px"
     }
-    
     const jumbotronsetting = {
         "background-color" : "white"
-        
-      }
+    }
 
     return (
       <div>
@@ -52,8 +51,7 @@ class Activities extends Component {
                   <img className="card-img-top" src={require("../../images/game1.jpg")}  alt="Card image cap"/>
                   <div className="card-body ">
                     <h5 className="card-title">Drawfy</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" className="btn btn-primary">CLICK HERE TO PLAY</a>
+                    <a href="#" className="btn btn-primary"> PLAY</a>
                   </div>
                 </div>
               </div>
@@ -61,11 +59,10 @@ class Activities extends Component {
                {/* Activity :Trivia*/}
               <div className="col-sm-3">
                 <div className="card  card1" >
-                  <img className="card-img-top" src={require("../../images/img2.jpg")}  alt="Card image cap"/>
+                  <img className="card-img-top" src={require("../../images/game3.jpg")}  alt="Card image cap"/>
                   <div className="card-body">
                     <h5 className="card-title">Trivia</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" className="btn btn-primary">CLICK HERE TO PLAY</a>
+                    <a href="https://anithasunil2008.github.io/TriviaGame/" className="btn btn-primary"> PLAY</a>
                   </div>
                 </div>
               </div>
@@ -76,8 +73,8 @@ class Activities extends Component {
                   <img className="card-img-top" src={require("../../images/game2.jpg")}  alt="Card image cap"/>
                   <div className="card-body">
                     <h5 className="card-title">Colorfy</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" className="btn btn-primary">CLICK HERE TO PLAY</a>
+                   
+                    <a href="#" className="btn btn-primary"> PLAY</a>
                   </div>
                 </div>
               </div>
@@ -85,17 +82,17 @@ class Activities extends Component {
                 {/* Activity :clickify*/}
                <div className="col-sm-3">
                 <div className="card  card1" >
-                  <img className="card-img-top" src={require("../../images/act1.jpg")}  alt="Card image cap"/>
-                  <div className="card-body">
+                  <img className="card-img-top" src={require("../../images/game4.png")}  alt="Card image cap" />
+                  <div className="card-body"><br/>
                     <h5 className="card-title">Clickify</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" className="btn btn-primary">CLICK HERE TO PLAY</a>
+                    <a href="https://click-me-game-react.herokuapp.com/" className="btn btn-primary">PLAY</a>
                   </div>
                 </div>
               </div>
-            </div>
-              
-              {/* optional  text */}
+
+            </div>{/* end activity row*/}
+            
+            {/* optional  text */}
             <div className="col-8 jobDetailSide">
                   <div className="jumbotron jumbotron-fluid" style={jumbotronsetting}>
                      <div className="container">
@@ -105,7 +102,8 @@ class Activities extends Component {
                          build and strengthen relationships, and more importantly, thrive. Together, we’ll help you connect the pieces.</p>
                      </div>
                   </div>
-            </div>
+            </div> {/* end optional text*/}
+
           {/*Footer */}
           <Footer/>
        </div>

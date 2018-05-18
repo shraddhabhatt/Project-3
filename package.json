@@ -29,6 +29,7 @@
     "mongoose": "^5.0.11",
     "passport": "^0.4.0",
     "passport-google-oauth": "^1.0.0",
+    "react-facebook-login": "^4.0.1",
     "react-google-login": "^3.2.1",
     "react-router-dom": "^4.2.2",
     "sequelize": "^4.37.7",

@@ -60,8 +60,8 @@ class Login extends Component {
 
  
                          <FormBtn type="submit"> Log In </FormBtn>
-                         <a href="/auth/google" className="btn btn-danger"><span class="fa fa-google-plus"></span> Google</a>
 
+                         <a href="/auth/google" className="btn btn-danger"><span class="fa fa-google-plus"></span> Google</a>
           </form>               
 
       );
