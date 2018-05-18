@@ -6,9 +6,31 @@ import Header from "../../components/Header/Header.js";
 import Grid from "../../components/Grid/Grid.js";
 import Footer  from "../../components/Footer";
 import "./Home.css";
+import {Redirect} from 'react-router-dom';
+
 class Home extends Component {
 
+  constructor(props){
+    super(props);
+    this.state = {
+       name:'',
+       redirect: false,
+   };
+}
+
+componentDidMount() {
+     let data = JSON.parse(sessionStorage.getItem('userData'));
+     console.log(data);
+    //  this.setState({name: data.userData.name})
+}
+
+
 render() {
+
+  if(!sessionStorage.getItem('userData') || this.state.redirect){
+    return (<Redirect to={'/'}/>)
+}
+
    const imagesetting = {
     "width" : "100%",
     "marginTop" : "100px",
