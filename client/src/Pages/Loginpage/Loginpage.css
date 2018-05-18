@@ -6,6 +6,8 @@
 	.bgimage{
 		background-image: url("../../images/login.jpg");
 		background-size: cover;
+		width: 100%;
+		height: 100%; 
 		top: 0;
 		/*height: 100%;*/
 		overflow-y: hidden;
@@ -24,8 +26,4 @@
 
 	.size1{ width: 200px; }
 
-	.nohover:hover {
-    /* here copy default .btn class styles */
-    	size: default !important;
-    /* or something like that */
-}
+	
