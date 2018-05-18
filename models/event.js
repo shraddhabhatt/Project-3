@@ -9,16 +9,17 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             notEmpty: true
         },
+        description: {
+            type: DataTypes.TEXT
+        },
         date: {
             type: DataTypes.STRING,
             notEmpty: true
         },
-
         address1: {
             type: DataTypes.STRING,
             notEmpty: true
         },
-
         address2: {
             type: DataTypes.STRING,
             notEmpty: true
@@ -34,17 +35,8 @@ module.exports = function (sequelize, DataTypes) {
         zip: {
             type: DataTypes.STRING,
             notEmpty: true
-        },
-
-        description: {
-            type: DataTypes.TEXT
-        },
-
-        link: {
-            type: DataTypes.STRING
-        },
-
-
+        }
+        
     });
 
     Event.associate = function (models) {
