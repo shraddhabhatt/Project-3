@@ -38,6 +38,7 @@ render() {
         </div>
        </div>
 
+        {/* 4 images jumbotron */}
         <div className="jumbotron jumbotron-fluid homejumboforimage" >
           <div className="row">
             <div className="container">
