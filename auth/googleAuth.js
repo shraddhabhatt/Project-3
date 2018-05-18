@@ -5,6 +5,7 @@ var router = express.Router();
 var passportInstance;
 var db = require('../models');
 
+var app = express();
 
 module.exports = {
     router: router,
@@ -31,9 +32,8 @@ module.exports = {
                 });
             }));
 
-
-
         router.get('/auth/google', function (a, b, next) {
+            console.log("Hello");
             next();
         });
 
