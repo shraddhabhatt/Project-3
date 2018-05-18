@@ -7,11 +7,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require('path');
-
-var database = require('./models');
-
 var passport = require('passport');
-
 // Sets up the Express App
 // =============================================================
 var app = express();
@@ -19,13 +15,10 @@ var PORT = process.env.PORT || 8080;
 // Requiring our models for syncing
 var routes = require('./routes');
 var db = require("./models");
-
 var session = require('express-session');
 // var FileStore = require('session-file-store')(session);
-
 var cookieSession = require('cookie-session');
 var cookieParser = require('cookie-parser');
-
 // try {
 //   rimraf.sync(path.join(__dirname, 'sessions'));
 // } catch (e) {
@@ -76,7 +69,7 @@ app.post("/signin", function(req, res) {
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
 
-db.sequelize.sync({}).then(function() {
+db.sequelize.sync({force : false}).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
