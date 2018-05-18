@@ -8,8 +8,6 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var path = require('path');
 
-var passport = require('passport');
-// Sets up the Express App
 // =============================================================
 
 var app = express();
@@ -30,7 +28,6 @@ _dirname = path.resolve();
 app.use(express.static(_dirname + '/public'));
 
 // var sessionStore = new FileStore();
-
 
 app.post("/signin", function(req, res) {
   console.log("inside serverside signin route");
