@@ -45,11 +45,12 @@ body {
 }
 a {
   font-size: 19px;
+  padding: auto;
 }
 
  a:hover {
   text-decoration: none;
-  font-size: 20px;
+  
   color: white;
   /*background-color: teal;*/
   text-decoration: all;
@@ -61,5 +62,7 @@ a {
 .navbar > .row > .nav > li > a:hover {
 
 background-color: #666666;
+/*font-size: 25px;*/
+
 }
 
