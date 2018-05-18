@@ -14,5 +14,9 @@ export default {
              console.log("Response in POST");
              return res;
          });
+    },
+    
+    getUser: function(){
+        return axios.get("/api//auth/google");
     }
 };
