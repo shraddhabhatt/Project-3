@@ -43,54 +43,72 @@ class Activities extends Component {
               </div>
           </div>
 
-           {/* Activities*/}
+
+        {/* 4 images jumbotron */}
+        <div className="jumbotron jumbotron-fluid homejumboforimage" >
           <div className="row">
-              {/* Activity: Drawing*/}
-              <div className="col-sm-3 ">
-                <div className="card  card1" >
+            <div className="container">
+
+               {/*image 1*/}
+              <div className="col-lg-6">
+               <div className="card  card1" >
                   <img className="card-img-top" src={require("../../images/game1.jpg")}  alt="Card image cap"/>
                   <div className="card-body ">
                     <h5 className="card-title">Drawfy</h5>
                     <a href="#" className="btn btn-primary"> PLAY</a>
                   </div>
                 </div>
-              </div>
+             </div>
+             
 
-               {/* Activity :Trivia*/}
-              <div className="col-sm-3">
-                <div className="card  card1" >
+            {/*image 2*/}
+            <div className="col-lg-6">
+              <div className="card  card1" >
                   <img className="card-img-top" src={require("../../images/game3.jpg")}  alt="Card image cap"/>
                   <div className="card-body">
                     <h5 className="card-title">Trivia</h5>
                     <a href="https://anithasunil2008.github.io/TriviaGame/" className="btn btn-primary"> PLAY</a>
                   </div>
-                </div>
-              </div>
+                </div> 
+            </div>
+          </div>  {/*row end*/}
+          <br/>
 
-                {/* Activity :Find color*/}
-               <div className="col-sm-3">
-                <div className="card  card1" >
+        {/*next row for image*/}
+       <div className="container">
+        <div className="row">
+          <div className="container">
+
+            {/*image3*/}
+            <div className="col-lg-6">
+               <div className="card  card1" >
                   <img className="card-img-top" src={require("../../images/game2.jpg")}  alt="Card image cap"/>
                   <div className="card-body">
                     <h5 className="card-title">Colorfy</h5>
-                   
                     <a href="#" className="btn btn-primary"> PLAY</a>
                   </div>
-                </div>
-              </div>
+                </div> 
+            </div>
 
-                {/* Activity :clickify*/}
-               <div className="col-sm-3">
-                <div className="card  card1" >
+            {/*image4*/}
+            <div className="col-lg-6">
+              <div className="card  card1" >
                   <img className="card-img-top" src={require("../../images/game4.png")}  alt="Card image cap" />
-                  <div className="card-body"><br/>
+                  <div className="card-body">
                     <h5 className="card-title">Clickify</h5>
                     <a href="https://click-me-game-react.herokuapp.com/" className="btn btn-primary">PLAY</a>
                   </div>
                 </div>
-              </div>
+            </div>
 
-            </div>{/* end activity row*/}
+          </div>  
+        </div> 
+       </div>
+      </div>{/*row end*/}
+    </div> {/*jumbotron end*/} 
+      
+
+           
             
             {/* optional  text */}
             <div className="col-8 jobDetailSide">

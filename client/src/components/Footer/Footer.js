@@ -56,6 +56,7 @@ class Footer extends Component {
 						</div>		
 					
 				</div>	
+				
 
 				<div className="row boxesContainer">	
 					<div className="col-12">
