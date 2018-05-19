@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 
 import { Input, TextArea, FormBtn } from "../../components/Form";
+import API from "../../utils/API";
+
 
 class Postevent extends Component {
+
 	constructor(props) {
 		super(props);
 
@@ -10,25 +13,58 @@ class Postevent extends Component {
 
 	          eventName: "",
 	          eventDescription: "",
-	          address: "",
+	          address1: "",
 	          address2: "",
 	          city: "",
 	          state: "",
 	          zip: ""
           }
   
-        this.handleSubmit = this.handleSubmit.bind(this);
+       // this.handleSubmit = this.handleSubmit.bind(this);
         this.formChange   = this.formChange.bind(this);
-	}
-
-	handleSubmit = (e) => { 
-      e.preventDefault();
+  }
+  
+  loadPosts = () => {    
+    API.getEvents()
+      .then(res =>
+        this.setState({
+          eventName: "",
+          eventDescription: "",
+          address1: "",
+          address2: "",
+          city: "",
+          state: "",
+          zip: ""
+       })
+      )
+      .catch(err => console.log(err));
+  };
+  
+  submitPost = event => { 
+      event.preventDefault();
+      console.log("Not Yet Inside Submit Post!!");
+      if (this.state.eventName) {
+          console.log("Inside Submit Post!!");
+          API.saveEvent({
+            name: this.state.eventName,
+            description: this.state.eventDescription,
+            address1: this.state.address1,
+            address2: this.state.address2,
+            city: this.state.city,
+            state: this.state.state,
+            zip: this.state.zip,
+            date: "01/01/2019",
+            UserId: 1
+          })
+          .then(console.log("Return backed with res"))
+          .catch(err => console.log(err));
+      }
 
       alert("Your event has been submitted! Details: " + JSON.stringify(this.state));
        this.setState({
           eventName: "",
           eventDescription: "",
-          address: "",
+          address1: "",
           address2: "",
           city: "",
           state: "",
@@ -42,13 +78,9 @@ class Postevent extends Component {
     }
 
     render() {
-
-        const {eventName, eventDescription, address, address2, city, state, zip} = this.state;
-    
-    	return (
-
-                      <form onSubmit={this.handleSubmit}>
-
+        const {eventName, eventDescription, address1, address2, city, state, zip} = this.state;
+       	return (
+                      <form>
                           <label for="eventName"> Event Name </label>
                             <Input 
                             name="eventName"
@@ -65,12 +97,12 @@ class Postevent extends Component {
                             value={eventDescription}
                             onChange={this.formChange} />
 
-                          <label for="address"> Address </label>
+                          <label for="address1"> Address </label>
                             <Input 
-                            name="address"
-                            id="address" 
+                            name="address1"
+                            id="address1" 
                             placeholder="123 Main Street"
-                            value={address}
+                            value={address1}
                             onChange={this.formChange} />
 
                           <label for="address2">Address 2</label>
@@ -105,7 +137,7 @@ class Postevent extends Component {
                             value={zip}
                             onChange={this.formChange} />
 
-                          <FormBtn type="submit"> Submit event </FormBtn>
+                          <FormBtn onClick={this.submitPost}> Submit event </FormBtn>
                           
                       </form>
     		);

@@ -138,7 +138,7 @@ class Loginpage extends Component {
 				} > SIGN UP </button>
 
 				<GoogleLogin clientId = "795374708066-fg769hi02d0hfj3jgkbvvb4g72nogch1.apps.googleusercontent.com"
-				buttonText = "Login with Google"
+				className = "googleButton" buttonText = "GOOGLE"
 				onSuccess = {
 					responseGoogle
 				}
