@@ -55,7 +55,7 @@ class Activities extends Component {
                   <img className="card-img-top" src={require("../../images/game1.jpg")}  alt="Card image cap"/>
                   <div className="card-body ">
                     <h5 className="card-title">Drawfy</h5>
-                    <a href="#" className="btn btn-primary"> PLAY</a>
+                    <a href="https://anithasunil2008.github.io/Color-Drawing-Recognition/color_draw_something.html" target="_b" className="btn btn-primary"> PLAY</a>
                   </div>
                 </div>
              </div>
@@ -67,7 +67,7 @@ class Activities extends Component {
                   <img className="card-img-top" src={require("../../images/game3.jpg")}  alt="Card image cap"/>
                   <div className="card-body">
                     <h5 className="card-title">Trivia</h5>
-                    <a href="https://anithasunil2008.github.io/TriviaGame/" className="btn btn-primary"> PLAY</a>
+                    <a href="https://anithasunil2008.github.io/TriviaGame/" target="_b" className="btn btn-primary"> PLAY</a>
                   </div>
                 </div> 
             </div>
@@ -85,7 +85,7 @@ class Activities extends Component {
                   <img className="card-img-top" src={require("../../images/game2.jpg")}  alt="Card image cap"/>
                   <div className="card-body">
                     <h5 className="card-title">Colorfy</h5>
-                    <a href="#" className="btn btn-primary"> PLAY</a>
+                    <a href="https://shraddhabhatt.github.io/Color_Play/Color_Recognition.html" target="_b" className="btn btn-primary"> PLAY</a>
                   </div>
                 </div> 
             </div>
@@ -96,7 +96,7 @@ class Activities extends Component {
                   <img className="card-img-top" src={require("../../images/game4.png")}  alt="Card image cap" />
                   <div className="card-body">
                     <h5 className="card-title">Clickify</h5>
-                    <a href="https://click-me-game-react.herokuapp.com/" className="btn btn-primary">PLAY</a>
+                    <a href="https://click-me-game-react.herokuapp.com/" target="_b" className="btn btn-primary">PLAY</a>
                   </div>
                 </div>
             </div>

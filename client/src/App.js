@@ -10,6 +10,7 @@ import "./App.css";
 
 
 const App = () => (
+  
   <Router>
     <div>
       {/*Routes for each page to jump on*/}

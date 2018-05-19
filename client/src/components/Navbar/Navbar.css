@@ -5,7 +5,9 @@
   padding-top: 15px;
 }
 
-
+.glyphicon-user {
+    font-size: 30px;
+}
 /*.itemRight {
   width: 10%;
 }*/

@@ -2,6 +2,12 @@
 # yarn lockfile v1
 
 
+"@types/react@*":
+  version "16.3.14"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.3.14.tgz#f90ac6834de172e13ecca430dcb6814744225d36"
+  dependencies:
+    csstype "^2.2.0"
+
 abab@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
@@ -246,7 +252,7 @@ assert-plus@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/assert-plus/-/assert-plus-0.2.0.tgz#d74e1b87e7affc0db8aadb7021f3fe48101ab234"
 
-assert@^1.1.1:
+assert@^1.1.1, assert@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/assert/-/assert-1.4.1.tgz#99912d591836b5a6f5b345c0f07eefc08fc65d91"
   dependencies:
@@ -1724,6 +1730,10 @@ cssom@0.3.x, "cssom@>= 0.3.2 < 0.4.0":
   dependencies:
     cssom "0.3.x"
 
+csstype@^2.2.0:
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.5.2.tgz#4534308476ceede8fbe148b9b99f9baf1c80fa06"
+
 currently-unhandled@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/currently-unhandled/-/currently-unhandled-0.4.1.tgz#988df33feab191ef799a61369dd76c17adf957ea"
@@ -2601,6 +2611,12 @@ flat-cache@^1.2.1:
     graceful-fs "^4.1.2"
     write "^0.2.1"
 
+flat@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/flat/-/flat-4.0.0.tgz#3abc7f3b588e64ce77dc42fd59aa35806622fea8"
+  dependencies:
+    is-buffer "~1.1.5"
+
 flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
@@ -3251,7 +3267,7 @@ is-binary-path@^1.0.0:
   dependencies:
     binary-extensions "^1.0.0"
 
-is-buffer@^1.1.5:
+is-buffer@^1.1.5, is-buffer@~1.1.5:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
 
@@ -5235,6 +5251,13 @@ react-dom@^16.2.0:
 react-error-overlay@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-3.0.0.tgz#c2bc8f4d91f1375b3dad6d75265d51cd5eeaf655"
+
+react-google-login@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/react-google-login/-/react-google-login-3.2.1.tgz#9ab6ac3694d0e6e2974f1e588c53cf7b903a36e6"
+  dependencies:
+    "@types/react" "*"
+    prop-types "^15.6.0"
 
 react-is@^16.3.2:
   version "16.3.2"

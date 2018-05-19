@@ -5,6 +5,7 @@ import Navbar from "../../components/Navbar";
 import Header from "../../components/Header/Header.js";
 import Grid from "../../components/Grid/Grid.js";
 import Footer  from "../../components/Footer";
+// import Carousal  from "../../components/Carousal";
 import "./Home.css";
 import {Redirect} from 'react-router-dom';
 
@@ -104,6 +105,8 @@ render() {
       </div>
       </div>{/*row end*/}
     </div> {/*jumbotron end*/} 
+    
+   
       
       {/*about us youtism*/}
       <div className="col-8 jobDetailSide">

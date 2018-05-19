@@ -1,29 +1,17 @@
 //imports dependencies and files
-import React, {
-	Component
-} from "react";
+import React, {Component} from "react";
 import "./Loginpage.css";
-import {
-	Input,
-	TextArea,
-	FormBtn
-} from "../../components/Form";
+import {Input,TextArea,FormBtn} from "../../components/Form";
 import Form from '../../components/Form';
-import {
-	Modal
-} from 'react-bootstrap';
+import {Modal} from 'react-bootstrap';
 import Login from "../../components/Login/Login.js";
 import Register from "../../components/Register/Register.js";
 import Guestlogin from "../../components/Guestlogin/Guestlogin.js";
 
 // This is for google Auth
 import GoogleLogin from 'react-google-login';
-import {
-	PostData
-} from '../../services/PostData';
-import {
-	Redirect
-} from 'react-router-dom';
+import {PostData} from '../../services/PostData';
+import {Redirect} from 'react-router-dom';
 
 
 class Loginpage extends Component {
@@ -75,10 +63,7 @@ class Loginpage extends Component {
 	render() {
 
 		if (this.state.redirectToReferrer || sessionStorage.getItem('userData')) {
-			return ( < Redirect to = {
-					'/Home'
-				}
-				/>)
+			return ( < Redirect to = {'/Home'}/>)
 			}
 
 			const responseGoogle = (response) => {
@@ -139,13 +124,8 @@ class Loginpage extends Component {
 
 				<GoogleLogin clientId = "795374708066-fg769hi02d0hfj3jgkbvvb4g72nogch1.apps.googleusercontent.com"
 				buttonText = "Login with Google"
-				onSuccess = {
-					responseGoogle
-				}
-				onFailure = {
-					responseGoogle
-				}
-				/>
+				onSuccess = { responseGoogle }
+				onFailure = { responseGoogle } />
 
 				{ /*Modal for Login*/ } 
 				<Modal show = {

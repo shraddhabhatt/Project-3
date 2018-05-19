@@ -14,6 +14,8 @@ class Navbar extends Component {
           {/*Nav links*/}
            <ul className=" nav ">
 
+              <li> <a href="/" className="glyphicon glyphicon-user"></a></li>
+
               <li ><a href="/Events">EVENTS</a></li>
 
               <li ><a href="/Activities">ACTIVITIES</a></li>
@@ -21,6 +23,8 @@ class Navbar extends Component {
               <li ><a href="/Career">CAREERS</a></li>
 
               <li ><a href="/Home">HOME</a></li>
+
+              
           </ul>
         </div>
       </nav>
