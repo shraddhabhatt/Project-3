@@ -59,55 +59,53 @@ class Postjob extends Component {
     	const {jobTitle, companyName, description, qualification, location} = this.state;
     
     	return (
+              // <form onSubmit={this.handleSubmit}>
+                <form>
+                  <label for="jobTitle"> Job Title </label>
+                    <Input 
+                        name="jobTitle"
+                        id="jobTitle" 
+                        placeholder="Job title goes here"
+                        value={jobTitle}
+                        onChange={this.formChange} />
 
-                      // <form onSubmit={this.handleSubmit}>
-                      <form>
-                        <label for="jobTitle"> Job Title </label>
-                          <Input 
-                          name="jobTitle"
-                          id="jobTitle" 
-                          placeholder="Job title goes here"
-                          value={jobTitle}
-                          onChange={this.formChange} />
+                  <label for="companyName"> Company Name </label>
+                     <Input 
+                        name="companyName"
+                        id="companyName" 
+                        placeholder="Company Name goes here"
+                        value={companyName}
+                        onChange={this.formChange} />
 
-                          <label for="companyName"> Company Name </label>
-                          <Input 
-                          name="companyName"
-                          id="companyName" 
-                          placeholder="Company Name goes here"
-                          value={companyName}
-                          onChange={this.formChange} />
+                  <label for="qualification"> Qualification </label>
+                      <Input 
+                        name="qualification"
+                        id="qualification" 
+                        placeholder="Qualification"
+                        value={qualification}
+                        onChange={this.formChange} />
 
-                        <label for="qualification"> Qualification </label>
-                          <Input 
-                          name="qualification"
-                          id="qualification" 
-                          placeholder="Qualification"
-                          value={qualification}
-                          onChange={this.formChange} />
+                  <label for="location"> Location </label>
+                      <Input 
+                        name="location"
+                        id="location" 
+                        placeholder="Where is the job located?"
+                        value={location}
+                        onChange={this.formChange} />
 
-                        <label for="location"> Location </label>
-                          <Input 
-                          name="location"
-                          id="location" 
-                          placeholder="Where is the job located?"
-                          value={location}
-                          onChange={this.formChange} />
-
-                        <label for="description">Description</label>
-                          <TextArea 
-                          name="description"
-                          id="jobDescription" 
-                          placeholder="Description"
-                          value={description}
-                          onChange={this.formChange} />
+                  <label for="description">Description</label>
+                      <TextArea 
+                        name="description"
+                        id="jobDescription" 
+                        placeholder="Description"
+                        value={description}
+                        onChange={this.formChange} />
 
 
-                        <FormBtn onClick={this.submitJob}> Post job </FormBtn>
-                      </form>
-
-    		);
-    }
+                  <FormBtn onClick={this.submitJob}> Post job </FormBtn>
+                  </form>
+    		    );
+      }
 }
 
 export default Postjob;

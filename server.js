@@ -27,7 +27,6 @@ app.use(express.static("public"));
 _dirname = path.resolve();
 app.use(express.static(_dirname + '/public'));
 
-
 app.use(routes);
 // var sessionStore = new FileStore();
 
