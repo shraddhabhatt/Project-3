@@ -1,7 +1,4 @@
-	.front{
-		/*overflow:hidden;*/
 
-	}
 
 	.bgimage{
 		background-image: url("../../images/login.jpg");
@@ -32,6 +29,6 @@
 		background-color: red;
 		color: white;
 		font-size: 20px;
-	}
+	} 
 
 	

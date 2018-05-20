@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import { Input, TextArea, FormBtn } from "../../components/Form";
 
+import API from "../../utils/API";
+
 class Postjob extends Component {
 	constructor(props) {
 		super(props);
@@ -9,46 +11,71 @@ class Postjob extends Component {
 		  this.state = {
 
             jobTitle: "",
+            companyName: "",
             qualification: "",
             location: "",
-            jobDescription: ""
+            description: ""
           }
   
-        this.handleSubmit = this.handleSubmit.bind(this);
+        // this.handleSubmit = this.handleSubmit.bind(this);
         this.formChage    = this.formChange.bind(this);  
 
 	}
 
-	formChange = (e) => {
-      this.setState({[e.target.name]: e.target.value});
-    }
-
-    handleSubmit = (e) => { 
+	submitJob = (e) => {
       e.preventDefault();
+      console.log("Not Yet Inside Submit Post!!");
+    
+      if (this.state.jobTitle) {
+          console.log("Inside Submit Post!!");
+          API.saveJob({
+            jobTitle: this.state.jobTitle,
+            companyName:this.state.jobTitle,
+            location: this.state.location,
+            description: this.state.description,
+            qualification: this.state.qualification
+          })
+          .then(console.log("Return backed with res"))
+          .catch(err => console.log(err));
+      }
 
       alert("Your job has been posted! Details: " + JSON.stringify(this.state));
        this.setState({
             jobTitle: "",
             qualification: "",
             location: "",
-            jobDescription: ""
+            companyName: "",
+            description: ""
        });
 
     } 
 
+    formChange = (e) => {
+      this.setState({[e.target.name]: e.target.value});
+    }
+
     render() {
 
-    	const {jobTitle, jobDescription, qualification, location} = this.state;
+    	const {jobTitle, companyName, description, qualification, location} = this.state;
     
     	return (
 
-                      <form onSubmit={this.handleSubmit}>
+                      // <form onSubmit={this.handleSubmit}>
+                      <form>
                         <label for="jobTitle"> Job Title </label>
                           <Input 
                           name="jobTitle"
                           id="jobTitle" 
                           placeholder="Job title goes here"
                           value={jobTitle}
+                          onChange={this.formChange} />
+
+                          <label for="companyName"> Company Name </label>
+                          <Input 
+                          name="companyName"
+                          id="companyName" 
+                          placeholder="Company Name goes here"
+                          value={companyName}
                           onChange={this.formChange} />
 
                         <label for="qualification"> Qualification </label>
@@ -67,16 +94,16 @@ class Postjob extends Component {
                           value={location}
                           onChange={this.formChange} />
 
-                        <label for="jobDescription">Description</label>
+                        <label for="description">Description</label>
                           <TextArea 
-                          name="jobDescription"
+                          name="description"
                           id="jobDescription" 
                           placeholder="Description"
-                          value={jobDescription}
+                          value={description}
                           onChange={this.formChange} />
 
 
-                        <FormBtn type="submit"> Post job </FormBtn>
+                        <FormBtn onClick={this.submitJob}> Post job </FormBtn>
                       </form>
 
     		);

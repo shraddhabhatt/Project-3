@@ -16,7 +16,12 @@ export default {
          });
     },
     
-    getUser: function(){
-        return axios.get("/api//auth/google");
-    }
+    saveJob: function(jobData) {
+        console.log(jobData);
+        return axios.post("/api/jobs/", jobData)
+         .then(function(res){
+             console.log("Response in POST");
+             return res;
+         });
+    },
 };
