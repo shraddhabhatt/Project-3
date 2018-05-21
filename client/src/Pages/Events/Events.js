@@ -10,6 +10,7 @@ import { Input, TextArea, Navtrial, FormBtn, EventsList } from "../../components
 import Postevent from "../../components/Postevent/Postevent.js";
 //sets state to 0 or empty
 
+
 class Events extends Component {
   
     constructor(props) {
@@ -50,6 +51,7 @@ render() {
       <div>
           
         <Navbar/>
+        <Navtrial />
          <div className="row">
             {/*image*/}
             <div className="col-4 imageside">

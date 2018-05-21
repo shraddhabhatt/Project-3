@@ -9,6 +9,7 @@ class Postjob extends Component {
 		  this.state = {
 
             jobTitle: "",
+            companyName: "",
             qualification: "",
             location: "",
             jobDescription: ""
@@ -29,6 +30,7 @@ class Postjob extends Component {
       alert("Your job has been posted! Details: " + JSON.stringify(this.state));
        this.setState({
             jobTitle: "",
+            companyName: "",
             qualification: "",
             location: "",
             jobDescription: ""
@@ -38,11 +40,14 @@ class Postjob extends Component {
 
     render() {
 
-    	const {jobTitle, jobDescription, qualification, location} = this.state;
+    	const {jobTitle, companyName, jobDescription, qualification, location} = this.state;
+      const jobPostForm = {
+        "padding": "20px"
+      }
     
     	return (
 
-                      <form onSubmit={this.handleSubmit}>
+                      <form onSubmit={this.handleSubmit} style={jobPostForm}>
                         <label for="jobTitle"> Job Title </label>
                           <Input 
                           name="jobTitle"
@@ -51,7 +56,15 @@ class Postjob extends Component {
                           value={jobTitle}
                           onChange={this.formChange} />
 
-                        <label for="qualification"> Qualification </label>
+                        <label for="companyName"> Company Name </label>
+                          <Input 
+                          name="companyName"
+                          id="companyName" 
+                          placeholder="Company Name"
+                          value={companyName}
+                          onChange={this.formChange} />
+
+                          <label for="qualification"> Qualification </label>
                           <Input 
                           name="qualification"
                           id="qualification" 
