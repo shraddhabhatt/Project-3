@@ -4,7 +4,11 @@ export default {
 
     // Gets all books
     getEvents: function() {
-        return axios.get("/api/events");
+        return axios.get("/api/events/")
+        .then(function(res){
+            console.log("Response in GET "+res);
+            return res;
+        });
     },
     // Saves a book to the database
     saveEvent: function(eventData) {

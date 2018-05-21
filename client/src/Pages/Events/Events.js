@@ -6,8 +6,11 @@ import Header from "../../components/Header/Header.js";
 import Grid from "../../components/Grid/Grid.js";
 import Footer  from "../../components/Footer";
 import { Modal } from 'react-bootstrap';
-import { Input, TextArea, Navtrial, FormBtn, EventsList } from "../../components/Form";
+import { Input, TextArea, Navtrial, FormBtn } from "../../components/Form";
+import { Col, Row } from "../../components/Grid";
+//import Map from "../../components/Map/Map";
 import Postevent from "../../components/Postevent/Postevent.js";
+import EventsList from "../../components/Listevent/EventsList.js";
 //sets state to 0 or empty
 
 class Events extends Component {
@@ -43,13 +46,11 @@ render() {
 
        const jumbotronsetting = {
         "background-color" : "white"
-        
-      }
+        }
 
     return (
       <div>
-          
-        <Navbar/>
+       <Navbar/>
          <div className="row">
             {/*image*/}
             <div className="col-4 imageside">
@@ -76,6 +77,7 @@ render() {
                   <button onClick={this.handleEvents} type="button" className="btn btn-primary btn-lg btn-block"><strong>FIND EVENTS HERE</strong>
                     {this.state.isToggleOn ? <EventsList /> : null}
                   </button>
+                 
                 </div>
               </div>
             </div>
