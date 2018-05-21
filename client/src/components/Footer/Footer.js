@@ -32,7 +32,7 @@ class Footer extends Component {
 									<ul className="right">	
 										<br/>
 										<h4>SHRADDHA BHATT</h4>
-										<h4>ANITHARAJ SHRIDHARAN</h4>			
+										<h4>ANITHARAJ SRIDHARAN</h4>			
 									</ul>
 								</div>	
 

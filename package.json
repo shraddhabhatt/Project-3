@@ -9,7 +9,7 @@
     "start": "concurrently \"nodemon server.js\" \"npm run client\"",
     "build": "node scripts/build.js",
     "seed": "node scripts/seedDB.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo test didn't run",
     "installDeps": "yarn && cd client && yarn"
   },
   "author": "",
@@ -30,6 +30,7 @@
     "mysql2": "^1.5.3",
     "passport": "^0.4.0",
     "passport-google-oauth": "^1.0.0",
+    "react-addons-test-utils": "^15.6.2",
     "react-facebook-login": "^4.0.1",
     "react-google-login": "^3.2.1",
     "react-router-dom": "^4.2.2",

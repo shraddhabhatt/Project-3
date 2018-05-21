@@ -55,7 +55,7 @@ class Activities extends Component {
                   <img className="card-img-top" src={require("../../images/game1.jpg")}  alt="Card image cap"/>
                   <div className="card-body ">
                     <h5 className="card-title">Drawfy</h5>
-                    <a href="#" className="btn btn-primary"> PLAY</a>
+                    <a href="https://anithasunil2008.github.io/Color-Drawing-Recognition/color_draw_something.html" className="btn btn-primary"> PLAY</a>
                   </div>
                 </div>
              </div>
