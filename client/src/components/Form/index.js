@@ -4,5 +4,4 @@ export * from "./FormBtn";
 export * from "./Signup";
 export * from "./Postjob";
 export * from "./Postevent";
-export * from "./EventsList";
 export * from "./Navtrial";

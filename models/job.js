@@ -5,27 +5,23 @@ module.exports = function (sequelize, DataTypes) {
             autoIncrement: true,
             primaryKey: true
         },
-        jobtitle: {
+        jobTitle: {
             type: DataTypes.STRING,
             notEmpty: true
         },
-        companyname: {
+        companyName: {
             type: DataTypes.STRING,
             notEmpty: true
         },
-        city: {
-            type: DataTypes.STRING,
-            notEmpty: true
-        },
-        state: {
-            type: DataTypes.STRING,
-            notEmpty: true
-        },
-        zip: {
+        location: {
             type: DataTypes.STRING,
             notEmpty: true
         },
         description: {
+            type: DataTypes.TEXT,
+            notEmpty: true
+        },
+        qualification: {
             type: DataTypes.TEXT,
             notEmpty: true
         }

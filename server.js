@@ -7,7 +7,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require('path');
-
 // =============================================================
 
 var app = express();
@@ -27,6 +26,7 @@ app.use(express.static("public"));
 _dirname = path.resolve();
 app.use(express.static(_dirname + '/public'));
 
+app.use(routes);
 // var sessionStore = new FileStore();
 
 app.post("/signin", function(req, res) {
