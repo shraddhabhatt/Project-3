@@ -3,14 +3,14 @@ const db = require("../models");
 // Defining methods for the booksController
 module.exports = {
   findAll: function(req, res) {
-    db.Event
-      .findAll({})
+    db.Job
+      .find({})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
     console.log("create function");
-    db.Event
+    db.Job
       .create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(error => {
@@ -20,7 +20,7 @@ module.exports = {
       });
   },
   remove: function(req, res) {
-    db.Event
+    db.job
       .findById({ _id: req.params.id })
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))

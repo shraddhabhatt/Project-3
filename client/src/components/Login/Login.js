@@ -45,7 +45,7 @@ class Login extends Component {
 
           <form onSubmit={this.loginSubmit}>
                           
-                          <label for="loginEmail" > Email address</label>
+                          <label for="loginEmail" id="loginEmail"> Email address</label>
                             <Input 
                             name="loginEmail"
                             id="loginEmail" 
