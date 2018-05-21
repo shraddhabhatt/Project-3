@@ -1,7 +1,4 @@
-	.front{
-		/*overflow:hidden;*/
 
-	}
 
 	.bgimage{
 		background-image: url("../../images/login.jpg");
@@ -25,5 +22,13 @@
 	}
 
 	.size1{ width: 200px; }
+
+	.googleButton{
+		margin-left: 75px;
+		margin-top: 10px;
+		background-color: red;
+		color: white;
+		font-size: 20px;
+	} 
 
 	

@@ -7,7 +7,7 @@ const num_boxes = 4;
 const Box = ({color}) => {
 	const style = {
 		width: "25%",
-		height: "30px",
+		height: "35px",
 		display: "inline-block",
 		border: "1px solid black",
 		backgroundColor: color,
