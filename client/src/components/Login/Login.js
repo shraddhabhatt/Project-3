@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import { Input, FormBtn } from "../../components/Form";
 
+import "./Login.css";
+
 class Login extends Component {
 
   constructor(props) {
@@ -42,7 +44,8 @@ class Login extends Component {
       return (
 
           <form onSubmit={this.loginSubmit}>
-                          <label for="loginEmail"> Email address</label>
+                          
+                          <label for="loginEmail" id="loginEmail"> Email address</label>
                             <Input 
                             name="loginEmail"
                             id="loginEmail" 
@@ -61,7 +64,6 @@ class Login extends Component {
  
                          <FormBtn type="submit"> Log In </FormBtn>
 
-                         <a href="/auth/google" className="btn btn-danger"><span class="fa fa-google-plus"></span> Google</a>
           </form>               
 
       );

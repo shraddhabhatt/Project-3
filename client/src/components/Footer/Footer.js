@@ -5,9 +5,8 @@ import Background from "../../images/footer7.png";
 
 var footerStyle = {
   width: "100%",
-  height: "200px",
-  backgroundImage: `url(${Background})` ,
-  
+  height: "220px",
+  backgroundImage: `url(${Background})` 
 
 }
 class Footer extends Component {
@@ -22,7 +21,6 @@ class Footer extends Component {
 							<div className="footer-display">
 									
 								<div className='col-lg-3'>
-
 									<ul className="left">	
 										<br/>					
 										<h4>ROXANA MILEA   </h4>
@@ -33,12 +31,11 @@ class Footer extends Component {
 								<div className="col-lg-3">
 									<ul className="right">	
 										<br/>
-										<h4>SHRADHHA BHATT</h4>
-										<h4>ANITHA SHRIDHARAN</h4>			
+										<h4>SHRADDHA BHATT</h4>
+										<h4>ANITHARAJ SHRIDHARAN</h4>			
 									</ul>
 								</div>	
 
-							    <div className="col-lg-5"></div>
 
 								<div className="col-lg-6">
 									<img alt="logo" src={require("../../images/logo.png")} className="footer-logo img-fluid" />
@@ -50,7 +47,7 @@ class Footer extends Component {
 							<div className="col-3"></div>
 							<div className="col-6"></div>
 								<div className="copyright">
-									<p></p>
+									<p>&copy; Bla Bla</p>
 								</div>	
 							<div className="col-3"></div>
 						</div>		
