@@ -58,10 +58,12 @@ class Postjob extends Component {
     render() {
 
     	const {jobTitle, companyName, description, qualification, location} = this.state;
-    
+      const jobPostForm = {
+        "padding": "25px"
+      }
     	return (
               // <form onSubmit={this.handleSubmit}>
-                <form>
+                <form style={jobPostForm}>
                   <label for="jobTitle"> Job Title </label>
                     <Input 
                         name="jobTitle"

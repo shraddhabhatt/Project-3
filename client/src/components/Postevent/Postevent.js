@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import API from "../../utils/API";
 
@@ -80,7 +79,7 @@ class Postevent extends Component {
     render() {
         const {eventName, eventDescription, address1, address2, city, state, zip} = this.state;
         const eventPostForm = {
-            "padding": "20px"
+            "padding": "25px"
         }
        	return (
                       <form style={eventPostForm}>
