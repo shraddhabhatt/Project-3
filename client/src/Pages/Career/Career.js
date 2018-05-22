@@ -23,6 +23,12 @@ class Career extends Component {
      })
     }
 
+    handleEvents = () => {
+      this.setState(function(prevState) {
+        return {isToggleOn: !prevState.isToggleOn};
+      });
+    }  
+
 render() {
     // inline style
        const imagesetting = {
@@ -66,7 +72,8 @@ render() {
                           <Postjob />
                       </Modal>
                       {/*Job list will show up on click */}
-                    <button type="button" className="btn btn-primary btn-lg btn-block"><strong>FIND JOBS HERE</strong></button>
+                      <button onClick={this.handleEvents} type="button" className="btn btn-primary btn-lg btn-block">
+                  <strong> FIND JOBS HERE</strong></button>
                 </div>
               </div>
             </div>
