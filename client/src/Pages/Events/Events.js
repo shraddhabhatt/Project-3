@@ -13,6 +13,7 @@ import Postevent from "../../components/Postevent/Postevent.js";
 import EventsList from "../../components/Listevent/EventsList.js";
 //sets state to 0 or empty
 
+
 class Events extends Component {
   
     constructor(props) {
@@ -50,7 +51,11 @@ render() {
 
     return (
       <div>
-       <Navbar/>
+
+          
+        <Navbar/>
+      
+
          <div className="row">
             {/*image*/}
             <div className="col-4 imageside">
@@ -74,9 +79,9 @@ render() {
                         <Postevent />
                     </Modal>
                   {/* see events list on click*/}
-                  <button onClick={this.handleEvents} type="button" className="btn btn-primary btn-lg btn-block"><strong>FIND EVENTS HERE</strong>
-                    {this.state.isToggleOn ? <EventsList /> : null}
+                  <button onClick={this.handleEvents} type="button" className="btn btn-primary btn-lg btn-block"><strong>FIND EVENTS HERE</strong>        
                   </button>
+                    {this.state.isToggleOn ? <EventsList /> : null}
                  
                 </div>
               </div>

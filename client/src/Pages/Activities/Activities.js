@@ -43,72 +43,64 @@ class Activities extends Component {
               </div>
           </div>
 
-
-        {/* 4 images jumbotron */}
-        <div className="jumbotron jumbotron-fluid homejumboforimage" >
+          <div className="jumbotron jumbotron-fluid homejumboforimage" >
           <div className="row">
-            <div className="container">
-
-               {/*image 1*/}
-              <div className="col-lg-6">
-               <div className="card  card1" >
-                  <img className="card-img-top" src={require("../../images/game1.jpg")}  alt="Card image cap"/>
-                  <div className="card-body ">
-                    <h5 className="card-title">Drawfy</h5>
-                    <a href="#" className="btn btn-primary"> PLAY</a>
-                  </div>
-                </div>
-             </div>
-             
-
-            {/*image 2*/}
-            <div className="col-lg-6">
-              <div className="card  card1" >
-                  <img className="card-img-top" src={require("../../images/game3.jpg")}  alt="Card image cap"/>
-                  <div className="card-body">
-                    <h5 className="card-title">Trivia</h5>
-                    <a href="https://anithasunil2008.github.io/TriviaGame/" className="btn btn-primary"> PLAY</a>
-                  </div>
-                </div> 
-            </div>
-          </div>  {/*row end*/}
-          <br/>
-
-        {/*next row for image*/}
-       <div className="container">
-        <div className="row">
-          <div className="container">
-
-            {/*image3*/}
-            <div className="col-lg-6">
-               <div className="card  card1" >
-                  <img className="card-img-top" src={require("../../images/game2.jpg")}  alt="Card image cap"/>
-                  <div className="card-body">
-                    <h5 className="card-title">Colorfy</h5>
-                    <a href="#" className="btn btn-primary"> PLAY</a>
-                  </div>
-                </div> 
-            </div>
-
-            {/*image4*/}
-            <div className="col-lg-6">
-              <div className="card  card1" >
-                  <img className="card-img-top" src={require("../../images/game4.png")}  alt="Card image cap" />
-                  <div className="card-body">
-                    <h5 className="card-title">Clickify</h5>
-                    <a href="https://click-me-game-react.herokuapp.com/" className="btn btn-primary">PLAY</a>
-                  </div>
-                </div>
-            </div>
-
-          </div>  
-        </div> 
-       </div>
-      </div>{/*row end*/}
-    </div> {/*jumbotron end*/} 
-      
-
+            <div className="containerOutside">
            
+              <div className="containerInside col-lg-6">
+                <img src={require("../../images/game2.jpg")} alt="Avatar" className="imageAct img-responsive" />
+                <div className="overlay">
+                  <div className="instructions">
+                   <h5>Hello World</h5>
+                   <a href="https://anithasunil2008.github.io/TriviaGame/" className="btn btn-primary"> PLAY</a>
+                  </div>
+                </div>
+              </div>
+
+
+              <div className="containerInside col-lg-6">
+                <img src={require("../../images/game3.jpg")} alt="Avatar" className="imageAct img-responsive" />
+                <div className="overlay">
+                  <div className="instructions">
+                    <h5>Hello World</h5>
+                    <a href="#" className="btn btn-primary"> PLAY</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <br />
+          <br />
+
+           <div className="row">
+            <div className="containerOutside">
+           
+              <div className="containerInside col-lg-6">
+                <img src={require("../../images/game2.jpg")} alt="Avatar" className="imageAct img-responsive" />
+                <div className="overlay">
+                  <div className="instructions">
+                    <h5>Hello World</h5>
+                    <a href="#" className="btn btn-primary"> PLAY</a>
+                  </div>
+                </div>
+              </div>
+
+
+              <div className="containerInside col-lg-6">
+                <img src={require("../../images/game3.jpg")} alt="Avatar" className="imageAct img-responsive" />
+                <div className="overlay">
+                  <div className="instructions">
+                    <h5>Hello World</h5>
+                    <a href="#" className="btn btn-primary">PLAY</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
             
             {/* optional  text */}
             <div className="col-8 jobDetailSide">
