@@ -40,6 +40,11 @@ render() {
       const jumbotronsetting = {
         "backgroundColor" : "white"
       }
+
+      const model = {
+        "width" : '80',
+        "height" : "100"
+      }
     
 
     return (
@@ -74,6 +79,7 @@ render() {
                       {/*Job list will show up on click */}
                       <button onClick={this.handleEvents} type="button" className="btn btn-primary btn-lg btn-block">
                   <strong> FIND JOBS HERE</strong></button>
+                  {/* {this.state.isToggleOn ?  : null} */}
                 </div>
               </div>
             </div>

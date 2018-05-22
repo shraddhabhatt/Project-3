@@ -42,6 +42,7 @@ class Postjob extends Component {
       alert("Your job has been posted! Details: " + JSON.stringify(this.state));
        this.setState({
             jobTitle: "",
+            companyName: "",
             qualification: "",
             location: "",
             companyName: "",

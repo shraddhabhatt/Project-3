@@ -79,8 +79,11 @@ class Postevent extends Component {
 
     render() {
         const {eventName, eventDescription, address1, address2, city, state, zip} = this.state;
+        const eventPostForm = {
+            "padding": "20px"
+        }
        	return (
-                      <form>
+                      <form style={eventPostForm}>
                           <label for="eventName"> Event Name </label>
                             <Input 
                             name="eventName"
