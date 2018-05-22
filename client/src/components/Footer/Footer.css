@@ -2,29 +2,28 @@
 footer {
     position: relative;
     left: 0;
-    bottom: 0;
+    bottom: -30px;
     width: 100%;
     color: white;
     text-align: center;
     font-weight: bold;
-    height: 320px;
+    height: 340px;
     box-shadow: 0px 0px 20px 5px grey;
     font-size: 30px;
     font-family: "Arvo", Times, serif;
     z-index: 4;
 }
+.footerStyle {
+  width: 100%;
+  height: 230px;
+  background: url(../../images/footer7.png);
+}
 
 .left .right {
     list-style-type: none;
     color: black;
-    margin: 15px 0px -25px 0px;
+    margin: 0px 0px -25px 0px;
     font-size: 15px;
-}
-.left {
-  text-align: left;
-}
-.right {
-  text-align: left;
 }
 
 .footer-logo {
@@ -37,9 +36,18 @@ footer {
     bottom: 0;
     width: 100%;
     margin: 0px;
+    margin-bottom: -50px;
+  /*  margin-top: -20px;*/
 }
 
+a {
+  font-size: 15px;
+}
+li {
+  padding: 0;
+}
 .logoFooter {
+
 }
 
 .space {
@@ -50,3 +58,89 @@ footer {
   margin-bottom: 0px;
   text-align: center;
 }
+
+
+@media screen and (max-width: 980px)
+{
+.footer-logo{
+  width: 100%;
+  align-content: center;
+  border-radius: 75px;
+}
+.logoDiv {
+  justify-content: center;
+}
+
+}
+
+/*TABLET SCREEN*/
+@media screen and (max-width: 768px)
+{
+.space {
+  height: 100px;
+}  
+footer {
+  height: 500px;
+}
+.footerStyle{
+height: 530px;
+background-repeat: no-repeat;
+} 
+
+.footer-logo{
+  width: 100%;
+  border-radius: 75px;
+}
+.boxesContainer {
+  margin-top: 0px;
+  }
+.logoDiv {
+  margin-left: 200px;
+  border-radius: 75px;
+}
+}
+
+/*MOBILE PHONE SCREEN*/
+@media screen and (max-width: 640px)
+{
+
+footer {
+  height: 500px;
+}
+.space{
+height: 30px;
+} 
+
+.footerStyle{
+height: 450px;
+background-repeat: no-repeat;
+} 
+
+ul.left ul.right{
+  justify-content: center;
+  float: none;
+  padding-left: 40px;
+  margin: 0px -20px;
+  text-align: center !important; 
+}
+
+.footer-logo{
+  margin-top: 40px;
+  margin-left: -100px;
+  width: 100%;
+  align-content: center !important;
+  border-radius: 75px;
+
+}
+
+.logoDiv {
+  align-content: center;
+  border-radius: 75px;
+  margin-left: 40px;
+}
+
+}
+
+
+
+

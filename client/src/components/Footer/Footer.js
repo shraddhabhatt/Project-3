@@ -3,41 +3,35 @@ import "./Footer.css";
 import Boxes from "../Boxes/Box.js";
 import Background from "../../images/footer7.png";
 
-var footerStyle = {
-  width: "100%",
-  height: "220px",
-  backgroundImage: `url(${Background})` 
-
-}
 class Footer extends Component {
     render () {
         return (
             <footer>
             	
-	            <div className="section" style={footerStyle}>
+	            <div className="section footerStyle" >
 	            	<div className="row space"><div className="col-12"></div></div> 
 
 						<div className="row logoFooter">
 							<div className="footer-display">
 									
-								<div className='col-lg-3'>
+								<div className='col-lg-3 col-md-3 col-sm-4 leftColumn'>
 									<ul className="left">	
 										<br/>					
-										<h4>ROXANA MILEA   </h4>
-									    <h4>RUPALI MESHRAM</h4>						
+										<li><a href="www.linkedin.com/in/roxana-milea" target="_blank">ROXANA MILEA   </a></li>
+									    <li><a href="#" target="_blank">RUPALI MESHRAM</a></li>						
 									</ul>
 								</div>
 								
-								<div className="col-lg-3">
+								<div className="col-lg-3 col-md-6 col-sm-6  rightColumn">
 									<ul className="right">	
 										<br/>
-										<h4>SHRADDHA BHATT</h4>
-										<h4>ANITHARAJ SHRIDHARAN</h4>			
+										<li><a href="#" target="_blank">SHRADDHA BHATT</a></li>
+										<li><a href="#" target="_blank">ANITHARAJ SHRIDHARAN</a></li>			
 									</ul>
 								</div>	
 
 
-								<div className="col-lg-6">
+								<div className="col-lg-6 col-md-4 col-sm-4 offset-sm-1 logoDiv">
 									<img alt="logo" src={require("../../images/logo.png")} className="footer-logo img-fluid" />
 								</div>
 							</div>						

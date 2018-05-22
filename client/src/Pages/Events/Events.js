@@ -79,9 +79,9 @@ render() {
                         <Postevent />
                     </Modal>
                   {/* see events list on click*/}
-                  <button onClick={this.handleEvents} type="button" className="btn btn-primary btn-lg btn-block"><strong>FIND EVENTS HERE</strong>
-                    {this.state.isToggleOn ? <EventsList /> : null}
+                  <button onClick={this.handleEvents} type="button" className="btn btn-primary btn-lg btn-block"><strong>FIND EVENTS HERE</strong>        
                   </button>
+                    {this.state.isToggleOn ? <EventsList /> : null}
                  
                 </div>
               </div>
