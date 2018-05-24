@@ -6,13 +6,11 @@ import { Col, Row } from "../../components/Grid";
 import Map from "../../components/Map/Map";
 import API from "../../utils/API";
 
-
 class EventsList extends Component {
     state = {
             allevents: []
         };
     
-
     componentDidMount() {
        console.log(this.state);
        this.loadPosts();
@@ -52,7 +50,7 @@ class EventsList extends Component {
                 <div style={{height: '500px', width: '500px'}}>
                 <Map></Map>
                 </div>
-          </Col>
+            </Col>
     </Row>         
     	);
     }

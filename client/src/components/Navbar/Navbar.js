@@ -19,7 +19,7 @@ class Navbar extends Component {
           {/*Nav links*/}
            <ul className=" nav ">
 
-              <li> <a href="/" className="glyphicon glyphicon-user">LOGOUT</a></li>
+              <li> <button className="glyphicon glyphicon-user">LOGOUT</button></li>
 
               <li ><a href="/Events">EVENTS</a></li>
 

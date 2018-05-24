@@ -11,10 +11,8 @@ class JobsList extends Component {
     state = {
             alljobs: []
         };
-    
 
     componentDidMount() {
-       
        this.loadPosts();
     }
     
@@ -30,7 +28,6 @@ class JobsList extends Component {
   
     render() {
         return (
-          
             <div className="panel panel-primary">
                 <div className="panel-body">
                   <List>
