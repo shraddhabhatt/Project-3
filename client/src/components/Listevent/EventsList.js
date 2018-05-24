@@ -21,11 +21,8 @@ class EventsList extends Component {
     loadPosts = () => {    
 		API.getEvents()
             .then(res => this.setState({ allevents: res.data }))
-        //     {
-                
-        //         this.setState({ allevents: res.data });
-        //    })
-        .catch(err => console.log(err));
+       
+            .catch(err => console.log(err));
 	};
   
     render() {
@@ -41,12 +38,11 @@ class EventsList extends Component {
                         name={event.name}
                         description={event.description}
                         date={event.date}
-					    address1={event.address1}
-						address2={event.address2}
-						city={event.city}
-						state={event.state}
-						zipcode={event.zip}
-                      >
+					              address1={event.address1}
+            						address2={event.address2}
+            						city={event.city}
+            						state={event.state}
+            						zipcode={event.zip}>  
                      </ListItem>))}
                   </List>
                 </div>
@@ -56,8 +52,8 @@ class EventsList extends Component {
                 <div style={{height: '500px', width: '500px'}}>
                 <Map></Map>
                 </div>
-            </Col>
-        </Row>         
+          </Col>
+    </Row>         
     	);
     }
 }

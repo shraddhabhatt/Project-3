@@ -17,16 +17,16 @@ class Footer extends Component {
 								<div className='col-lg-3 col-md-3 col-sm-4 leftColumn'>
 									<ul className="left">	
 										<br/>					
-										{/* <li><a href="www.linkedin.com/in/roxana-milea" target="_blank">ROXANA MILEA   </a></li>
-									    <li><a href="#" target="_blank">RUPALI MESHRAM</a></li>						 */}
+										<li><a href="www.linkedin.com/in/roxana-milea" target="_blank">ROXANA MILEA   </a></li>
+									    <li><a href="#" target="_blank">RUPALI MESHRAM</a></li>						
 									</ul>
 								</div>
 								
 								<div className="col-lg-3 col-md-6 col-sm-6  rightColumn">
 									<ul className="right">	
 										<br/>
-										{/* <h4>SHRADDHA BHATT</h4>
-										<h4>ANITHARAJ SRIDHARAN</h4>			 */}
+										<li><a href="#" target="_blank">SHRADDHA BHATT</a></li>
+										<li><a href="#" target="_blank">ANITHARAJ SRIDHARAN</a></li>			
 									</ul>
 								</div>	
 
@@ -41,7 +41,7 @@ class Footer extends Component {
 							<div className="col-3"></div>
 							<div className="col-6"></div>
 								<div className="copyright">
-									{/* <p>&copy; Bla Bla</p> */}
+									<p>&copy; Bla Bla</p>
 								</div>	
 							<div className="col-3"></div>
 						</div>		
