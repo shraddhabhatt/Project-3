@@ -46,7 +46,7 @@ class Loginpage extends Component {
         } else {}
     }
 
-    signOut(){
+    signOut = ( ) => {
         this.setState({
             redirectToReferrer: false
         });
@@ -85,6 +85,8 @@ class Loginpage extends Component {
                 }
                 alt = "Cinque Terre" /> <br/> < br/> { /*button group for Login,Sign up , Guest user*/ } 
                 <div className = "btn-group" >
+
+                {/* <button type = "button" onClick={this.signOut} >Logout </button> */}
             
                 <button type = "button"
                 id = "guestUser"

@@ -1,25 +1,16 @@
 import React, { Component } from "react";
 import "./Navbar.css";
-import Loginpage from "../../Pages/Loginpage/Loginpage";
-import { connect } from 'react-redux';
-// import { logout } from '../../Pages/Loginpage/Loginpage';
+// import Loginpage from "../../Pages/Loginpage/Login.js";
+
 
 class Navbar extends Component {
 
-  // Loginpage(e){
+  // logout(e){
   //   e.preventDefault();
   //   this.props.logout();
   // }
 
   render() {
-
-    const { isAuthenticated } = this.props.auth;
-
-    // const userLinks = {
-    //   <ul className=" nav ">
-    //     <li><Link  to="" > Log out </Link></li>
-    //   </ul>
-    // }
 
     return (
       <nav className="navbar navbar-expand-lg ">
@@ -30,7 +21,7 @@ class Navbar extends Component {
           {/*Nav links*/}
            <ul className=" nav ">
 
-              <li> <a href="#">LOGOUT</a></li>
+              {/* <li> <a href="/" onClick={this.signOut} >LOGOUT</a></li> */}
 
               <li ><a href="/Events">EVENTS</a></li>
 
@@ -46,16 +37,6 @@ class Navbar extends Component {
   }
 }
 
-// Navbar.prototype = {
-//   // auth: React.PropTypes.object.isRequired,
-//   Loginpage: React.PropTypes.func.isRequired
-// }
-
-// function mapStateToProps(state){
-//   return {
-//     auth: state.auth
-//   }
-// }
-export default connect({Loginpage} )(Navbar);
+export default Navbar;
 
 
