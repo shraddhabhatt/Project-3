@@ -26,7 +26,7 @@ class Footer extends Component {
 									<ul className="right">	
 										<br/>
 										<li><a href="#" target="_blank">SHRADDHA BHATT</a></li>
-										<li><a href="#" target="_blank">ANITHARAJ SHRIDHARAN</a></li>			
+										<li><a href="#" target="_blank">ANITHARAJ SRIDHARAN</a></li>			
 									</ul>
 								</div>	
 
@@ -62,6 +62,3 @@ class Footer extends Component {
     }
 }
 export default Footer;
-
- 
- 

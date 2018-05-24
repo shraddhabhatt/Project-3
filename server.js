@@ -4,6 +4,7 @@
 // ******************************************************************************
 // *** Dependencies
 // =============================================================
+
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require('path');
@@ -33,8 +34,8 @@ app.post("/signin", function(req, res) {
   console.log("inside serverside signin route");
   res.json({ "url" : "/Home" });
 });
-// =============================================================
 
+// =============================================================
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
 
