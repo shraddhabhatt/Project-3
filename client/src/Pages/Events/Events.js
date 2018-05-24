@@ -46,7 +46,7 @@ render() {
       }
 
        const jumbotronsetting = {
-        "background-color" : "white"
+        "backgroundColor" : "white"
         }
 
     return (

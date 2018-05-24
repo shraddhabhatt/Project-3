@@ -1,23 +1,25 @@
-import React, { Component } from 'react';
-import { withGoogleMap, GoogleMap } from 'react-google-maps';
-class Map extends Component {
-   render() {
-   const GoogleMapExample = withGoogleMap(props => (
+import React , { Component } from "react";
+import ReactDOM from "react-dom";
+import { compose, withProps } from "recompose"
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+
+const Map = compose(
+  withProps({
+    googleMapURL: "https://maps.googleapis.com/maps/api/js?libraries=visualization&key=AIzaSyCGjATBrCWBodZMNsGI0UoPPw9ayD3-D4g",
+    loadingElement: <div style={{ height: "100%" }} />,
+    containerElement: <div style={{ height: '100%', width:'100%'}} />,
+    mapElement: <div style={{ height: "100%", width:'100%' }} />,
+  }),
+  withScriptjs,
+  withGoogleMap
+)(props =>
+  <div>
       <GoogleMap
-        defaultCenter = { { lat: 40.756795, lng: -73.954298 } }
-        defaultZoom = { 6 }
+        defaultZoom={8}
+        defaultCenter={{ lat: -34.397, lng: 150.644 }}
       >
+        {props.isMarkerShown && <Marker position={{ lat: -34.397, lng: 150.644 }} />}
       </GoogleMap>
-   ));
-   return(
-      <div style={{ height: `100%` }}>
-        <GoogleMapExample
-          containerElement={ <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'flex-end',
-          alignItems: 'center'}} /> }
-          mapElement={ <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }} /> }
-        />
-      </div>
-   );
-   }
-};
+  </div>
+);
 export default Map;
