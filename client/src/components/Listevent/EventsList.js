@@ -5,6 +5,7 @@ import { ListItem } from "./ListItem";
 import { Col, Row } from "../../components/Grid";
 import Map from "../../components/Map/Map";
 import API from "../../utils/API";
+import './List.css';
 
 class EventsList extends Component {
     state = {
@@ -47,8 +48,8 @@ class EventsList extends Component {
               </div>
             </Col>
             <Col size="md-4">
-                <div style={{height: '500px', width: '500px'}}>
-                <Map></Map>
+                <div id="map" style={{height: '580px', width: '350px'}}>
+                    <Map />
                 </div>
             </Col>
     </Row>         
