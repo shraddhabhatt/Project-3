@@ -51,12 +51,10 @@ render() {
 
     return (
       <div>
-
-          
+    
         <Navbar/>
       
-
-         <div className="row">
+        <div className="row">
             {/*image*/}
             <div className="col-4 imageside">
               <img  alt="Events picture" src={require("../../images/events4.jpg")} style={imagesetting}/>
