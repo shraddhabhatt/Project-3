@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Geocode from "react-geocode";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import API from "../../utils/API";
 
@@ -9,6 +9,9 @@ class Postevent extends Component {
 	constructor(props) {
 		super(props);
 
+      // set Google Maps Geocoding API for purposes of quota management. Its optional but recommended.
+      Geocode.setApiKey("AIzaSyCGjATBrCWBodZMNsGI0UoPPw9ayD3-D4g");
+     
 		  this.state = {
 
 	          eventName: "",
@@ -17,7 +20,9 @@ class Postevent extends Component {
 	          address2: "",
 	          city: "",
 	          state: "",
-	          zip: ""
+            zip: "",
+            lat: "",
+            lng: ""
           }
   
        // this.handleSubmit = this.handleSubmit.bind(this);
@@ -40,38 +45,69 @@ class Postevent extends Component {
       .catch(err => console.log(err));
   };
   
-  submitPost = event => { 
+   getLatLng = event => { 
       event.preventDefault();
-      console.log("Not Yet Inside Submit Post!!");
-      if (this.state.eventName) {
-          console.log("Inside Submit Post!!");
-          API.saveEvent({
-            name: this.state.eventName,
-            description: this.state.eventDescription,
-            address1: this.state.address1,
-            address2: this.state.address2,
-            city: this.state.city,
-            state: this.state.state,
-            zip: this.state.zip,
-            date: "01/01/2019",
-            UserId: 1
-          })
-          .then(console.log("Return backed with res"))
-          .catch(err => console.log(err));
-      }
 
-      alert("Your event has been submitted! Details: " + JSON.stringify(this.state));
-       this.setState({
-          eventName: "",
-          eventDescription: "",
-          address1: "",
-          address2: "",
-          city: "",
-          state: "",
-          zip: ""
-       })
+      const address = this.state.address1 + ", " + this.state.city + ", "+ this.state.state + ", " + this.state.zip; 
+      console.log("Find Lat/Lng for address : "+address);
 
+      this.getLatitudeLongitude(address);
     } 
+
+    getLatitudeLongitude = address => {
+      // If adress is not supplied, use default value 'Ferrol, Galicia, Spain'
+      address = address || 'Ferrol, Galicia, Spain';
+      // Enable or disable logs. Its optional.
+      Geocode.enableDebug();
+      // Get latidude & longitude from address.
+      Geocode.fromAddress(address).then(
+         response => {
+           const { lat, lng } = response.results[0].geometry.location;
+           console.log(lat, lng);
+           this.setState({lat: lat});
+           this.setState({lng: lng});
+           this.submitPost();
+         },
+         error => {
+           console.error(error);
+         }
+       );
+     };
+
+    submitPost = () =>{
+      
+      console.log("Not Yet Inside Submit Post!!")
+      
+            if (this.state.eventName) {
+                console.log("Inside Submit Post!!")
+                API.saveEvent({
+                  name: this.state.eventName,
+                  description: this.state.eventDescription,
+                  address1: this.state.address1,
+                  address2: this.state.address2,
+                  city: this.state.city,
+                  state: this.state.state,
+                  zip: this.state.zip,
+                  lat: this.state.lat,
+                  lng: this.state.lng,
+                  date: "01/01/2019",
+                  UserId: 1
+                })
+                .then(console.log("Return backed with res"))
+                .catch(err => console.log(err));
+            }
+
+            alert("Your event has been submitted! Details: " + JSON.stringify(this.state));
+            this.setState({
+                eventName: "",
+                eventDescription: "",
+                address1: "",
+                address2: "",
+                city: "",
+                state: "",
+                zip: ""
+            })
+    }
 
     formChange = (e) => {
       this.setState({[e.target.name]: e.target.value});
@@ -140,7 +176,7 @@ class Postevent extends Component {
                             value={zip}
                             onChange={this.formChange} />
 
-                          <FormBtn onClick={this.submitPost}> Submit event </FormBtn>
+                          <FormBtn onClick={this.getLatLng}> Submit event </FormBtn>
                           
                       </form>
     		);

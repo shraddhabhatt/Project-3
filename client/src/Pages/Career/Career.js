@@ -7,21 +7,30 @@ import Footer  from "../../components/Footer";
 import Imagegrid  from "../../components/Imagegrid";
 import { Modal } from 'react-bootstrap';
 import Postjob from "../../components/Postjob/Postjob.js";
+import JobsList from "../../components/Listjob/JobsList.js";
 
 class Career extends Component {
 
   constructor(props) {
-      super(props); 
-        this.state = {
-            isActive:false
-          }
+      super(props);       
+       this.state = {
+          isActive:false,
+          isToggleOn: false
+        }
+        this.handleEvents = this.handleEvents.bind(this); 
     }     
      
    toggleModal = () => {
       this.setState({
       isActive:!this.state.isActive
-     })
+     });
     }
+
+    handleEvents = () => {
+      this.setState(function(prevState) {
+        return {isToggleOn: !prevState.isToggleOn};
+      });
+    }  
 
 render() {
     // inline style
@@ -66,7 +75,9 @@ render() {
                           <Postjob />
                       </Modal>
                       {/*Job list will show up on click */}
-                    <button type="button" className="btn btn-primary btn-lg btn-block"><strong>FIND JOBS HERE</strong></button>
+                      <button onClick={this.handleEvents} type="button" className="btn btn-primary btn-lg btn-block">
+                  <strong> FIND JOBS HERE</strong></button>
+                  {this.state.isToggleOn ? <JobsList/>: null}
                 </div>
               </div>
             </div>

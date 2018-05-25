@@ -35,6 +35,14 @@ module.exports = function (sequelize, DataTypes) {
         zip: {
             type: DataTypes.STRING,
             notEmpty: true
+        },
+        lat: {
+            type: DataTypes.STRING,
+            notEmpty: true
+        },
+        lng: {
+            type: DataTypes.STRING,
+            notEmpty: true
         }
         
     });

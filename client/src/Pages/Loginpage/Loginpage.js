@@ -45,6 +45,13 @@ class Loginpage extends Component {
             });
         } else {}
     }
+
+    signOut(){
+        this.setState({
+            redirectToReferrer: false
+        });
+    }
+
     // set state for Modal
     state = {
         isActive: false
@@ -78,37 +85,20 @@ class Loginpage extends Component {
                 }
                 alt = "Cinque Terre" /> <br/> < br/> { /*button group for Login,Sign up , Guest user*/ } 
                 <div className = "btn-group" >
-                { /*button  for Login */ } 
+            
                 <button type = "button"
-                className = "btn btn-success"
-                onClick = {
-                    () => this.setState({
-                        showModal1: true,
-                        showModal2: false,
-                        showModal3: false
-                    })
-                } >LOGIN</button>
-                { /*button  for Guestlogin */ } 
-                <button type = "button"
-                className = "btn btn-info"
+                id = "guestUser"
+                className =  "btn btn-info"
                 onClick = {
                     () => this.setState({
                         showModal1: false,
                         showModal2: false,
                         showModal3: true
                     })
-                } > GUEST USER </button>
-                { /*button  for sign up */ } 
-                <button type = "button"
-                className = "btn btn-warning"
-                onClick = {
-                    () => this.setState({
-                        showModal1: false,
-                        showModal2: true,
-                        showModal3: false
-                    })
-                } > SIGN UP </button>
+                } > Guest User </button>
+            
                 <GoogleLogin clientId = "795374708066-fg769hi02d0hfj3jgkbvvb4g72nogch1.apps.googleusercontent.com"
+                className="googleButton"
                 buttonText = "Login with Google"
                 onSuccess = {
                     responseGoogle
