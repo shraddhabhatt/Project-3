@@ -7,6 +7,8 @@ import Grid from "../../components/Grid/Grid.js";
 import Footer  from "../../components/Footer";
 import "./Home.css";
 import {Redirect} from 'react-router-dom';
+import { Carousel } from 'react-bootstrap';
+
 
 class Home extends Component {
 
@@ -104,6 +106,27 @@ render() {
       </div>
       </div>{/*row end*/}
     </div> {/*jumbotron end*/} 
+
+
+
+     {/*carousal*/}
+    <Carousel>
+      <Carousel.Item>
+        <img className="slidesetting" alt="900x500" src={require("../../images/s1.jpg")} />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img className="slidesetting" alt="900x500" src={require("../../images/s2.jpg")} />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img className="slidesetting" alt="900x500" src={require("../../images/s3.jpg")} />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img className="slidesetting" alt="900x500" src={require("../../images/s4.jpg")} />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img className="slidesetting" alt="900x500" src={require("../../images/s5.jpg")} />
+      </Carousel.Item>
+      </Carousel>
       
       {/*about us youtism*/}
       <div className="col-8 jobDetailSide">
