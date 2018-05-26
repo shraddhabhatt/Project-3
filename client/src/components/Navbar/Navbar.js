@@ -4,11 +4,6 @@ import "./Navbar.css";
 
 class Navbar extends Component {
 
-  // logout(e){
-  //   e.preventDefault();
-  //   this.props.logout();
-  // }
-
   render() {
 
     return (

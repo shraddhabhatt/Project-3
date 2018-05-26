@@ -12,8 +12,6 @@ import Guestlogin from "../../components/Guestlogin/Guestlogin.js";
 import GoogleLogin from 'react-google-login';
 import {PostData} from '../../services/PostData';
 import {Redirect} from 'react-router-dom';
-
-
 class Loginpage extends Component {
 
     // componentDidMount() {
