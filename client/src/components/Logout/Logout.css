@@ -1,0 +1,14 @@
+.logout {
+  background-color : black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border-color: gray;
+}
+
+#myLogoutButton {
+  position: fixed;
+  left: -4px;
+  top: 100px;
+  z-index: 9999;
+}

@@ -9,7 +9,7 @@
     "start": "concurrently \"nodemon server.js\" \"npm run client\"",
     "build": "node scripts/build.js",
     "seed": "node scripts/seedDB.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo test didn't run",
     "installDeps": "yarn && cd client && yarn"
   },
   "author": "",
@@ -27,6 +27,7 @@
     "express": "^4.15.4",
     "express-session": "^1.15.6",
     "mysql2": "^1.5.3",
+    "react-geocode": "0.0.9",
     "sequelize": "^4.37.7",
     "sequelize-values": "^1.1.0",
     "session-file-store": "^1.2.0"

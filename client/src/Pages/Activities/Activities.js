@@ -6,6 +6,7 @@ import Header from "../../components/Header/Header.js";
 import Grid from "../../components/Grid/Grid.js";
 import Footer  from "../../components/Footer";
 import "./Activities.css";
+import LogoutBtn from "../../components/Logout";
 
 class Activities extends Component {
 
@@ -32,13 +33,14 @@ class Activities extends Component {
     return (
       <div>
         <Navbar/>
+        <LogoutBtn />    
 
-          <div className="row">
-            <div className="col-4 imageside">
-            {/* Image*/}
-            <img  alt="image1" src={require("../../images/act3.jpg")} style={imagesetting}/>
+            <div className="row">
+              <div className="col-4 imageside">
+              {/* Image*/}
+              <img  alt="image1" src={require("../../images/act3.jpg")} style={imagesetting}/>
+              </div>
             </div>
-          </div>
 
           {/* text in jumbotorn*/}
           <div className="col-8 jobDetailSide">
@@ -52,81 +54,61 @@ class Activities extends Component {
               </div>
           </div>
 
-          <div className="jumbotron jumbotron-fluid homejumboforimage" >
+
+        <div className="jumbotron jumbotron-fluid homejumboforimage" >
           <div className="row">
             <div className="containerOutside">
            
-              <div className="containerInside col-lg-6">
+              <div className="containerInside col-lg-6 col-md-8">
                 <img src={require("../../images/game2.jpg")} alt="Color Recognition Game" className="imageAct img-responsive" />
                 <div className="overlay">
                   <div className="instructions">
-                    <h5>Colorfy</h5>
-                    <a href="https://shraddhabhatt.github.io/Color_Play/Color_Recognition.html" className="btn btn-primary"> PLAY</a>
+                    <h2>Colorfy</h2>
+                    <a href="https://shraddhabhatt.github.io/Color_Play/Color_Recognition.html" className="btn btn-primary btn-center"> PLAY</a>
                   </div>
                 </div>
               </div>
 
 
-              <div className="containerInside col-lg-6">
+              <div className="containerInside col-lg-6 col-md-8">
                 <img src={require("../../images/drawify.jpg")} alt="Drawing Activity" className="imageAct img-responsive" />
                 <div className="overlay">
                   <div className="instructions">
-                    <h5>Drawfy</h5>
-                    <h3>Enable your webcame and start playing!</h3>
-                    <a href="https://anithasunil2008.github.io/Color-Drawing-Recognition/color_draw_something.html" className="btn btn-primary"> PLAY</a>
+                    <h2>Drawfy</h2>
+                    <a href="https://anithasunil2008.github.io/Color-Drawing-Recognition/color_draw_something.html" className="btn btn-primary btn-center"> PLAY</a>
                   </div>
                 </div>
               </div>
 
-            </div>
+           </div>
           </div>
-
-          <br />
-          <br />
-
-           <div className="row">
+<br />
+          <div className="row">
             <div className="containerOutside">
            
-              <div className="containerInside col-lg-6">
-                <img src={require("../../images/game2.jpg")} alt="Avatar" className="imageAct img-responsive" />
+              <div className="containerInside col-lg-6 col-md-8">
+                <img src={require("../../images/click.webp")} alt="Avatar" className="imageAct img-responsive" />
                 <div className="overlay">
                   <div className="instructions">
-                    <h5>Hello World</h5>
-                    <div className="embed-responsive embed-responsive-16by9">
-                    <iframe className="embed-responsive-item" src="https://shraddhabhatt.github.io/Color_Play/Color_Recognition.html" allowfullscreen></iframe>
-                    </div>
+                    <h2>Clickify</h2>                 
+                    <a href="https://click-me-game-react.herokuapp.com/" className="btn btn-primary btn-center">PLAY</a>
                   </div>
-                </div>
+                </div> 
               </div>
 
-
-              <div className="containerInside col-lg-6">
+              <div className="containerInside col-lg-6col-md-8">
                 <img src={require("../../images/game3.jpg")} alt="Trivia Game" className="imageAct img-responsive" />
                 <div className="overlay">
                   <div className="instructions">
-                    <h5>Trivia Game</h5>
-                    <a href="https://anithasunil2008.github.io/TriviaGame/" className="btn btn-primary">PLAY</a>
+                    <h2>Trivia Game</h2>
+                    <a href="https://anithasunil2008.github.io/TriviaGame/" className="btn btn-primary btn-center">PLAY</a>
                   </div>
                 </div>
               </div>
 
             </div>
           </div>
-        </div>
-
-              
-            
-            {/* optional  text */}
-            <div className="col-8 jobDetailSide">
-                  <div className="jumbotron jumbotron-fluid" style={jumbotronsetting}>
-                     <div className="container">
-                        <h2 className="display-4">Connecting People.Improving Skills.</h2><hr/>
-                        <p className="lead">Youtism is a non-profit organization that exists to educate and connect
-                         individuals and families to answers that matter: information and resources that help them make more informed decisions, 
-                         build and strengthen relationships, and more importantly, thrive. Together, we’ll help you connect the pieces.</p>
-                     </div>
-                  </div>
-            </div> {/* end optional text*/}
+      </div>
 
           {/*Footer */}
           <Footer/>

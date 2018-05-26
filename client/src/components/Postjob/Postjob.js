@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-
 import { Input, TextArea, FormBtn } from "../../components/Form";
-
 import API from "../../utils/API";
 
 class Postjob extends Component {

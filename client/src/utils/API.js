@@ -10,6 +10,7 @@ export default {
             return res;
         });
     },
+    
     // Saves a book to the database
     saveEvent: function(eventData) {
         console.log(eventData);
@@ -27,5 +28,13 @@ export default {
              console.log("Response in POST");
              return res;
          });
+    },
+
+    getJobs: function() {
+        return axios.get("/api/jobs/")
+        .then(function(res){
+            console.log("Response in GET "+ res);
+            return res;
+        });
     },
 };

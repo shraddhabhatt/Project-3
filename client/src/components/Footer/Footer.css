@@ -27,10 +27,12 @@ footer {
 }
 
 .footer-logo {
-
     height: 100px;
     float: right;
     border-radius: 75px;
+}
+#none {
+  display: block;
 }
 .boxesContainer {
     bottom: 0;
@@ -43,6 +45,7 @@ footer {
 a {
   font-size: 15px;
 }
+
 li {
   padding: 0;
 }
@@ -86,17 +89,23 @@ footer {
 height: 530px;
 background-repeat: no-repeat;
 } 
-
+.
 .footer-logo{
   width: 100%;
   border-radius: 75px;
+  display: none;
+}
+
+#none {
+  height: 0;
+  width: 0;
+  display: none !important;
 }
 .boxesContainer {
   margin-top: 0px;
   }
 .logoDiv {
-  margin-left: 200px;
-  border-radius: 75px;
+  height: 0px;
 }
 }
 
@@ -105,14 +114,14 @@ background-repeat: no-repeat;
 {
 
 footer {
-  height: 500px;
+  height: 370px;
 }
 .space{
 height: 30px;
 } 
 
 .footerStyle{
-height: 450px;
+height: 330px;
 background-repeat: no-repeat;
 } 
 
@@ -120,7 +129,7 @@ ul.left ul.right{
   justify-content: center;
   float: none;
   padding-left: 40px;
-  margin: 0px -20px;
+  margin: -40px -20px;
   text-align: center !important; 
 }
 

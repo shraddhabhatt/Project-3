@@ -26,13 +26,13 @@ class Footer extends Component {
 									<ul className="right">	
 										<br/>
 										<li><a href="#" target="_blank">SHRADDHA BHATT</a></li>
-										<li><a href="#" target="_blank">ANITHARAJ SHRIDHARAN</a></li>			
+										<li><a href="#" target="_blank">ANITHARAJ SRIDHARAN</a></li>			
 									</ul>
 								</div>	
 
 
 								<div className="col-lg-6 col-md-4 col-sm-4 offset-sm-1 logoDiv">
-									<img alt="logo" src={require("../../images/logo.png")} className="footer-logo img-fluid" />
+									<img alt="logo" src={require("../../images/logo.png")} className="footer-logo img-fluid" id="none" />
 								</div>
 							</div>						
 					    </div>
@@ -62,6 +62,3 @@ class Footer extends Component {
     }
 }
 export default Footer;
-
- 
- 

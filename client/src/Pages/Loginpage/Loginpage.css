@@ -24,11 +24,18 @@
 	.size1{ width: 200px; }
 
 	.googleButton{
-		margin-left: 75px;
+		margin-left: 50px;
 		margin-top: 10px;
 		background-color: red;
 		color: white;
 		font-size: 20px;
+		padding: 10px;
 	} 
+
+	#guestUser{
+		margin-left: 50px;
+		width: 170px;
+		font-size: 20px;
+	}
 
 	
