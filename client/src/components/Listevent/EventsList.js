@@ -5,6 +5,7 @@ import { ListItem } from "./ListItem";
 import { Col, Row } from "../../components/Grid";
 import Map from "../../components/Map/Map";
 import API from "../../utils/API";
+import './List.css';
 
 class EventsList extends Component {
     state = {
@@ -36,19 +37,22 @@ class EventsList extends Component {
                         name={event.name}
                         description={event.description}
                         date={event.date}
-					              address1={event.address1}
-            						address2={event.address2}
-            						city={event.city}
-            						state={event.state}
-            						zipcode={event.zip}>  
+					    address1={event.address1}
+            			address2={event.address2}
+            			city={event.city}
+            			state={event.state}
+            			zipcode={event.zip}>  
                      </ListItem>))}
                   </List>
                 </div>
               </div>
             </Col>
             <Col size="md-4">
-                <div style={{height: '500px', width: '500px'}}>
-                <Map></Map>
+                <div id="map" style={{height: '580px', width: '350px'}}>
+                    <Map 
+                        markers={this.state.allevents}
+                        isMarkerShown 
+                     />
                 </div>
             </Col>
     </Row>         
