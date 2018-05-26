@@ -1,3 +1,4 @@
+
 //imports dependencies and files
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
@@ -27,9 +28,7 @@ componentDidMount() {
 
 render() {
 
-  if(!sessionStorage.getItem('userData') || this.state.redirect){
-    return (<Redirect to={'/'}/>)
-}
+
 
    const imagesetting = {
     "width" : "100%",
@@ -126,3 +125,5 @@ render() {
 }
 
 export default Home;
+
+
