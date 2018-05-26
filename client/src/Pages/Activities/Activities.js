@@ -20,6 +20,15 @@ class Activities extends Component {
         "background-color" : "white"
     }
 
+    const iframe = {
+        "position": "absolute",
+        "left" : "0",
+        "right": "0",
+        "top": "0",
+        "bottom": "0",
+        "z-index": "100"
+    }
+
     return (
       <div>
         <Navbar/>
@@ -35,7 +44,7 @@ class Activities extends Component {
           <div className="col-8 jobDetailSide">
               <div className="jumbotron jumbotron-fluid" style={jumbotronsetting}>
                  <div className="container">
-                    <h2 className="display-4">Connecting People.Improving Skills.</h2><hr/>
+                    <h2 className="display-4">Connecting People. Improving Skills.</h2><hr/>
                     <p className="lead">Youtism is a non-profit organization that exists to educate and connect
                      individuals and families to answers that matter: information and resources that help them make more informed decisions, 
                      build and strengthen relationships, and more importantly, thrive. Together, we’ll help you connect the pieces.</p>
@@ -48,22 +57,23 @@ class Activities extends Component {
             <div className="containerOutside">
            
               <div className="containerInside col-lg-6">
-                <img src={require("../../images/game2.jpg")} alt="Avatar" className="imageAct img-responsive" />
+                <img src={require("../../images/game2.jpg")} alt="Color Recognition Game" className="imageAct img-responsive" />
                 <div className="overlay">
                   <div className="instructions">
-                   <h5>Hello World</h5>
-                   <a href="https://anithasunil2008.github.io/TriviaGame/" className="btn btn-primary"> PLAY</a>
+                    <h5>Colorfy</h5>
+                    <a href="https://shraddhabhatt.github.io/Color_Play/Color_Recognition.html" className="btn btn-primary"> PLAY</a>
                   </div>
                 </div>
               </div>
 
 
               <div className="containerInside col-lg-6">
-                <img src={require("../../images/game3.jpg")} alt="Avatar" className="imageAct img-responsive" />
+                <img src={require("../../images/drawify.jpg")} alt="Drawing Activity" className="imageAct img-responsive" />
                 <div className="overlay">
                   <div className="instructions">
-                    <h5>Hello World</h5>
-                    <a href="#" className="btn btn-primary"> PLAY</a>
+                    <h5>Drawfy</h5>
+                    <h3>Enable your webcame and start playing!</h3>
+                    <a href="https://anithasunil2008.github.io/Color-Drawing-Recognition/color_draw_something.html" className="btn btn-primary"> PLAY</a>
                   </div>
                 </div>
               </div>
@@ -82,18 +92,20 @@ class Activities extends Component {
                 <div className="overlay">
                   <div className="instructions">
                     <h5>Hello World</h5>
-                    <a href="#" className="btn btn-primary"> PLAY</a>
+                    <div className="embed-responsive embed-responsive-16by9">
+                    <iframe className="embed-responsive-item" src="https://shraddhabhatt.github.io/Color_Play/Color_Recognition.html" allowfullscreen></iframe>
+                    </div>
                   </div>
                 </div>
               </div>
 
 
               <div className="containerInside col-lg-6">
-                <img src={require("../../images/game3.jpg")} alt="Avatar" className="imageAct img-responsive" />
+                <img src={require("../../images/game3.jpg")} alt="Trivia Game" className="imageAct img-responsive" />
                 <div className="overlay">
                   <div className="instructions">
-                    <h5>Hello World</h5>
-                    <a href="#" className="btn btn-primary">PLAY</a>
+                    <h5>Trivia Game</h5>
+                    <a href="https://anithasunil2008.github.io/TriviaGame/" className="btn btn-primary">PLAY</a>
                   </div>
                 </div>
               </div>
@@ -101,6 +113,8 @@ class Activities extends Component {
             </div>
           </div>
         </div>
+
+              
             
             {/* optional  text */}
             <div className="col-8 jobDetailSide">

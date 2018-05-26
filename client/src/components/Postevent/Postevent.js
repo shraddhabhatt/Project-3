@@ -82,7 +82,8 @@ class Postevent extends Component {
             "padding": "25px"
         }
        	return (
-                      <form style={eventPostForm}>
+                      <form style={eventPostForm} className="container">
+                        <div className="row">
                           <label for="eventName"> Event Name </label>
                             <Input 
                             name="eventName"
@@ -90,7 +91,9 @@ class Postevent extends Component {
                             placeholder="Event name goes here"
                             value={eventName}
                             onChange={this.formChange} />
-
+                          </div>  
+                        
+                         <div className="row">
                           <label for="eventDescription"> Event Description </label>
                             <TextArea 
                             name="eventDescription"
@@ -98,7 +101,9 @@ class Postevent extends Component {
                             placeholder="Event description goes here"
                             value={eventDescription}
                             onChange={this.formChange} />
-
+                          </div>  
+                        
+                         <div className="row">
                           <label for="address1"> Address </label>
                             <Input 
                             name="address1"
@@ -106,7 +111,9 @@ class Postevent extends Component {
                             placeholder="123 Main Street"
                             value={address1}
                             onChange={this.formChange} />
-
+                          </div>  
+                          
+                          <div className="row">
                           <label for="address2">Address 2</label>
                             <Input 
                             name="address2"
@@ -114,7 +121,10 @@ class Postevent extends Component {
                             placeholder="Apartment, studio, or floor"
                             value={address2}
                             onChange={this.formChange} />
+                          </div>  
 
+                          <div className="row">
+                          <div className="col-md-4">
                           <label for="city">City</label>
                             <Input 
                             name="city"
@@ -122,7 +132,9 @@ class Postevent extends Component {
                             placeholder="City"
                             value={city}
                             onChange={this.formChange} />
+                          </div>  
 
+                          <div className="col-md-4">
                           <label for="state">State</label>
                             <Input 
                             name="state"
@@ -130,7 +142,9 @@ class Postevent extends Component {
                             placeholder="State"
                             value={state}
                             onChange={this.formChange} />
+                          </div>  
 
+                          <div className="col-md-4">
                           <label for="zip">Zip</label>
                             <Input 
                             name="zip"
@@ -138,6 +152,8 @@ class Postevent extends Component {
                             placeholder="Zip"
                             value={zip}
                             onChange={this.formChange} />
+                          </div>  
+                        </div>    
 
                           <FormBtn onClick={this.submitPost}> Submit event </FormBtn>
                           
