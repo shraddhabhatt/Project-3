@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./Navbar.css";
 // import Loginpage from "../../Pages/Loginpage/Login.js";
+import GoogleLogout from 'react-google-login';
+
 
 
 class Navbar extends Component {
@@ -21,7 +23,7 @@ class Navbar extends Component {
           {/*Nav links*/}
            <ul className=" nav ">
 
-              {/* <li> <a href="/" onClick={this.signOut} >LOGOUT</a></li> */}
+              <li> <a href="/"  >LOGOUT</a></li>
 
               <li ><a href="/Events">EVENTS</a></li>
 
@@ -32,6 +34,11 @@ class Navbar extends Component {
               <li ><a href="/Home">HOME</a></li>
           </ul>
         </div>
+        {/* <GoogleLogout
+        buttonText="Logout"
+        onLogoutSuccess={logout}
+        >
+        </GoogleLogout> */}
       </nav>
     );
   }
