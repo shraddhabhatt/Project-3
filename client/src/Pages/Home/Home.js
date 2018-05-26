@@ -105,6 +105,26 @@ render() {
       </div>
       </div>{/*row end*/}
     </div> {/*jumbotron end*/} 
+
+
+     {/*carousal*/}
+    <Carousel>
+      <Carousel.Item>
+        <img className="slidesetting" alt="900x500" src={require("../../images/s1.jpg")} />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img className="slidesetting" alt="900x500" src={require("../../images/s2.jpg")} />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img className="slidesetting" alt="900x500" src={require("../../images/s3.jpg")} />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img className="slidesetting" alt="900x500" src={require("../../images/s4.jpg")} />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img className="slidesetting" alt="900x500" src={require("../../images/s5.jpg")} />
+      </Carousel.Item>
+      </Carousel>
     
    
       
