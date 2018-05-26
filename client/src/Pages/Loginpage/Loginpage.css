@@ -1,5 +1,4 @@
 
-
 	.bgimage{
 		background-image: url("http://www.wesleyedu.org/images/kids1.png");
 		background-size: cover;
@@ -34,8 +33,13 @@
 
 	#guestUser{
 		margin-left: 50px;
+		margin-top: 10px;
+		background-color:blue;
+		color: white;
 		width: 170px;
+		padding: 40px;
 		font-size: 20px;
+		
 	}
 
 	
