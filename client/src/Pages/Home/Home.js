@@ -55,7 +55,7 @@ render() {
     {/*about youtism*/}
       <div className="jumbotron jumbotron-fluid" style={jumbotronsetting}>
         <div className="container">
-          <h2 className="display-4">Connecting People.Improving Lives.</h2><hr/>
+          <h2 className="display-4">Connecting People. Improving Lives.</h2><hr/>
           <p className="lead">Youtism is a non-profit organization that exists to educate and connect
            individuals and families to answers that matter: information and resources that help them make more informed decisions, 
            build and strengthen relationships, and more importantly, thrive. Together, we’ll help you connect the pieces.</p>
@@ -132,12 +132,12 @@ render() {
       <div className="col-8 jobDetailSide">
               <div className="jumbotron jumbotron-fluid" style={jumbotronsetting}>
                  <div className="container">
-                    <h2 className="display-4">Connecting People.Improving Skills.</h2><hr/>
-                    <p className="lead">Youtism was founded  by a group of parents who realized there was a lack of support and programs available in the Northland and surrounding communities. 
-                    , they decided to make a difference and created Autism Works. 
+                    <h2 className="display-4">Connecting People. Improving Skills.</h2><hr/>
+                    <p className="lead">Youtism was founded  by a group of devlopers who realized there was a lack of support and programs available in Portsmouth, NH and surrounding communities. 
+                    We have decided to make a difference and created You+ism. 
                     Our organization works closely with families and the local community to increase autism awareness and develop programs for individuals with Autism Spectrum Disorders.
 
-                    Subscribe to our newsletter to stay up to date on programs, support groups and workshops. There’s always something great happening at Autism Works!</p>
+                    Subscribe to our newsletter to stay up to date on events and job postings. There’s always something great happening in the applications we develop for children and at the events organized in the surrounding area!</p>
                  </div>
               </div>
         </div>

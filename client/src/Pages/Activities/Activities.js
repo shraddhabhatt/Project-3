@@ -47,9 +47,10 @@ class Activities extends Component {
               <div className="jumbotron jumbotron-fluid" style={jumbotronsetting}>
                  <div className="container">
                     <h2 className="display-4">Connecting People. Improving Skills.</h2><hr/>
-                    <p className="lead">Youtism is a non-profit organization that exists to educate and connect
-                     individuals and families to answers that matter: information and resources that help them make more informed decisions, 
-                     build and strengthen relationships, and more importantly, thrive. Together, we’ll help you connect the pieces.</p>
+                    <p className="lead">outism is intended to become a platform that will educate and connect
+                     individuals and families, and provide a solution to the lack of information and resources available online at the moment regarding autism spectrum disorders.
+                     This way, families will make better, more informed decisions regarding the needs of their loved ones so that they can build and strengthen relationships with them, and more importantly, thrive. 
+                     Together, we’ll help you connect the pieces.</p>
                  </div>
               </div>
           </div>
