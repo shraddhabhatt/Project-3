@@ -112,7 +112,7 @@ render() {
      {/*carousal*/}
     <Carousel>
       <Carousel.Item>
-        <img className="slidesetting" alt="900x500" src={require("../../images/s1.jpg")} />
+        <img className="slidesetting" alt="900x500" src={require("../../images/act3.png")} />
       </Carousel.Item>
       <Carousel.Item>
         <img className="slidesetting" alt="900x500" src={require("../../images/s2.jpg")} />
@@ -121,7 +121,7 @@ render() {
         <img className="slidesetting" alt="900x500" src={require("../../images/s3.jpg")} />
       </Carousel.Item>
       <Carousel.Item>
-        <img className="slidesetting" alt="900x500" src={require("../../images/s4.jpg")} />
+        <img className="slidesetting" alt="900x500" src={require("../../images/s6.png")} />
       </Carousel.Item>
       <Carousel.Item>
         <img className="slidesetting" alt="900x500" src={require("../../images/s5.jpg")} />
