@@ -6,6 +6,7 @@ import Header from "../../components/Header/Header.js";
 import Grid from "../../components/Grid/Grid.js";
 import Footer  from "../../components/Footer";
 import "./Activities.css";
+import LogoutBtn from "../../components/Logout";
 
 class Activities extends Component {
 
@@ -20,22 +21,32 @@ class Activities extends Component {
         "background-color" : "white"
     }
 
+    const iframe = {
+        "position": "absolute",
+        "left" : "0",
+        "right": "0",
+        "top": "0",
+        "bottom": "0",
+        "z-index": "100"
+    }
+
     return (
       <div>
         <Navbar/>
+        <LogoutBtn />    
 
-          <div className="row">
-            <div className="col-4 imageside">
-            {/* Image*/}
-            <img  alt="image1" src={require("../../images/act3.jpg")} style={imagesetting}/>
+            <div className="row">
+              <div className="col-4 imageside">
+              {/* Image*/}
+              <img  alt="image1" src={require("../../images/act3.jpg")} style={imagesetting}/>
+              </div>
             </div>
-          </div>
 
           {/* text in jumbotorn*/}
           <div className="col-8 jobDetailSide">
               <div className="jumbotron jumbotron-fluid" style={jumbotronsetting}>
                  <div className="container">
-                    <h2 className="display-4">Connecting People.Improving Skills.</h2><hr/>
+                    <h2 className="display-4">Connecting People. Improving Skills.</h2><hr/>
                     <p className="lead">Youtism is a non-profit organization that exists to educate and connect
                      individuals and families to answers that matter: information and resources that help them make more informed decisions, 
                      build and strengthen relationships, and more importantly, thrive. Together, we’ll help you connect the pieces.</p>
@@ -44,80 +55,60 @@ class Activities extends Component {
           </div>
 
 
-        {/* 4 images jumbotron */}
         <div className="jumbotron jumbotron-fluid homejumboforimage" >
           <div className="row">
-            <div className="container">
-
-               {/*image 1*/}
-              <div className="col-lg-6">
-               <div className="card  card1" >
-                  <img className="card-img-top" src={require("../../images/game1.jpg")}  alt="Card image cap"/>
-                  <div className="card-body ">
-                    <h5 className="card-title">Drawfy</h5>
-                    <a href="https://anithasunil2008.github.io/Color-Drawing-Recognition/color_draw_something.html" target="_b" className="btn btn-primary"> PLAY</a>
+            <div className="containerOutside">
+           
+              <div className="containerInside col-lg-6 col-md-8">
+                <img src={require("../../images/game2.jpg")} alt="Color Recognition Game" className="imageAct img-responsive" />
+                <div className="overlay">
+                  <div className="instructions">
+                    <h2>Colorfy</h2>
+                    <a href="https://shraddhabhatt.github.io/Color_Play/Color_Recognition.html" className="btn btn-primary btn-center"> PLAY</a>
                   </div>
                 </div>
-             </div>
-             
+              </div>
 
-            {/*image 2*/}
-            <div className="col-lg-6">
-              <div className="card  card1" >
-                  <img className="card-img-top" src={require("../../images/game3.jpg")}  alt="Card image cap"/>
-                  <div className="card-body">
-                    <h5 className="card-title">Trivia</h5>
-                    <a href="https://anithasunil2008.github.io/TriviaGame/" target="_b" className="btn btn-primary"> PLAY</a>
-                  </div>
-                </div> 
-            </div>
-          </div>  {/*row end*/}
-          <br/>
 
-        {/*next row for image*/}
-       <div className="container">
-        <div className="row">
-          <div className="container">
-
-            {/*image3*/}
-            <div className="col-lg-6">
-               <div className="card  card1" >
-                  <img className="card-img-top" src={require("../../images/game2.jpg")}  alt="Card image cap"/>
-                  <div className="card-body">
-                    <h5 className="card-title">Colorfy</h5>
-                    <a href="https://shraddhabhatt.github.io/Color_Play/Color_Recognition.html" target="_b" className="btn btn-primary"> PLAY</a>
-                  </div>
-                </div> 
-            </div>
-
-            {/*image4*/}
-            <div className="col-lg-6">
-              <div className="card  card1" >
-                  <img className="card-img-top" src={require("../../images/game4.png")}  alt="Card image cap" />
-                  <div className="card-body">
-                    <h5 className="card-title">Clickify</h5>
-                    <a href="https://click-me-game-react.herokuapp.com/" target="_b" className="btn btn-primary">PLAY</a>
+              <div className="containerInside col-lg-6 col-md-8">
+                <img src={require("../../images/drawify.jpg")} alt="Drawing Activity" className="imageAct img-responsive" />
+                <div className="overlay">
+                  <div className="instructions">
+                    <h2>Drawfy</h2>
+                    <a href="https://anithasunil2008.github.io/Color-Drawing-Recognition/color_draw_something.html" className="btn btn-primary btn-center"> PLAY</a>
                   </div>
                 </div>
-            </div>
+              </div>
 
-          </div>  
-        </div> 
-       </div>
-      </div>{/*row end*/}
-    </div> {/*jumbotron end*/} 
-      
-            {/* optional  text */}
-            <div className="col-8 jobDetailSide">
-                  <div className="jumbotron jumbotron-fluid" style={jumbotronsetting}>
-                     <div className="container">
-                        <h2 className="display-4">Connecting People.Improving Skills.</h2><hr/>
-                        <p className="lead">Youtism is a non-profit organization that exists to educate and connect
-                         individuals and families to answers that matter: information and resources that help them make more informed decisions, 
-                         build and strengthen relationships, and more importantly, thrive. Together, we’ll help you connect the pieces.</p>
-                     </div>
+           </div>
+          </div>
+<br />
+          <div className="row">
+            <div className="containerOutside">
+           
+              <div className="containerInside col-lg-6 col-md-8">
+                <img src={require("../../images/click.webp")} alt="Avatar" className="imageAct img-responsive" />
+                <div className="overlay">
+                  <div className="instructions">
+                    <h2>Clickify</h2>                 
+                    <a href="https://click-me-game-react.herokuapp.com/" className="btn btn-primary btn-center">PLAY</a>
                   </div>
-            </div> {/* end optional text*/}
+                </div> 
+              </div>
+
+              <div className="containerInside col-lg-6col-md-8">
+                <img src={require("../../images/game3.jpg")} alt="Trivia Game" className="imageAct img-responsive" />
+                <div className="overlay">
+                  <div className="instructions">
+                    <h2>Trivia Game</h2>
+                    <a href="https://anithasunil2008.github.io/TriviaGame/" className="btn btn-primary btn-center">PLAY</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+      </div>
 
           {/*Footer */}
           <Footer/>

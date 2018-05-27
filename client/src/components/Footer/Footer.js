@@ -32,7 +32,7 @@ class Footer extends Component {
 
 
 								<div className="col-lg-6 col-md-4 col-sm-4 offset-sm-1 logoDiv">
-									<img alt="logo" src={require("../../images/logo.png")} className="footer-logo img-fluid" />
+									<img alt="logo" src={require("../../images/logo.png")} className="footer-logo img-fluid" id="none" />
 								</div>
 							</div>						
 					    </div>

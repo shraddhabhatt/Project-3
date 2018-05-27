@@ -8,8 +8,8 @@ import Grid from "../../components/Grid/Grid.js";
 import Footer  from "../../components/Footer";
 import "./Home.css";
 import {Redirect} from 'react-router-dom';
+import LogoutBtn from "../../components/Logout";
 import { Carousel } from 'react-bootstrap';
-
 
 class Home extends Component {
 
@@ -45,6 +45,7 @@ render() {
   return (
     <div>
       <Navbar/>
+      <LogoutBtn />  
       {/*image */}
       <img  alt="image1" src={require("../../images/img1.jpg")} style={imagesetting}/>
 

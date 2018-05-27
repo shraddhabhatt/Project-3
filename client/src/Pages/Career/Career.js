@@ -8,6 +8,9 @@ import Imagegrid  from "../../components/Imagegrid";
 import { Modal } from 'react-bootstrap';
 import Postjob from "../../components/Postjob/Postjob.js";
 import JobsList from "../../components/Listjob/JobsList.js";
+import {FormGroup, InputGroup, Button, FormControl} from "react-bootstrap";
+import LogoutBtn from "../../components/Logout";
+
 
 class Career extends Component {
 
@@ -49,6 +52,7 @@ render() {
       <div>
         
         <Navbar/>
+        <LogoutBtn />  
         <div className="row">
             {/*image*/}
             <div className="col-4 imageside">
@@ -82,6 +86,39 @@ render() {
               </div>
             </div>
           </div> {/*end about career*/}
+
+        <div className="jumbotron jumbotron-fluid">
+          <div className="container">
+
+            <div className="row">
+              <div className="col-md-4"></div>
+              <div className="col-md-4">
+                <h2 className="text-center">Get job alerts here!</h2>
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="col-md-2"></div>
+              <div className="col-md-8">
+                <p>Enter your email address to get the latest updates right now in your inbox. If you have a job available and want to post it on our website, please register and then sign in!</p>
+              </div>
+            </div>
+
+            <div className="row">
+                      <div className="col-lg-4"></div>
+                      <div className="col-lg-4">
+                          <FormGroup>
+                              <InputGroup>
+                                <FormControl type="email" placeholder="Enter your email address here" style={{"border": "2px solid gray", "border-radius": "20px 0 0 20px", "height": "50px"}}/>
+                                  <InputGroup.Button>
+                                     <Button type="submit" style={{"background" : "orange", "border": "2px solid gray", "border-radius": "0 20px 20px 0", "height": "50px"}}>Subscribe</Button>
+                                  </InputGroup.Button>
+                              </InputGroup>
+                          </FormGroup>
+                      </div>  
+            </div>
+          </div> 
+        </div>  
            
            {/*footer*/} 
           <Footer/>

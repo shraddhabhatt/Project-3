@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-
 import { Input, TextArea, FormBtn } from "../../components/Form";
-
 import API from "../../utils/API";
 
 class Postjob extends Component {
@@ -58,10 +56,12 @@ class Postjob extends Component {
     render() {
 
     	const {jobTitle, companyName, description, qualification, location} = this.state;
-    
+      const jobPostForm = {
+        "padding": "25px"
+      }
     	return (
               // <form onSubmit={this.handleSubmit}>
-                <form>
+                <form style={jobPostForm}>
                   <label for="jobTitle"> Job Title </label>
                     <Input 
                         name="jobTitle"
