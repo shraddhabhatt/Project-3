@@ -3,7 +3,7 @@
  	overflow: hidden;
  }
 
- .bgimage {
+ .bgimage{
  	background-image: url("../../images/kids2.png");
  	background-size: cover;
  	width: 100%;
