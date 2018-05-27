@@ -58,17 +58,14 @@ class Loginpage extends Component {
         });
     }
 
-    // set state for Modal
-    state = {
-        isActive: false
-    }
-    // toggle Modal
-    toggleModal = () => {
-        this.setState({
-            isActive: !this.state.isActive
-        })
-    }
     render() {
+
+
+  //   const imagesetting = {
+  //   "width" : "250px",
+  //   "marginTop" : "100px",
+  //   "height" : "auto"
+  // }
         
         if (this.state.redirectToReferrer || sessionStorage.getItem('userData')) {
 
@@ -83,92 +80,28 @@ class Loginpage extends Component {
             }
             return (
                 <div className = "front" > { /*for full size image */ } 
-                <div className = "jumbotron bgimage" > { /* setting to get full size for image*/ } 
-                <br/> <br/> <br/>
-                <br/> <br/> <br/>
-                <br/> <br/> <br/> { /*jumbotron box for Login,Sign up , Guest user*/ } 
-                <div className = "jumbotron jumbotron-fluid textjumbo " >
-                <div className = "container" >
-                <img className = "size1"
-                src = {
-                    require("../../images/a2.png")
-                }
-                alt = "Cinque Terre" /> <br/> < br/> { /*button group for Login,Sign up , Guest user*/ } 
-                <div className = "btn-group" >
-            
-                {/* <button type = "button"
-                id = "guestUser"
-                className =  "btn btn-info"
-                onClick = {
-                    () => this.setState({
-                        showModal1: false,
-                        showModal2: false,
-                        showModal3: true
-                    })
-                } > Guest User </button> */}
+                    <div className = " bgimage" > { /* setting to get full size for image*/ } 
+                        <div className=" ovf">
+                            {/*<img className="ss  w3-container w3-center w3-animate-top" alt="logo" src={require("../../images/logo.png")}/>*/}
 
-                {/* <button type = "button"
-               id = "guestUser"
-               className =  "btn btn-info"
-                ><a href="/Home"> Guest User</a> </button> */}
+                            <GoogleLogin clientId = "795374708066-fg769hi02d0hfj3jgkbvvb4g72nogch1.apps.googleusercontent.com"
+                            className="googleButton animated zoomIn"
+                            buttonText="G+"
+                            onSuccess = {
+                                responseGoogle
+                            }
+                            onFailure = {
+                                responseGoogle
+                            }
 
-                <a href="/Home"  id = "guestUser" type="button" >Guest User</a>
 
-                <GoogleLogin clientId = "795374708066-fg769hi02d0hfj3jgkbvvb4g72nogch1.apps.googleusercontent.com"
-                className="googleButton"
-                buttonText = "Login with Google"
-                onSuccess = {
-                    responseGoogle
-                }
-                onFailure = {
-                    responseGoogle
-                }
-                />
+                            />
 
-                { /*Modal for Login*/ } 
-                <Modal show = {
-                    this.state.showModal1
-                }
-                onHide = {
-                    () => this.setState({
-                        showModal2: false,
-                        showModal3: false
-                    })
-                } >
-                <Login/>
-                </Modal>
-                { /*Modal for Sign up */ } 
-                <Modal show = {
-                    this.state.showModal2
-                }
-                onHide = {
-                    () => this.setState({
-                        showModal1: false,
-                        showModal3: false
-                    })
-                } >
-                <Register />
-                </Modal>
-                { /*Modal for Guest user */ } 
-                <Modal show = {
-                    this.state.showModal3
-                }
-                onHide = {
-                    () => this.setState({
-                        showModal1: false,
-                        showModal2: false
-                    })
-                } >
-                <Guestlogin />
-                </Modal> 
-                </div>
-                </div> 
-                </div> { /* setting to get full size for image*/ } 
-                <br /> < br /> < br />
-                <br /> < br /> < br />
-                <br /> < br /> < br />
-                <br /> < br />
-                </div> 
+                            <a href="/Home"   type="button" > <img id="guestUser"  className="animated zoomIn" alt="logo" src={require("../../images/guest.png")}/></a>
+                        </div>
+                        
+                    </div> 
+                    
                 </div>
             );
         }

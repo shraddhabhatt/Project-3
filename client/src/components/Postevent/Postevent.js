@@ -224,6 +224,16 @@ class Postevent extends Component {
                           </div>  
                         </div>    
 
+                        <div className="col-sm-6">
+                          <div className="form-group">
+                            <div className="input-group date" id="datetimepicker1">
+                              <input type="text" className="form-control" />
+                              <span className="input-group-addon">
+                                <span className="glyphicon glyphicon-calendar" />
+                              </span>
+                            </div>
+                          </div></div>
+
                           <FormBtn onClick={this.getLatLng}> Submit event </FormBtn>
                           
                       </form>
