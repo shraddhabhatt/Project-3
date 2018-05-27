@@ -12,9 +12,13 @@ import Guestlogin from "../../components/Guestlogin/Guestlogin.js";
 import GoogleLogin from 'react-google-login';
 import {PostData} from '../../services/PostData';
 import {Redirect} from 'react-router-dom';
-
-
 class Loginpage extends Component {
+
+    // componentDidMount() {
+    //     sessionStorage.clear();
+    //     setInterval( () => this.context.router.transitionTo('/'), 2000);
+    // }
+
     constructor(props) {
         super(props);
         this.state = {
@@ -47,6 +51,8 @@ class Loginpage extends Component {
     }
 
     signOut(){
+        sessionStorage.removeItem("userData");
+
         this.setState({
             redirectToReferrer: false
         });
@@ -63,9 +69,13 @@ class Loginpage extends Component {
         })
     }
     render() {
+        
         if (this.state.redirectToReferrer || sessionStorage.getItem('userData')) {
+
             return ( < Redirect to = {'/Home'}/>)
-            }
+        }
+        
+            
             const responseGoogle = (response) => {
                 console.log("google console");
                 console.log(response);
@@ -86,7 +96,7 @@ class Loginpage extends Component {
                 alt = "Cinque Terre" /> <br/> < br/> { /*button group for Login,Sign up , Guest user*/ } 
                 <div className = "btn-group" >
             
-                <button type = "button"
+                {/* <button type = "button"
                 id = "guestUser"
                 className =  "btn btn-info"
                 onClick = {
@@ -95,8 +105,15 @@ class Loginpage extends Component {
                         showModal2: false,
                         showModal3: true
                     })
-                } > Guest User </button>
-            
+                } > Guest User </button> */}
+
+                {/* <button type = "button"
+               id = "guestUser"
+               className =  "btn btn-info"
+                ><a href="/Home"> Guest User</a> </button> */}
+
+                <a href="/Home"  id = "guestUser" type="button" >Guest User</a>
+
                 <GoogleLogin clientId = "795374708066-fg769hi02d0hfj3jgkbvvb4g72nogch1.apps.googleusercontent.com"
                 className="googleButton"
                 buttonText = "Login with Google"
@@ -107,6 +124,7 @@ class Loginpage extends Component {
                     responseGoogle
                 }
                 />
+
                 { /*Modal for Login*/ } 
                 <Modal show = {
                     this.state.showModal1

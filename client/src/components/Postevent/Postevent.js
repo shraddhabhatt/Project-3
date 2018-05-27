@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Geocode from "react-geocode";
+// import Geocode from "react-geocode";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import API from "../../utils/API";
 
@@ -10,7 +10,7 @@ class Postevent extends Component {
 		super(props);
 
       // set Google Maps Geocoding API for purposes of quota management. Its optional but recommended.
-      Geocode.setApiKey("AIzaSyCGjATBrCWBodZMNsGI0UoPPw9ayD3-D4g");
+     // Geocode.setApiKey("AIzaSyCGjATBrCWBodZMNsGI0UoPPw9ayD3-D4g");
      
 		  this.state = {
 
@@ -56,22 +56,22 @@ class Postevent extends Component {
 
     getLatitudeLongitude = address => {
       // If adress is not supplied, use default value 'Ferrol, Galicia, Spain'
-      address = address || 'Ferrol, Galicia, Spain';
-      // Enable or disable logs. Its optional.
-      Geocode.enableDebug();
-      // Get latidude & longitude from address.
-      Geocode.fromAddress(address).then(
-         response => {
-           const { lat, lng } = response.results[0].geometry.location;
-           console.log(lat, lng);
-           this.setState({lat: lat});
-           this.setState({lng: lng});
-           this.submitPost();
-         },
-         error => {
-           console.error(error);
-         }
-       );
+      // address = address || 'Ferrol, Galicia, Spain';
+      // // Enable or disable logs. Its optional.
+      // Geocode.enableDebug();
+      // // Get latidude & longitude from address.
+      // Geocode.fromAddress(address).then(
+      //    response => {
+      //      const { lat, lng } = response.results[0].geometry.location;
+      //      console.log(lat, lng);
+      //      this.setState({lat: lat});
+      //      this.setState({lng: lng});
+      //      this.submitPost();
+      //    },
+      //    error => {
+      //      console.error(error);
+      //    }
+      //  );
      };
 
     submitPost = () =>{
