@@ -14,11 +14,6 @@ import {PostData} from '../../services/PostData';
 import {Redirect} from 'react-router-dom';
 class Loginpage extends Component {
 
-    // componentDidMount() {
-    //     sessionStorage.clear();
-    //     setInterval( () => this.context.router.transitionTo('/'), 2000);
-    // }
-
     constructor(props) {
         super(props);
         this.state = {
