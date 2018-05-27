@@ -1,38 +1,32 @@
 {
-<<<<<<< HEAD
-  "main.css": "static/css/main.d1054014.css",
-  "main.css.map": "static/css/main.d1054014.css.map",
-  "main.js": "static/js/main.7606af6f.js",
-  "main.js.map": "static/js/main.7606af6f.js.map",
-=======
-  "main.css": "static/css/main.232ee975.css",
-  "main.css.map": "static/css/main.232ee975.css.map",
-  "main.js": "static/js/main.4d075584.js",
-  "main.js.map": "static/js/main.4d075584.js.map",
->>>>>>> 38ee1735860459894adc87d420a6a3018f0d2925
+  "main.css": "static/css/main.625bd5f4.css",
+  "main.css.map": "static/css/main.625bd5f4.css.map",
+  "main.js": "static/js/main.1c786c25.js",
+  "main.js.map": "static/js/main.1c786c25.js.map",
   "static\\media\\a2.png": "static/media/a2.e6331c5f.png",
   "static\\media\\act3.jpg": "static/media/act3.e4d86c2b.jpg",
   "static\\media\\career.jpg": "static/media/career.1d3e7c05.jpg",
   "static\\media\\career1.jpg": "static/media/career1.1a8301ff.jpg",
   "static\\media\\career2.jpg": "static/media/career2.95caae93.jpg",
   "static\\media\\career3.jpg": "static/media/career3.cd89f4fa.jpg",
+  "static\\media\\click.webp": "static/media/click.612cd3ad.webp",
   "static\\media\\donate.jpg": "static/media/donate.6412c29a.jpg",
+  "static\\media\\drawify.jpg": "static/media/drawify.6088ab89.jpg",
   "static\\media\\events4.jpg": "static/media/events4.df858925.jpg",
   "static\\media\\footer7.png": "static/media/footer7.d3cfb861.png",
-  "static\\media\\game1.jpg": "static/media/game1.8af0886e.jpg",
   "static\\media\\game2.jpg": "static/media/game2.fb97b11c.jpg",
   "static\\media\\game3.jpg": "static/media/game3.0052ed17.jpg",
-  "static\\media\\game4.png": "static/media/game4.0b852bb8.png",
   "static\\media\\h1.png": "static/media/h1.de033be5.png",
   "static\\media\\h3.jpg": "static/media/h3.2cbe7e36.jpg",
   "static\\media\\h4.jpg": "static/media/h4.1996eb21.jpg",
   "static\\media\\img1.jpg": "static/media/img1.2160dfad.jpg",
-<<<<<<< HEAD
-  "static\\media\\login.jpg": "static/media/login.1cee886c.jpg",
-=======
->>>>>>> 38ee1735860459894adc87d420a6a3018f0d2925
   "static\\media\\logo.png": "static/media/logo.fd5f82d0.png",
   "static\\media\\p1.jpg": "static/media/p1.9327f837.jpg",
   "static\\media\\parallax2.jpg": "static/media/parallax2.74a1b789.jpg",
+  "static\\media\\s1.jpg": "static/media/s1.92bfe282.jpg",
+  "static\\media\\s2.jpg": "static/media/s2.5e733c4d.jpg",
+  "static\\media\\s3.jpg": "static/media/s3.624c985d.jpg",
+  "static\\media\\s4.jpg": "static/media/s4.d581f6f7.jpg",
+  "static\\media\\s5.jpg": "static/media/s5.022711d9.jpg",
   "static\\media\\volunteer.png": "static/media/volunteer.2a614c52.png"
 }
