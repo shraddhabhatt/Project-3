@@ -1,12 +1,8 @@
 import React, { Component } from "react";
+import LoginPage from "../../Pages/Loginpage/Loginpage";
 import "./Navbar.css";
 
 class Navbar extends Component {
-
-  // logout(e){
-  //   e.preventDefault();
-  //   this.props.logout();
-  // }
 
   render() {
 
@@ -19,7 +15,10 @@ class Navbar extends Component {
           {/*Nav links*/}
            <ul className=" nav ">
 
-              <li> <button className="glyphicon glyphicon-user">LOGOUT</button></li>
+              <li>   <button type = "button"
+               
+               className =  "btn btn-info"
+                ><a href="/"> Logout</a> </button></li>
 
               <li ><a href="/Events">EVENTS</a></li>
 
@@ -36,5 +35,4 @@ class Navbar extends Component {
 }
 
 export default Navbar;
-
 

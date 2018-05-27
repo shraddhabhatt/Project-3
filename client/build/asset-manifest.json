@@ -1,8 +1,15 @@
 {
+<<<<<<< HEAD
   "main.css": "static/css/main.d1054014.css",
   "main.css.map": "static/css/main.d1054014.css.map",
   "main.js": "static/js/main.7606af6f.js",
   "main.js.map": "static/js/main.7606af6f.js.map",
+=======
+  "main.css": "static/css/main.232ee975.css",
+  "main.css.map": "static/css/main.232ee975.css.map",
+  "main.js": "static/js/main.4d075584.js",
+  "main.js.map": "static/js/main.4d075584.js.map",
+>>>>>>> 38ee1735860459894adc87d420a6a3018f0d2925
   "static\\media\\a2.png": "static/media/a2.e6331c5f.png",
   "static\\media\\act3.jpg": "static/media/act3.e4d86c2b.jpg",
   "static\\media\\career.jpg": "static/media/career.1d3e7c05.jpg",
@@ -20,7 +27,10 @@
   "static\\media\\h3.jpg": "static/media/h3.2cbe7e36.jpg",
   "static\\media\\h4.jpg": "static/media/h4.1996eb21.jpg",
   "static\\media\\img1.jpg": "static/media/img1.2160dfad.jpg",
+<<<<<<< HEAD
   "static\\media\\login.jpg": "static/media/login.1cee886c.jpg",
+=======
+>>>>>>> 38ee1735860459894adc87d420a6a3018f0d2925
   "static\\media\\logo.png": "static/media/logo.fd5f82d0.png",
   "static\\media\\p1.jpg": "static/media/p1.9327f837.jpg",
   "static\\media\\parallax2.jpg": "static/media/parallax2.74a1b789.jpg",

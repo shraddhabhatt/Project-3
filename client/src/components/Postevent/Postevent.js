@@ -10,7 +10,7 @@ class Postevent extends Component {
 		super(props);
 
       // set Google Maps Geocoding API for purposes of quota management. Its optional but recommended.
-      Geocode.setApiKey("AIzaSyCGjATBrCWBodZMNsGI0UoPPw9ayD3-D4g");
+     // Geocode.setApiKey("AIzaSyCGjATBrCWBodZMNsGI0UoPPw9ayD3-D4g");
      
 		  this.state = {
 
@@ -56,22 +56,22 @@ class Postevent extends Component {
 
     getLatitudeLongitude = address => {
       // If adress is not supplied, use default value 'Ferrol, Galicia, Spain'
-      address = address || 'Ferrol, Galicia, Spain';
-      // Enable or disable logs. Its optional.
-      Geocode.enableDebug();
-      // Get latidude & longitude from address.
-      Geocode.fromAddress(address).then(
-         response => {
-           const { lat, lng } = response.results[0].geometry.location;
-           console.log(lat, lng);
-           this.setState({lat: lat});
-           this.setState({lng: lng});
-           this.submitPost();
-         },
-         error => {
-           console.error(error);
-         }
-       );
+      // address = address || 'Ferrol, Galicia, Spain';
+      // // Enable or disable logs. Its optional.
+      // Geocode.enableDebug();
+      // // Get latidude & longitude from address.
+      // Geocode.fromAddress(address).then(
+      //    response => {
+      //      const { lat, lng } = response.results[0].geometry.location;
+      //      console.log(lat, lng);
+      //      this.setState({lat: lat});
+      //      this.setState({lng: lng});
+      //      this.submitPost();
+      //    },
+      //    error => {
+      //      console.error(error);
+      //    }
+      //  );
      };
 
     submitPost = () =>{
@@ -116,10 +116,12 @@ class Postevent extends Component {
     render() {
         const {eventName, eventDescription, address1, address2, city, state, zip} = this.state;
         const eventPostForm = {
-            "padding": "20px"
+            "padding": "25px", 
+            "width": "100%"
         }
        	return (
-                      <form style={eventPostForm}>
+                      <form style={eventPostForm} className="container">
+                        <div className="row">
                           <label for="eventName"> Event Name </label>
                             <Input 
                             name="eventName"
@@ -127,7 +129,9 @@ class Postevent extends Component {
                             placeholder="Event name goes here"
                             value={eventName}
                             onChange={this.formChange} />
-
+                          </div>  
+                        
+                         <div className="row">
                           <label for="eventDescription"> Event Description </label>
                             <TextArea 
                             name="eventDescription"
@@ -135,7 +139,9 @@ class Postevent extends Component {
                             placeholder="Event description goes here"
                             value={eventDescription}
                             onChange={this.formChange} />
-
+                          </div>  
+                        
+                         <div className="row">
                           <label for="address1"> Address </label>
                             <Input 
                             name="address1"
@@ -143,7 +149,9 @@ class Postevent extends Component {
                             placeholder="123 Main Street"
                             value={address1}
                             onChange={this.formChange} />
-
+                          </div>  
+                          
+                          <div className="row">
                           <label for="address2">Address 2</label>
                             <Input 
                             name="address2"
@@ -151,7 +159,10 @@ class Postevent extends Component {
                             placeholder="Apartment, studio, or floor"
                             value={address2}
                             onChange={this.formChange} />
+                          </div>  
 
+                          <div className="row">
+                          <div className="col-md-4">
                           <label for="city">City</label>
                             <Input 
                             name="city"
@@ -159,7 +170,9 @@ class Postevent extends Component {
                             placeholder="City"
                             value={city}
                             onChange={this.formChange} />
+                          </div>  
 
+                          <div className="col-md-4">
                           <label for="state">State</label>
                             <Input 
                             name="state"
@@ -167,7 +180,9 @@ class Postevent extends Component {
                             placeholder="State"
                             value={state}
                             onChange={this.formChange} />
+                          </div>  
 
+                          <div className="col-md-4">
                           <label for="zip">Zip</label>
                             <Input 
                             name="zip"
@@ -175,6 +190,8 @@ class Postevent extends Component {
                             placeholder="Zip"
                             value={zip}
                             onChange={this.formChange} />
+                          </div>  
+                        </div>    
 
                           <FormBtn onClick={this.getLatLng}> Submit event </FormBtn>
                           
