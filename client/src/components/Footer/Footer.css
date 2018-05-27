@@ -31,9 +31,11 @@ footer {
     float: right;
     border-radius: 75px;
 }
+
 #none {
   display: block;
 }
+
 .boxesContainer {
     bottom: 0;
     width: 100%;
