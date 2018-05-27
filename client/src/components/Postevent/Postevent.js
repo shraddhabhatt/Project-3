@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import Geocode from "react-geocode";
+import Geocode from "./geocode";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import API from "../../utils/API";
 
