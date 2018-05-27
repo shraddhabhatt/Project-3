@@ -1,7 +1,13 @@
 import React, { Component } from "react";
-// import Geocode from "react-geocode";
+import Geocode from "./geocode";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import API from "../../utils/API";
+import moment from 'moment';
+import PropTypes from "prop-types";
+import DatePicker, {CalendarContainer} from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import './Postevent.css';
+
 
 
 class Postevent extends Component {
@@ -10,7 +16,7 @@ class Postevent extends Component {
 		super(props);
 
       // set Google Maps Geocoding API for purposes of quota management. Its optional but recommended.
-     // Geocode.setApiKey("AIzaSyCGjATBrCWBodZMNsGI0UoPPw9ayD3-D4g");
+     Geocode.setApiKey("AIzaSyCGjATBrCWBodZMNsGI0UoPPw9ayD3-D4g");
      
 		  this.state = {
 
@@ -22,13 +28,20 @@ class Postevent extends Component {
 	          state: "",
             zip: "",
             lat: "",
-            lng: ""
+            lng: "",
+            startDate: moment()
           }
   
-       // this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
         this.formChange   = this.formChange.bind(this);
   }
   
+  handleChange(date) {
+    this.setState({
+      startDate: date
+      }, () => console.log(moment(this.state.startDate).format("MM/DD/YY HH:mm")));
+   }
+
   loadPosts = () => {    
     API.getEvents()
       .then(res =>
@@ -54,26 +67,27 @@ class Postevent extends Component {
       this.getLatitudeLongitude(address);
     } 
 
+
     getLatitudeLongitude = address => {
       // If adress is not supplied, use default value 'Ferrol, Galicia, Spain'
-      // address = address || 'Ferrol, Galicia, Spain';
-      // // Enable or disable logs. Its optional.
-      // Geocode.enableDebug();
-      // // Get latidude & longitude from address.
-      // Geocode.fromAddress(address).then(
-      //    response => {
-      //      const { lat, lng } = response.results[0].geometry.location;
-      //      console.log(lat, lng);
-      //      this.setState({lat: lat});
-      //      this.setState({lng: lng});
-      //      this.submitPost();
-      //    },
-      //    error => {
-      //      console.error(error);
-      //    }
-      //  );
+      address = address || 'Ferrol, Galicia, Spain';
+      // Enable or disable logs. Its optional.
+      Geocode.enableDebug();
+      // Get latidude & longitude from address.
+      Geocode.fromAddress(address).then(
+         response => {
+           const { lat, lng } = response.results[0].geometry.location;
+           console.log(lat, lng);
+           this.setState({lat: lat});
+           this.setState({lng: lng});
+           this.submitPost();
+         },
+         error => {
+           console.error(error);
+         }
+       );
      };
-
+          
     submitPost = () =>{
       
       console.log("Not Yet Inside Submit Post!!")
@@ -90,7 +104,7 @@ class Postevent extends Component {
                   zip: this.state.zip,
                   lat: this.state.lat,
                   lng: this.state.lng,
-                  date: this.state.date,
+                  date: moment(this.state.startDate).format("MM/DD/YY HH:mm"),
                   UserId: 1
                 })
                 .then(console.log("Return backed with res"))
@@ -119,9 +133,11 @@ class Postevent extends Component {
             "padding": "25px", 
             "width": "100%"
         }
+        
        	return (
                       <form style={eventPostForm} className="container">
                         <div className="row">
+                        <div className="col-md-6">
                           <label for="eventName"> Event Name </label>
                             <Input 
                             name="eventName"
@@ -130,7 +146,22 @@ class Postevent extends Component {
                             value={eventName}
                             onChange={this.formChange} />
                           </div>  
-                        
+
+                          <div className="col-md-6" id="datetimepicker">
+                              <label for="eventDateTime"> Date Time</label>
+                              <DatePicker
+                                  selected={this.state.startDate}
+                                  onChange={this.handleChange}
+                                  calendarContainer={MyContainer}
+                                  showTimeSelect
+                                  timeFormat="HH:mm"
+                                  timeIntervals={15}
+                                  dateFormat="LLL"
+                                  timeCaption="time"
+                              />
+                              </div>
+                         </div>
+
                          <div className="row">
                           <label for="eventDescription"> Event Description </label>
                             <TextArea 
@@ -209,5 +240,21 @@ class Postevent extends Component {
     		);
     }
 }
+function MyContainer({ className, children }) {
+  return (
+    <div id='mycontainer' style={{ overflow: 'visible', padding: '10px', background: '#216ba5', color: '#fff' }}>
+      <CalendarContainer className={className}>
+        <div style={{ background: '#f0f0f0' }}>When is your event?</div>
+        <div style={{ position: 'relative' }}>
+          {children}
+        </div>
+      </CalendarContainer>
+    </div>
+  );
+} 
 
+MyContainer.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node
+};
 export default Postevent;
