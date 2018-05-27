@@ -82,10 +82,10 @@ class Loginpage extends Component {
                 <div className = "front" > { /*for full size image */ } 
                     <div className = " bgimage" > { /* setting to get full size for image*/ } 
                         <div className=" ovf">
-                            <img className="ss  w3-container w3-center w3-animate-top" alt="logo" src={require("../../images/logo.png")}/>
+                            {/*<img className="ss  w3-container w3-center w3-animate-top" alt="logo" src={require("../../images/logo.png")}/>*/}
 
                             <GoogleLogin clientId = "795374708066-fg769hi02d0hfj3jgkbvvb4g72nogch1.apps.googleusercontent.com"
-                            className="googleButton"
+                            className="googleButton animated zoomIn"
                             buttonText="G+"
                             onSuccess = {
                                 responseGoogle
@@ -93,9 +93,11 @@ class Loginpage extends Component {
                             onFailure = {
                                 responseGoogle
                             }
+
+
                             />
 
-                            <a href="/Home"   type="button" > <img id="guestUser" alt="logo" src={require("../../images/guest.png")}/></a>
+                            <a href="/Home"   type="button" > <img id="guestUser"  className="animated zoomIn" alt="logo" src={require("../../images/guest.png")}/></a>
                         </div>
                         
                     </div> 

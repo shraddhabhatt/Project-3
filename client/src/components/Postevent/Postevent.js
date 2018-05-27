@@ -90,7 +90,7 @@ class Postevent extends Component {
                   zip: this.state.zip,
                   lat: this.state.lat,
                   lng: this.state.lng,
-                  date: "01/01/2019",
+                  date: this.state.date,
                   UserId: 1
                 })
                 .then(console.log("Return backed with res"))
@@ -192,6 +192,16 @@ class Postevent extends Component {
                             onChange={this.formChange} />
                           </div>  
                         </div>    
+
+                        <div className="col-sm-6">
+                          <div className="form-group">
+                            <div className="input-group date" id="datetimepicker1">
+                              <input type="text" className="form-control" />
+                              <span className="input-group-addon">
+                                <span className="glyphicon glyphicon-calendar" />
+                              </span>
+                            </div>
+                          </div></div>
 
                           <FormBtn onClick={this.getLatLng}> Submit event </FormBtn>
                           
