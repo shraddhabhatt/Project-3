@@ -1,45 +1,89 @@
+ .front {
+ 	height: 100%;
+ 	overflow: hidden;
+ }
 
 	.bgimage{
-		background-image: url("http://www.wesleyedu.org/images/kids1.png");
+		background-image: url("../../images/kids2.png");
 		background-size: cover;
 		width: 100%;
 		height: 100%; 
 		top: 0;
+		margin-bottom: 0;
 		/*height: 100%;*/
-		overflow-y: hidden;
+		/*overflow-x: hidden;
+		overflow-y: hidden;*/
 		background-attachment: fixed;
+		padding: 400px;
+		
+		overflow-wrap: break-word;
 
 	}
 
-	.textjumbo{
+	/*.textjumbo{
 		width: 300px;
-		margin-left: 900px;
+		margin-left: 300px;
 		margin-bottom: 250px;
 		border-radius: 50px;
 		position: fixed;
 		
-	}
+	}*/
 
 	.size1{ width: 200px; }
 
 	.googleButton{
-		margin-left: 50px;
-		margin-top: 10px;
+		top: 0;
+		left: 0;
+		margin-top: 19px;
 		background-color: red;
 		color: white;
-		font-size: 20px;
-		padding: 10px;
+		font-size: 30px;
+		padding: 15px;
+		border-radius:15%;
+
 	} 
 
 	#guestUser{
-		margin-left: 50px;
-		margin-top: 10px;
-		background-color:blue;
-		color: white;
-		width: 170px;
-		padding: 40px;
-		font-size: 20px;
+		/*margin-left: 0px;*/
+		/*width: 100px;*/
+		/*font-size: 20px;*/
+		text-decoration: none;
+		/*color: white;*/
+		margin-left: 20px;
+		top: 0px;
 		
+		/*color: white;*/
+		/*font-size: 20px;*/
+		/*padding: 15px;*/
+		/*border-radius:5%;*/
+		width: 150px;
+		height: 150px;
+		float: right;
 	}
+
+	#guestUser:hover{
+
+		width: 200px;
+		height: 200px;
+	}
+
+	.googleButton:hover{
+
+		width: 100px;
+		height: 100px;
+	}
+
+	.ss{
+		top: 20px;
+		background-attachment: fixed;
+		position: absolute;
+		/*overflow-y: hidden;*/
+
+	}
+
+	
+
+	
+
 
 	
