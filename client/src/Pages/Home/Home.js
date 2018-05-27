@@ -1,3 +1,4 @@
+
 //imports dependencies and files
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
@@ -7,6 +8,8 @@ import Grid from "../../components/Grid/Grid.js";
 import Footer  from "../../components/Footer";
 import "./Home.css";
 import {Redirect} from 'react-router-dom';
+import LogoutBtn from "../../components/Logout";
+import { Carousel } from 'react-bootstrap';
 
 class Home extends Component {
 
@@ -27,9 +30,7 @@ componentDidMount() {
 
 render() {
 
-  if(!sessionStorage.getItem('userData') || this.state.redirect){
-    return (<Redirect to={'/'}/>)
-}
+
 
    const imagesetting = {
     "width" : "100%",
@@ -44,6 +45,7 @@ render() {
   return (
     <div>
       <Navbar/>
+      <LogoutBtn />  
       {/*image */}
       <img  alt="image1" src={require("../../images/img1.jpg")} style={imagesetting}/>
 
@@ -104,6 +106,27 @@ render() {
       </div>
       </div>{/*row end*/}
     </div> {/*jumbotron end*/} 
+
+
+
+     {/*carousal*/}
+    <Carousel>
+      <Carousel.Item>
+        <img className="slidesetting" alt="900x500" src={require("../../images/s1.jpg")} />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img className="slidesetting" alt="900x500" src={require("../../images/s2.jpg")} />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img className="slidesetting" alt="900x500" src={require("../../images/s3.jpg")} />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img className="slidesetting" alt="900x500" src={require("../../images/s4.jpg")} />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img className="slidesetting" alt="900x500" src={require("../../images/s5.jpg")} />
+      </Carousel.Item>
+      </Carousel>
       
       {/*about us youtism*/}
       <div className="col-8 jobDetailSide">
@@ -126,3 +149,5 @@ render() {
 }
 
 export default Home;
+
+
