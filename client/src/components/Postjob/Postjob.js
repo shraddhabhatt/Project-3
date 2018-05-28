@@ -7,7 +7,6 @@ class Postjob extends Component {
 		super(props);
 
 		  this.state = {
-
             jobTitle: "",
             companyName: "",
             qualification: "",
@@ -28,7 +27,7 @@ class Postjob extends Component {
           console.log("Inside Submit Post!!");
           API.saveJob({
             jobTitle: this.state.jobTitle,
-            companyName:this.state.jobTitle,
+            companyName:this.state.companyName,
             location: this.state.location,
             description: this.state.description,
             qualification: this.state.qualification
@@ -57,7 +56,8 @@ class Postjob extends Component {
 
     	const {jobTitle, companyName, description, qualification, location} = this.state;
       const jobPostForm = {
-        "padding": "25px"
+        "padding": "25px",
+        "margin":"20px"
       }
     	return (
               // <form onSubmit={this.handleSubmit}>
@@ -103,7 +103,7 @@ class Postjob extends Component {
                         onChange={this.formChange} />
 
 
-                  <FormBtn onClick={this.submitJob}> Post job </FormBtn>
+                  <FormBtn onClick={this.submitJob} style={{"margin-bottom" : "30px"}}> Post job </FormBtn>
                   </form>
     		    );
       }
