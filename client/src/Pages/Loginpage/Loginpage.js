@@ -56,16 +56,21 @@ class Loginpage extends Component {
                 token: res.Zi.access_token,
                 provider_pic: res.w3.Paa
             };
+            this.setState({
+                name: postData.name,
+                email: postData.email
+            });
         }
+        
         if (postData) {
             PostData('/signin', postData).then((result) => {
                 let responseJson = result;
                 sessionStorage.setItem("userData", JSON.stringify(responseJson));
                 this.setState({
                     redirectToReferrer: true,
-                    name: postData.name,
-                    email: postData.email
+                  
                 });
+                this.submitUser();
             });
         } 
         else {
