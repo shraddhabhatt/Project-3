@@ -20,6 +20,12 @@ export default {
              return res;
          });
     },
+
+    // Deletes the event with the given id
+    deleteEvent: function(id) {
+        console.log("Delete : "+id);
+        return axios.delete("/api/events/" + id);
+    },
     
     saveJob: function(jobData) {
         console.log(jobData);
