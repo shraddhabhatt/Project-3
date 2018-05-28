@@ -6,6 +6,8 @@ import moment from 'moment';
 import PropTypes from "prop-types";
 import DatePicker, {CalendarContainer} from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+// import Datetime from 'react-datetime';
+// import "../../../node_modules/react-datetime/css/react-datetime.css";
 import './Postevent.css';
 
 
@@ -29,13 +31,25 @@ class Postevent extends Component {
             zip: "",
             lat: "",
             lng: "",
-            startDate: moment()
+            startDate: moment(),
+            selectedValue:''
           }
   
         this.handleChange = this.handleChange.bind(this);
-        this.formChange   = this.formChange.bind(this);
+        // this.focousOut = this.focousOut.bind(this);
+        // this.handleChange = this.handleChange.bind(this);
   }
   
+  // focousOut(value) {
+  //   if(!moment(value).isValid()) {
+  //    this.setState({selectedValue: ''}); 
+  //   }
+  // }
+
+  // handleChange(date) {
+  //  this.setState({ selectedValue: date });
+  // }
+
   handleChange(date) {
     this.setState({
       startDate: date
@@ -104,7 +118,7 @@ class Postevent extends Component {
                   zip: this.state.zip,
                   lat: this.state.lat,
                   lng: this.state.lng,
-                  date: moment(this.state.startDate).format("MM/DD/YY HH:mm"),
+                  date: moment(this.state.selectedValue).format("MM/DD/YY HH:mm"),
                   UserId: 1
                 })
                 .then(console.log("Return backed with res"))
@@ -149,6 +163,15 @@ class Postevent extends Component {
 
                           <div className="col-md-6" id="datetimepicker">
                               <label for="eventDateTime"> Date Time</label>
+                              {/* <Datetime
+                                  timeFormat='HH:mm'
+                                  value={this.state.selectedValue}
+                                  onChange={this.handleChange}
+                                  onBlur={this.focousOut}
+                                  locale='en-US'
+                                  dateFormat='MM/DD/YY'
+                                  closeOnSelect
+                                /> */}
                               <DatePicker
                                   selected={this.state.startDate}
                                   onChange={this.handleChange}
@@ -224,17 +247,7 @@ class Postevent extends Component {
                           </div>  
                         </div>    
 
-                        <div className="col-sm-6">
-                          <div className="form-group">
-                            <div className="input-group date" id="datetimepicker1">
-                              <input type="text" className="form-control" />
-                              <span className="input-group-addon">
-                                <span className="glyphicon glyphicon-calendar" />
-                              </span>
-                            </div>
-                          </div></div>
-
-                          <FormBtn onClick={this.getLatLng}> Submit event </FormBtn>
+                       <FormBtn onClick={this.getLatLng}> Submit event </FormBtn>
                           
                       </form>
     		);

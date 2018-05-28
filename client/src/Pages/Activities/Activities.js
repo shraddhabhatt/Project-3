@@ -96,7 +96,7 @@ class Activities extends Component {
                 </div> 
               </div>
 
-              <div className="containerInside col-lg-6col-md-8">
+              <div className="containerInside col-lg-6 col-md-8">
                 <img src={require("../../images/game3.jpg")} alt="Trivia Game" className="imageAct img-responsive" />
                 <div className="overlay">
                   <div className="instructions">
