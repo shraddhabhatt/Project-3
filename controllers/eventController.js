@@ -8,6 +8,15 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  findById: function(req, res) {
+    
+    let eventid = { id : req.params.id };
+
+    db.Event
+      .findAll({ where: eventid})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
   create: function(req, res) {
     console.log("create function");
     db.Event
@@ -20,9 +29,16 @@ module.exports = {
       });
   },
   remove: function(req, res) {
+    console.log("remove function");
     db.Event
-      .findById({ _id: req.params.id })
-      .then(dbModel => dbModel.remove())
+      .findOne({ where: {
+            id : req.params.id
+       }})
+      .then(dbModel => dbModel.destroy({
+        where: {
+          id: dbModel.id
+        }
+      }))
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   }
