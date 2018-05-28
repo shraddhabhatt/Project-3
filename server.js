@@ -24,13 +24,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Serve up static assets
 app.use(express.static("client/build"));
 
-
-// Static directory
-app.use(express.static("public"));
-
-_dirname = path.resolve();
-app.use(express.static(_dirname + '/public'));
-
 app.use(routes);
 // var sessionStore = new FileStore();
 
@@ -47,6 +40,6 @@ app.post("/signin", function(req, res) {
 
 db.sequelize.sync({force : false}).then(function() {
   app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
+    console.log(" 🌎  ==>  App listening on PORT " + PORT);
   });
 });
