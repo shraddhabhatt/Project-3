@@ -35,6 +35,8 @@ class Loginpage extends Component {
             })
             .then((res) => {
                 console.log("Return user with res : " + res);
+                // console.log("This is the user name: " + res.name);
+                // console.log("This is the user email: " + res.email);
             })
             .catch(err => console.log(err));
             
@@ -62,17 +64,18 @@ class Loginpage extends Component {
         if (postData) {
             PostData('/signin', postData).then((result) => {
                 let responseJson = result;
-                sessionStorage.setItem("userData", postData.email );
+                sessionStorage.setItem("userData", JSON.stringify(responseJson));
                 this.setState({
                     redirectToReferrer: true,
+                  
                 });
                 this.submitUser();
-                
             });
         } 
         else {
 
         }
+
         console.log("This is the user name: " + postData.name);
         console.log("This is the user email: " + postData.email);
      
@@ -97,7 +100,7 @@ class Loginpage extends Component {
                 console.log("google console");
                 console.log(response);
                 this.signup(response, 'google');
-                // this.submitUser();
+                this.submitUser();
              
             }
             return (
