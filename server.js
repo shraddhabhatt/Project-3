@@ -21,6 +21,10 @@ var db = require("./models");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Serve up static assets
+app.use(express.static("client/build"));
+
+
 // Static directory
 app.use(express.static("public"));
 
@@ -36,8 +40,6 @@ app.post("/signin", function(req, res) {
 
 });
 
-// Serve up static assets
-app.use(express.static("client/build"));
 
 // =============================================================
 // Syncing our sequelize models and then starting our Express app
