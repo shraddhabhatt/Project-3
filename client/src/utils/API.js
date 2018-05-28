@@ -37,4 +37,14 @@ export default {
             return res;
         });
     },
+
+    saveEmailEvents: function(emailEvents) {
+        console.log("this is in API:" + emailEvents);
+
+        return axios.post("/api/emailEvents/", emailEvents)
+        .then(function(res){
+            console.log("Response in Post email for events");
+            return res;
+        });
+    }
 };
