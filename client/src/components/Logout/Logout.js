@@ -7,7 +7,7 @@ class LogoutBtn extends Component {
 	    return (
 
 		  <div id="myLogoutButton">
-		            <button className="logout">Logout</button>
+		            <button className="logout"><a href="/"> Logout</a> </button>
 		  </div>
         )
     }

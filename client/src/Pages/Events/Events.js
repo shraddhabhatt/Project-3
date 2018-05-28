@@ -106,7 +106,7 @@ render() {
             </div>
 
             <div className="row">
-                      <div className="col-lg-4"></div>
+                  <div className="col-lg-4"></div>
                       <div className="col-lg-4">
                           <FormGroup>
                               <InputGroup>
@@ -116,7 +116,7 @@ render() {
                                   </InputGroup.Button>
                               </InputGroup>
                           </FormGroup>
-                      </div>  
+                  </div>  
             </div>
           </div> 
         </div>   
