@@ -6,7 +6,7 @@ export const ListItem = props =>
     		<h4>Job Title : {props.jobTitle}</h4>
 		</span>	
 		<span >	
-				<p>companyName : {props.companyName}</p>
+				<h4>CompanyName : {props.companyName}</h4>
 		</span>	
     	<span>
     		<h4> Description : {props.description}</h4>
@@ -15,6 +15,6 @@ export const ListItem = props =>
     		<h4> Qualification : {props.qualification}</h4>
 		</span>	
 		<span >
-				<p>Location: {props.location}</p>
+				<h4>Location: {props.location}</h4>
 		</span>
   </li>;
