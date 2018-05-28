@@ -35,8 +35,6 @@ class Loginpage extends Component {
             })
             .then((res) => {
                 console.log("Return user with res : " + res);
-                // console.log("This is the user name: " + res.name);
-                // console.log("This is the user email: " + res.email);
             })
             .catch(err => console.log(err));
             
@@ -66,6 +64,7 @@ class Loginpage extends Component {
                     name: postData.name,
                     email: postData.email
                 });
+                
             });
         } 
         else {

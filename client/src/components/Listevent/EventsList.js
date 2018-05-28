@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import ReactDOM from 'react-dom';
+import { Button, Glyphicon } from 'react-bootstrap';
 import { List } from "./List";
 import { ListItem } from "./ListItem";
 import { Col, Row } from "../../components/Grid";
 import Map from "../../components/Map/Map";
 import API from "../../utils/API";
 import './List.css';
+
 
 class EventsList extends Component {
     state = {
@@ -20,10 +22,16 @@ class EventsList extends Component {
     loadPosts = () => {    
 		API.getEvents()
             .then(res => this.setState({ allevents: res.data }))
-       
             .catch(err => console.log(err));
 	};
-  
+    
+    deleteEvents = (id) => {
+        console.log("Delete Button Clicked");
+        API.deleteEvent(id)
+        .then(res => this.loadPosts())
+        .catch(err => console.log(err));
+    };
+
     render() {
         return (
 		<Row>
@@ -42,6 +50,9 @@ class EventsList extends Component {
             			city={event.city}
             			state={event.state}
             			zipcode={event.zip}>  
+                        <Button bsSize="small" bsStyle="danger" onClick={() => {this.deleteEvents(event.id)}} >
+                                <Glyphicon glyph="trash" /> 
+                        </Button>
                      </ListItem>))}
                   </List>
                 </div>
@@ -55,7 +66,7 @@ class EventsList extends Component {
                      />
                 </div>
             </Col>
-    </Row>         
+        </Row>         
     	);
     }
 }
