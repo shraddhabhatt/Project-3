@@ -33,7 +33,11 @@ app.use(routes);
 app.post("/signin", function(req, res) {
   console.log("inside serverside signin route");
   res.json({ "url" : "/Home" });
+
 });
+
+// Serve up static assets
+app.use(express.static("client/build"));
 
 // =============================================================
 // Syncing our sequelize models and then starting our Express app
