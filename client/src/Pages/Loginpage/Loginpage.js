@@ -54,23 +54,25 @@ class Loginpage extends Component {
                 token: res.Zi.access_token,
                 provider_pic: res.w3.Paa
             };
+            this.setState({
+                name: postData.name,
+                email: postData.email
+            });
         }
         if (postData) {
             PostData('/signin', postData).then((result) => {
                 let responseJson = result;
-                sessionStorage.setItem("userData", JSON.stringify(responseJson));
+                sessionStorage.setItem("userData", postData.email );
                 this.setState({
                     redirectToReferrer: true,
-                    name: postData.name,
-                    email: postData.email
                 });
+                this.submitUser();
                 
             });
         } 
         else {
 
         }
-
         console.log("This is the user name: " + postData.name);
         console.log("This is the user email: " + postData.email);
      
@@ -95,7 +97,7 @@ class Loginpage extends Component {
                 console.log("google console");
                 console.log(response);
                 this.signup(response, 'google');
-                this.submitUser();
+                // this.submitUser();
              
             }
             return (
