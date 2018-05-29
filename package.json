@@ -34,6 +34,7 @@
     "react-geocode": "0.0.9",
     "react-google-login": "^3.2.1",
     "react-redux": "^5.0.7",
+    "react-tilt": "^0.1.4",
     "redux": "^4.0.0",
     "sequelize": "^4.37.7",
     "sequelize-values": "^1.1.0",

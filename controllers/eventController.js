@@ -22,6 +22,10 @@ module.exports = {
     db.Event
       .create(req.body)
       .then(dbModel => res.json(dbModel))
+  //     .then(dbModel => {
+  //       findEmails()
+  //         .then(dbModel => console.log("Array of objects from events emails table " + res.json(dbModel)));
+  // })
       .catch(error => {
         if (error.response) {
           dispatch(authError(error.response.data.error));
@@ -39,6 +43,13 @@ module.exports = {
           id: dbModel.id
         }
       }))
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  findEmails: function(req, res) {
+    console.log("find emails function");
+    db.EventsEmail
+      .findAll({})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   }

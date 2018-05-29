@@ -133,7 +133,13 @@ class Postevent extends Component {
                   date: moment(this.state.startDate).format("MM/DD/YY HH:mm"),
                   UserId: Number(this.state.user)
                 })
-                .then(console.log("Return backed with res"))
+                   .then((res) => {
+
+                      console.log("Return getCurrentUserId with res : " + res.data.length);
+                      API.getEventsEmails()
+                        .then(console.log ("response from get emails event" + res.data));
+                  })
+
                 .catch(err => console.log(err));
             }
       

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import LoginPage from "../../Pages/Loginpage/Loginpage";
 import "./Navbar.css";
+import Logo from "../Logo";
 
 class Navbar extends Component {
 
@@ -10,8 +11,9 @@ class Navbar extends Component {
       <nav className="navbar navbar-expand-lg ">
         <div className="row "> 
          {/*logo Image*/}
-
-          <img className="navbar-brand" alt="logo" src={require("../../images/logo.png")}/>
+         <div className="col-4">
+          <Logo />
+          </div>
           {/*Nav links*/}
            <ul className=" nav ">
 

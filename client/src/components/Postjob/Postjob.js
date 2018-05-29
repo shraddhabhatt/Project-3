@@ -36,16 +36,6 @@ class Postjob extends Component {
           .catch(err => console.log(err));
       }
 
-      alert("Your job has been posted! Details: " + JSON.stringify(this.state));
-       this.setState({
-            jobTitle: "",
-            companyName: "",
-            qualification: "",
-            location: "",
-            companyName: "",
-            description: ""
-       });
-
     } 
 
     formChange = (e) => {

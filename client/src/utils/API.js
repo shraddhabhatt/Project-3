@@ -80,7 +80,7 @@ export default {
             console.log("response in GET emails for events" + res);
             return res;
         });
-    } 
+    }, 
 
 
     //Saves a User to the database
@@ -91,6 +91,6 @@ export default {
              console.log("Response in POST");
              return res;
          });
-    },
+    }
 
 };

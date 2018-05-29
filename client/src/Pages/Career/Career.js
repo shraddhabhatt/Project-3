@@ -77,7 +77,7 @@ render() {
                     <button type="button" className="btn btn-dark btn-lg btn-block" onClick={this.toggleModal}><strong>POST JOBS HERE</strong></button>
                       
                       {/*post job form will open in Modal*/}
-                      <Modal show={this.state.isActive} onHide={this.toggleModal}>
+                      <Modal show={this.state.isActive} onHide={this.toggleModal} className="animated zoomIn">
                           <Postjob />
                       </Modal>
                       {/*Job list will show up on click */}

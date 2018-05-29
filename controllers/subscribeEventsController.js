@@ -6,7 +6,7 @@ module.exports = {
     console.log("find all emails for events! in subseventsController");
     db.EventsEmail
       .findAll({})
-      .then(dbModel => res.json(dbModel))
+      .then(dbModel => console.log("array of email objects from subscrive events: " + JSON.stringify(dbModel)))
       .catch(err => res.status(422).json(err));
   },
 
