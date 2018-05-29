@@ -18,15 +18,15 @@ class Footer extends Component {
 									<ul className="left">	
 										<br/>					
 										<li><a href="www.linkedin.com/in/roxana-milea" target="_blank">ROXANA MILEA   </a></li>
-									    <li><a href="#" target="_blank">RUPALI MESHRAM</a></li>						
+									    <li><a href="https://www.linkedin.com/in/rupali-meshram/" target="_blank">RUPALI MESHRAM</a></li>						
 									</ul>
 								</div>
 								
 								<div className="col-lg-3 col-md-6 col-sm-6  rightColumn">
 									<ul className="right">	
 										<br/>
-										<li><a href="#" target="_blank">SHRADDHA BHATT</a></li>
-										<li><a href="#" target="_blank">ANITHARAJ SRIDHARAN</a></li>			
+										<li><a href="https://www.linkedin.com/in/shraddha-bhatt/" target="_blank">SHRADDHA BHATT</a></li>
+										<li><a href="https://www.linkedin.com/in/anitharaj/" target="_blank">ANITHARAJ SRIDHARAN</a></li>			
 									</ul>
 								</div>	
 
