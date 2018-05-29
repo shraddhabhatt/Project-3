@@ -72,16 +72,25 @@ export default {
         });
     },
 
-    getEventsEmails: function() {
+    postEventEmails: function() {
         console.log("inside API function, getting my emails baby!!!");
 
-        return axios.get("api/emailEvents/")
+        return axios.post("/api/events/sendeventemail")
         .then(function(res){
             console.log("response in GET emails for events" + res);
             return res;
         });
     }, 
 
+    postJobEmails: function() {
+        console.log("inside API function, getting my emails baby!!!");
+
+        return axios.post("/api/jobs/sendjobemail")
+        .then(function(res){
+            console.log("response in GET emails for events" + res);
+            return res;
+        });
+    }, 
 
     //Saves a User to the database
     saveUser: function(userData) {

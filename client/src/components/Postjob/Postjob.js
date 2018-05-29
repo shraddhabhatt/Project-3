@@ -32,8 +32,13 @@ class Postjob extends Component {
             description: this.state.description,
             qualification: this.state.qualification
           })
-          .then(console.log("Return backed with res"))
-          .catch(err => console.log(err));
+          .then((res) => {
+
+            console.log("Return getCurrentUserId with res : " + res.data);
+            API.postJobEmails()
+              .then(console.log ("response in POST JOBS" + res.data));
+        })
+        .catch(err => console.log(err));
       }
 
     } 

@@ -15,7 +15,7 @@ class EventsList extends Component {
             user: ""
         };
     
-    componentDidMount() {
+    componentDidMount() { 
        console.log(this.state);
        this.loadPosts();
        this.getCurrentUserId();

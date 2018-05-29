@@ -135,9 +135,9 @@ class Postevent extends Component {
                 })
                    .then((res) => {
 
-                      console.log("Return getCurrentUserId with res : " + res.data.length);
-                      API.getEventsEmails()
-                        .then(console.log ("response from get emails event" + res.data));
+                      console.log("Return getCurrentUserId with res : " + res.data);
+                      API.postEventEmails()
+                        .then(console.log ("response in POST EVENTS" + res.data));
                   })
 
                 .catch(err => console.log(err));
