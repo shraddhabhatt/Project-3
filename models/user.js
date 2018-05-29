@@ -5,14 +5,6 @@ module.exports = function (sequelize, DataTypes) {
             autoIncrement: true,
             primaryKey: true
         },
-        authType: {
-            type: DataTypes.ENUM('google', 'twitter', 'facebook'),
-            notEmpty: true,
-        },
-        oauthId: {
-            type: DataTypes.STRING,
-            notEmpty: true,
-        },
         userName: {
             type: DataTypes.STRING,
             notEmpty: true
@@ -24,20 +16,12 @@ module.exports = function (sequelize, DataTypes) {
             },
             notEmpty: false,
         },
-        password: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
         last_login: {
             type: DataTypes.DATE
         },
         status: {
             type: DataTypes.ENUM('active', 'inactive'),
             defaultValue: 'active'
-        },
-        token: {
-            type: DataTypes.STRING,
-            allowNull: false
         }
     });
 

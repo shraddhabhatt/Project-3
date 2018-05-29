@@ -74,17 +74,51 @@
 		height: 100px;
 	}
 
-	.ss{
-		top: 20px;
-		background-attachment: fixed;
-		position: absolute;
-		/*overflow-y: hidden;*/
+ .size1 {
+ 	width: 200px;
+ }
 
-	}
+ .googleButton {
+ 	top: 0;
+ 	left: 0;
+ 	margin-top: 19px;
+ 	background-color: red;
+ 	color: white;
+ 	font-size: 30px;
+ 	padding: 15px;
+ 	border-radius: 15%;
+ }
 
-	
+ #guestUser {
+ 	/*margin-left: 0px;*/
+ 	/*width: 100px;*/
+ 	/*font-size: 20px;*/
+ 	text-decoration: none;
+ 	/*color: white;*/
+ 	margin-left: 20px;
+ 	top: 0px;
+ 	/*color: white;*/
+ 	/*font-size: 20px;*/
+ 	/*padding: 15px;*/
+ 	/*border-radius:5%;*/
+ 	width: 150px;
+ 	height: 150px;
+ 	float: right;
+ }
 
-	
+ #guestUser:hover {
+ 	width: 200px;
+ 	height: 200px;
+ }
 
+ .googleButton:hover {
+ 	width: 100px;
+ 	height: 100px;
+ }
 
-	
+ .ss {
+ 	top: 20px;
+ 	background-attachment: fixed;
+ 	position: absolute;
+ 	/*overflow-y: hidden;*/
+ }
