@@ -1,5 +1,5 @@
 export function PostData(type, userData) {
-    let BaseURL = 'http://localhost:8080';
+    let BaseURL = 'https://still-atoll-68112.herokuapp.com';
     //let BaseURL = 'http://localhost/socialapi/';
 
     return new Promise((resolve, reject) => {
