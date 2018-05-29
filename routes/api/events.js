@@ -13,4 +13,8 @@ router.route("/:id/:userid")
    .get(eventController.findById)
    .delete(eventController.remove);
 
+// Matches with "/api/events/sendeventemail"
+router.route("/sendeventemail")
+   .post(eventController.sendeventemail)
+ 
 module.exports = router;

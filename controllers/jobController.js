@@ -1,4 +1,7 @@
 const db = require("../models");
+const express = require("express");
+const bodyParser = require("body-parser");
+const nodemailer = require('nodemailer');
 
 // Defining methods for the booksController
 module.exports = {
@@ -25,5 +28,54 @@ module.exports = {
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
-  }
+  },
+  sendjobemail: function(req, res) {
+    console.log("send Emails jobs");
+    var emailList = "";
+
+    db.JobsEmail
+      .findAll({})
+      .then(dbModel => { 
+            var results = JSON.stringify(dbModel);
+            console.log("Events Emails FOUND !!!!!!! "+results);
+
+            var jsonResults = JSON.parse(results);
+            for (var i = 0; i < jsonResults.length; i++)
+            {
+              console.log(jsonResults[i].jobsemailid);
+              emailList = emailList +','+ jsonResults[i].jobsemailid;
+            }
+            emailList = emailList.substring(1);
+
+            console.log("Final LIST :::::: "+emailList);
+            let transporter = nodemailer.createTransport({
+              host: 'smtp.gmail.com',
+              port: 465,
+              secure: true,
+              auth: {
+                  user: 'trivedishraddha99@gmail.com',
+                  pass: 'Shraddha$2212'
+              }
+          });
+          let mailOptions = {
+              from: '"Youtism" <trivedishraddha99@gmail.com>', // sender address
+              to: emailList, // list of receivers
+              subject: 'You+ism has some new job opportunities added! ', // Subject line
+              text: "A new job has been posted, please visit the site to get more details and we hope that turns out helpful for your kids", // plain text body
+              html: '<h2>New Job has been posted to the You+ism portal</h2><p>Please visit the site to get more details</p><p>Hope that is helpful</p>' // html body
+          };
+    
+          transporter.sendMail(mailOptions, (error, info) => {
+              if (error) {
+                  return console.log(error);
+              }
+              console.log('Message %s sent: %s', info.messageId, info.response);
+                  res.render('index');
+              });
+        })
+      .catch(err => res.status(422).json(err));
+        
+          
+      
+    }
 };

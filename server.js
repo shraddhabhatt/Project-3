@@ -8,6 +8,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require('path');
+var nodemailer = require('nodemailer');
 // =============================================================
 
 var app = express();
@@ -32,7 +33,6 @@ app.post("/signin", function(req, res) {
   res.json({ "url" : "/Home" });
 
 });
-
 
 // =============================================================
 // Syncing our sequelize models and then starting our Express app
