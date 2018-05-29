@@ -7,28 +7,56 @@ import {Modal} from 'react-bootstrap';
 import Login from "../../components/Login/Login.js";
 import Register from "../../components/Register/Register.js";
 import Guestlogin from "../../components/Guestlogin/Guestlogin.js";
-
+import API from "../../utils/API";
+import moment from 'moment';
 // This is for google Auth
 import GoogleLogin from 'react-google-login';
 import {PostData} from '../../services/PostData';
 import {Redirect} from 'react-router-dom';
 class Loginpage extends Component {
 
-    // componentDidMount() {
-    //     sessionStorage.clear();
-    //     setInterval( () => this.context.router.transitionTo('/'), 2000);
-    // }
-
     constructor(props) {
         super(props);
         this.state = {
             loginError: false,
-            redirectToReferrer: false
+            redirectToReferrer: false,
+            name: "",
+            email:""
         };
         this.signup = this.signup.bind(this);
     }
+
+	submitUser = (e) => {  
+
+            console.log("Inside Submit User!!");
+            let currentemail = sessionStorage.getItem('email');
+            API.findUser(currentemail)
+                .then((res) => {
+                    console.log("Return findUser with res : " + res.data);
+                    if(res.data.length === 0)
+                    {
+                        console.log("Inside Save USER : ");
+                    
+                        API.saveUser({
+                        userName: this.state.name,
+                        email:this.state.email,
+                        last_login: moment()
+                        })
+                        .then((res) => {
+                            console.log("Return user with res : " + res.email);
+                            // console.log("This is the user name: " + res.name);
+                            // console.log("This is the user email: " + res.email);
+                        })
+                        .catch(err => console.log(err));
+                    }
+                })
+             
+    }
+
     signup(res, type) {
         let postData;
+        let name;
+        let email;
         if (type === 'google' && res.w3.U3) {
             postData = {
                 name: res.w3.ig,
@@ -38,16 +66,31 @@ class Loginpage extends Component {
                 token: res.Zi.access_token,
                 provider_pic: res.w3.Paa
             };
+            this.setState({
+                name: postData.name,
+                email: postData.email
+            });
+            sessionStorage.setItem("email", postData.email);
         }
+        
         if (postData) {
             PostData('/signin', postData).then((result) => {
                 let responseJson = result;
                 sessionStorage.setItem("userData", JSON.stringify(responseJson));
                 this.setState({
-                    redirectToReferrer: true
+                    redirectToReferrer: true,
+                  
                 });
+                this.submitUser();
             });
-        } else {}
+        } 
+        else {
+
+        }
+
+        console.log("This is the user name: " + postData.name);
+        console.log("This is the user email: " + postData.email);
+     
     }
 
     signOut(){
@@ -60,42 +103,28 @@ class Loginpage extends Component {
 
     render() {
 
-
-  //   const imagesetting = {
-  //   "width" : "250px",
-  //   "marginTop" : "100px",
-  //   "height" : "auto"
-  // }
-        
         if (this.state.redirectToReferrer || sessionStorage.getItem('userData')) {
 
             return ( < Redirect to = {'/Home'}/>)
         }
         
-            
             const responseGoogle = (response) => {
                 console.log("google console");
                 console.log(response);
                 this.signup(response, 'google');
+                        
             }
             return (
                 <div className = "front" > { /*for full size image */ } 
                     <div className = " bgimage" > { /* setting to get full size for image*/ } 
                         <div className=" ovf">
                             {/*<img className="ss  w3-container w3-center w3-animate-top" alt="logo" src={require("../../images/logo.png")}/>*/}
-
+                           
                             <GoogleLogin clientId = "795374708066-fg769hi02d0hfj3jgkbvvb4g72nogch1.apps.googleusercontent.com"
-                            className="googleButton animated zoomIn"
-                            buttonText="G+"
-                            onSuccess = {
-                                responseGoogle
-                            }
-                            onFailure = {
-                                responseGoogle
-                            }
-
-
-                            />
+                            className="googleButton animated zoomIn" buttonText="G+"
+                            onSuccess = {responseGoogle}
+                            
+                            onFailure = {responseGoogle}/>
 
                             <a href="/Home"   type="button" > <img id="guestUser"  className="animated zoomIn" alt="logo" src={require("../../images/guest.png")}/></a>
                         </div>
