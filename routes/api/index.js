@@ -8,6 +8,6 @@ router.use("/events", eventRoutes);
 
 router.use("/jobs", jobRoutes);
 
-router.use("/users", userRoutes);
+router.use("/user", userRoutes);
 
 module.exports = router;
