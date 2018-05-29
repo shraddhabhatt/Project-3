@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-// import "./Events.css";
 import Navbar from "../../components/Navbar";
 import Header from "../../components/Header/Header.js";
 import Grid from "../../components/Grid/Grid.js";
@@ -13,6 +12,7 @@ import Postevent from "../../components/Postevent/Postevent.js";
 import EventsList from "../../components/Listevent/EventsList.js";
 import {FormGroup, InputGroup, Button, FormControl} from "react-bootstrap";
 import LogoutBtn from "../../components/Logout";
+import SubscribeEvents from "../../components/SubscribeEvents/SubscribeEvents.js";
 
 
 class Events extends Component {

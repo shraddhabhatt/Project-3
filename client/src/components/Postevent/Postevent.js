@@ -32,6 +32,7 @@ class Postevent extends Component {
             lat: "",
             lng: "",
             startDate: moment(),
+            user: "",
             selectedValue:''
           }
   
@@ -56,7 +57,7 @@ class Postevent extends Component {
       }, () => console.log(moment(this.state.startDate).format("MM/DD/YY HH:mm")));
    }
 
-  loadPosts = () => {    
+   loadPosts = () => {    
     API.getEvents()
       .then(res =>
         this.setState({
@@ -72,7 +73,7 @@ class Postevent extends Component {
       .catch(err => console.log(err));
   };
   
-   getLatLng = event => { 
+  getLatLng = event => { 
       event.preventDefault();
 
       const address = this.state.address1 + ", " + this.state.city + ", "+ this.state.state + ", " + this.state.zip; 
@@ -81,8 +82,7 @@ class Postevent extends Component {
       this.getLatitudeLongitude(address);
     } 
 
-
-    getLatitudeLongitude = address => {
+  getLatitudeLongitude = address => {
       // If adress is not supplied, use default value 'Ferrol, Galicia, Spain'
       address = address || 'Ferrol, Galicia, Spain';
       // Enable or disable logs. Its optional.
@@ -94,13 +94,25 @@ class Postevent extends Component {
            console.log(lat, lng);
            this.setState({lat: lat});
            this.setState({lng: lng});
-           this.submitPost();
+           this.getCurrentUserId();
          },
          error => {
            console.error(error);
          }
        );
      };
+
+    getCurrentUserId= () =>{
+
+        let currentuser = sessionStorage.getItem('email'); 
+        API.findUser(currentuser)
+          .then((res) => {
+                console.log("Return getCurrentUserId with res : " + res.data[0].id);
+                this.setState({user: res.data[0].id});
+                this.submitPost();
+            })
+          .catch(err => console.log(err));
+    }
           
     submitPost = () =>{
       
@@ -118,14 +130,13 @@ class Postevent extends Component {
                   zip: this.state.zip,
                   lat: this.state.lat,
                   lng: this.state.lng,
-                  date: moment(this.state.selectedValue).format("MM/DD/YY HH:mm"),
-                  UserId: 1
+                  date: moment(this.state.startDate).format("MM/DD/YY HH:mm"),
+                  UserId: Number(this.state.user)
                 })
                 .then(console.log("Return backed with res"))
                 .catch(err => console.log(err));
             }
-
-            alert("Your event has been submitted! Details: " + JSON.stringify(this.state));
+      
             this.setState({
                 eventName: "",
                 eventDescription: "",

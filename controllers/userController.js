@@ -25,5 +25,14 @@ module.exports = {
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+  findByEmail: function(req, res) {
+    
+    let email = { email : req.params.email };
+    console.log("Email inside ROUTER : "+email);
+    db.User
+      .findAll({ where: email})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
   }
 };

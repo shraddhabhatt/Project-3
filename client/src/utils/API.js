@@ -21,10 +21,16 @@ export default {
          });
     },
 
+    // Find user with email
+    findUser: function(email) {
+        console.log("Email : "+email);
+        return axios.get("/api/user/" + email);
+    },
+
     // Deletes the event with the given id
-    deleteEvent: function(id) {
-        console.log("Delete : "+id);
-        return axios.delete("/api/events/" + id);
+    deleteEvent: function(id, userid) {
+        console.log("Delete : "+id+"/ user "+userid);
+        return axios.delete("/api/events/" + id + "/" +userid);
     },
     
     // Saves a Jobs to the database
@@ -49,7 +55,7 @@ export default {
     //Saves a User to the database
     saveUser: function(userData) {
         console.log(userData);
-        return axios.post("/api/users/", userData)
+        return axios.post("/api/user/", userData)
          .then(function(res){
              console.log("Response in POST");
              return res;
