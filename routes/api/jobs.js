@@ -7,4 +7,8 @@ router.route("/")
    .post(jobController.create)
    .get(jobController.findAll);
 
+// Matches with "/api/jobs/sendjobemail"
+router.route("/sendjobemail")
+   .post(jobController.sendjobemail)
+
 module.exports = router;

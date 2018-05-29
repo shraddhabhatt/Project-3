@@ -52,6 +52,46 @@ export default {
         });
     },
 
+
+    saveEmailEvents: function(emailEvents) {
+        console.log("this is in API:" + emailEvents);
+
+        return axios.post("/api/emailEvents/", emailEvents)
+        .then(function(res){
+            console.log("Response in Post email for events");
+            return res;
+        });
+    },
+    saveEmailJobs: function(emailJobs) {
+        console.log("this is in API:" + emailJobs);
+
+        return axios.post("/api/emailJobs/", emailJobs)
+        .then(function(res){
+            console.log("Response in Post email for events");
+            return res;
+        });
+    },
+
+    postEventEmails: function() {
+        console.log("inside API function, getting my emails baby!!!");
+
+        return axios.post("/api/events/sendeventemail")
+        .then(function(res){
+            console.log("response in GET emails for events" + res);
+            return res;
+        });
+    }, 
+
+    postJobEmails: function() {
+        console.log("inside API function, getting my emails baby!!!");
+
+        return axios.post("/api/jobs/sendjobemail")
+        .then(function(res){
+            console.log("response in GET emails for events" + res);
+            return res;
+        });
+    }, 
+
     //Saves a User to the database
     saveUser: function(userData) {
         console.log(userData);
@@ -60,5 +100,6 @@ export default {
              console.log("Response in POST");
              return res;
          });
-    },
+    }
+
 };

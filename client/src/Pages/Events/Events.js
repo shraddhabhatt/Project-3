@@ -75,7 +75,7 @@ render() {
                   <button type="button" className="btn btn-dark btn-lg btn-block" onClick={this.toggleModal}><strong>POST EVENTS HERE</strong></button>
                     
                     {/*post events in Modal*/}
-                    <Modal show={this.state.isActive} onHide={this.toggleModal}>
+                    <Modal show={this.state.isActive} onHide={this.toggleModal} className="animated zoomIn">
                         <Postevent />
                     </Modal>
                   {/* see events list on click*/}
@@ -88,38 +88,7 @@ render() {
             </div>
           </div>
 
-        <div className="jumbotron jumbotron-fluid">
-          <div className="container">
-
-            <div className="row">
-              <div className="col-md-4"></div>
-              <div className="col-md-4">
-                <h2 className="text-center">Get event alerts here!</h2>
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="col-md-2"></div>
-              <div className="col-md-8">
-                <p>Enter your email address to get the latest updates right now in your inbox. If you are organizing an event and want to post it on our website, please register and sign in!</p>
-              </div>
-            </div>
-
-            <div className="row">
-                  <div className="col-lg-4"></div>
-                      <div className="col-lg-4">
-                          <FormGroup>
-                              <InputGroup>
-                                <FormControl type="email" placeholder="Enter your email address here" style={{"border-radius": "20px 0 0 20px", "border": "2px solid gray", "height": "50px"}}/>
-                                  <InputGroup.Button>
-                                     <Button type="submit" style={{"background" : "orange", "border": "2px solid gray", "border-radius": "0 20px 20px 0", "height": "50px"}}>Subscribe</Button>
-                                  </InputGroup.Button>
-                              </InputGroup>
-                          </FormGroup>
-                  </div>  
-            </div>
-          </div> 
-        </div>   
+      <SubscribeEvents />  
 
 
         {/*footer*/}

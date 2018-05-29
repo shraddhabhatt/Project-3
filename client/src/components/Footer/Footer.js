@@ -41,7 +41,7 @@ class Footer extends Component {
 							<div className="col-3"></div>
 							<div className="col-6"></div>
 								<div className="copyright">
-									<p>&copy; Bla Bla</p>
+									<p>&copy; GoodWork</p>
 								</div>	
 							<div className="col-3"></div>
 						</div>		

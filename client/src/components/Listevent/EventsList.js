@@ -15,7 +15,7 @@ class EventsList extends Component {
             user: ""
         };
     
-    componentDidMount() {
+    componentDidMount() { 
        console.log(this.state);
        this.loadPosts();
        this.getCurrentUserId();
@@ -66,11 +66,12 @@ class EventsList extends Component {
                         name={event.name}
                         description={event.description}
                         date={event.date}
-					    address1={event.address1}
-            			address2={event.address2}
-            			city={event.city}
-            			state={event.state}
-            			zipcode={event.zip}>  
+
+      					        address1={event.address1}
+                  			address2={event.address2}
+                  			city={event.city}
+                  			state={event.state}
+                  			zipcode={event.zip}>  
                         <Button bsSize="small" bsStyle="danger" onClick={() => {this.deleteEvents(event.id, this.state.user)}} >
                                 <Glyphicon glyph="trash" /> 
                         </Button>
