@@ -8,7 +8,7 @@ import Login from "../../components/Login/Login.js";
 import Register from "../../components/Register/Register.js";
 import Guestlogin from "../../components/Guestlogin/Guestlogin.js";
 import API from "../../utils/API";
-
+import moment from 'moment';
 // This is for google Auth
 import GoogleLogin from 'react-google-login';
 import {PostData} from '../../services/PostData';
@@ -29,18 +29,28 @@ class Loginpage extends Component {
 	submitUser = (e) => {  
 
             console.log("Inside Submit User!!");
-            API.saveUser({
-              name: this.state.name,
-              email:this.state.email,
-            })
-            .then((res) => {
-                console.log("Return user with res : " + res);
-                // console.log("This is the user name: " + res.name);
-                // console.log("This is the user email: " + res.email);
-            })
-            .catch(err => console.log(err));
-            
-           
+            let currentemail = sessionStorage.getItem('email');
+            API.findUser(currentemail)
+                .then((res) => {
+                    console.log("Return findUser with res : " + res.data);
+                    if(res.data.length === 0)
+                    {
+                        console.log("Inside Save USER : ");
+                    
+                        API.saveUser({
+                        userName: this.state.name,
+                        email:this.state.email,
+                        last_login: moment()
+                        })
+                        .then((res) => {
+                            console.log("Return user with res : " + res.email);
+                            // console.log("This is the user name: " + res.name);
+                            // console.log("This is the user email: " + res.email);
+                        })
+                        .catch(err => console.log(err));
+                    }
+                })
+             
     }
 
     signup(res, type) {
@@ -60,6 +70,7 @@ class Loginpage extends Component {
                 name: postData.name,
                 email: postData.email
             });
+            sessionStorage.setItem("email", postData.email);
         }
         
         if (postData) {
@@ -101,8 +112,7 @@ class Loginpage extends Component {
                 console.log("google console");
                 console.log(response);
                 this.signup(response, 'google');
-                this.submitUser();
-             
+                        
             }
             return (
                 <div className = "front" > { /*for full size image */ } 

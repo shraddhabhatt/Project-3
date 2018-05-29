@@ -32,7 +32,7 @@ module.exports = {
     console.log("remove function");
     db.Event
       .findOne({ where: {
-            id : req.params.id
+            $and: [{id : req.params.id}, {UserId : req.params.userid}]
        }})
       .then(dbModel => dbModel.destroy({
         where: {
