@@ -17,9 +17,6 @@ class Navbar extends Component {
           {/*Nav links*/}
            <ul className=" nav ">
 
-
-              <li>   <button type = "button"  className =  "btn btn-info"   ><a href="/"> Logout</a> </button></li>
-
               <li><a className ="size" href="/Events">EVENTS</a></li>
 
               <li><a className ="size" href="/Activities">ACTIVITIES</a></li>
