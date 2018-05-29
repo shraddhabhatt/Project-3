@@ -20,13 +20,13 @@ class Navbar extends Component {
                className =  "btn btn-info"
                 ><a href="/"> Logout</a> </button></li>
 
-              <li ><a href="/Events">EVENTS</a></li>
+              <li ><a className ="size" href="/Events">EVENTS</a></li>
 
-              <li ><a href="/Activities">ACTIVITIES</a></li>
+              <li ><a className ="size" href="/Activities">ACTIVITIES</a></li>
 
-              <li ><a href="/Career">CAREERS</a></li>
+              <li ><a className ="size" href="/Career">CAREERS</a></li>
 
-              <li ><a href="/Home">HOME</a></li>
+              <li ><a className ="size" href="/Home">HOME</a></li>
           </ul>
         </div>
       </nav>

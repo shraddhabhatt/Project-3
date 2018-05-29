@@ -47,7 +47,7 @@ class Activities extends Component {
               <div className="jumbotron jumbotron-fluid" style={jumbotronsetting}>
                  <div className="container">
                     <h2 className="display-4">Connecting People. Improving Skills.</h2><hr/>
-                    <p className="lead">outism is intended to become a platform that will educate and connect
+                    <p className="lead">You+ism is intended to become a platform that will educate and connect
                      individuals and families, and provide a solution to the lack of information and resources available online at the moment regarding autism spectrum disorders.
                      This way, families will make better, more informed decisions regarding the needs of their loved ones so that they can build and strengthen relationships with them, and more importantly, thrive. 
                      Together, we’ll help you connect the pieces.</p>
@@ -97,7 +97,7 @@ class Activities extends Component {
                 </div> 
               </div>
 
-              <div className="containerInside col-lg-6col-md-8">
+              <div className="containerInside col-lg-6 col-md-8">
                 <img src={require("../../images/game3.jpg")} alt="Trivia Game" className="imageAct img-responsive" />
                 <div className="overlay">
                   <div className="instructions">

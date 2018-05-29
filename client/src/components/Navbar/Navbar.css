@@ -25,6 +25,9 @@
   padding-top: 0px;
   margin-top: 0px;
 }
+.size {
+  font-size: 22px !important;
+}
 
 li {
   color: black;
@@ -39,7 +42,6 @@ body {
    font-family: "Arvo", Times, serif;
 }
 a {
-  font-size: 19px;
   padding: auto;
 }
 

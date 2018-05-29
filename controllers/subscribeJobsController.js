@@ -1,10 +1,9 @@
 const db = require("../models");
 
 module.exports = {
-
   findAll: function(req, res) {
-    console.log("find all emails for events! in subseventsController");
-    db.EventsEmail
+    console.log("find all emails for jobs! in subseventsController");
+    db.JobsEmail
       .findAll({})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
@@ -13,7 +12,7 @@ module.exports = {
   create: function(req, res) {
     console.log("create function");
 
-    db.EventsEmail
+    db.JobsEmail
       .create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(error => {

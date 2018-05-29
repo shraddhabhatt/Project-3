@@ -37,11 +37,11 @@ class EventsList extends Component {
                         name={event.name}
                         description={event.description}
                         date={event.date}
-					    address1={event.address1}
-            			address2={event.address2}
-            			city={event.city}
-            			state={event.state}
-            			zipcode={event.zip}>  
+					              address1={event.address1}
+                  			address2={event.address2}
+                  			city={event.city}
+                  			state={event.state}
+                  			zipcode={event.zip}>  
                      </ListItem>))}
                   </List>
                 </div>
