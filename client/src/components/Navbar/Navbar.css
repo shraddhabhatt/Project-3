@@ -4,7 +4,9 @@
   float: right;
   padding-top: 15px;
 }
-
+.nav {
+  margin-right: 20px;
+}
 .navbar {
   background: white;
   /*background: #212F3D;*/
@@ -62,4 +64,18 @@ background-color: #666666;
 /*font-size: 25px;*/
 
 }
+
+@media screen and (max-width: 640px)
+{
+.size {
+  font-size: 12px !important;
+}  
+}
+
+
+
+
+
+
+
 
