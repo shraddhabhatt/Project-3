@@ -17,7 +17,7 @@ class Footer extends Component {
 								<div className='col-lg-3 col-md-3 col-sm-4 leftColumn'>
 									<ul className="left">	
 										<br/>					
-										<li><a href="www.linkedin.com/in/roxana-milea" target="_blank">ROXANA MILEA   </a></li>
+										<li><a href="https://www.linkedin.com/in/roxana-milea/" target="_blank">ROXANA MILEA   </a></li>
 									    <li><a href="https://www.linkedin.com/in/rupali-meshram/" target="_blank">RUPALI MESHRAM</a></li>						
 									</ul>
 								</div>

@@ -38,7 +38,7 @@ app.post("/signin", function(req, res) {
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
 
-db.sequelize.sync({force : true}).then(function() {
+db.sequelize.sync({force : false}).then(function() {
   app.listen(PORT, function() {
     console.log(" 🌎  ==>  App listening on PORT " + PORT);
   });
