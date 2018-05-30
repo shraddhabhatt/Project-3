@@ -40,7 +40,13 @@ class Postjob extends Component {
         })
         .catch(err => console.log(err));
       }
-
+      this.setState({
+        jobTitle: "",
+        companyName: "",
+        qualification: "",
+        location: "",
+        description: ""
+      })
     } 
 
     formChange = (e) => {

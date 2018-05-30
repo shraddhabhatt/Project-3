@@ -51,14 +51,13 @@ module.exports = {
             let transporter = nodemailer.createTransport({
               host: 'smtp.gmail.com',
               port: 465,
-              secure: true,
               auth: {
-                  user: 'trivedishraddha99@gmail.com',
-                  pass: 'Shraddha$2212'
+                  user: 'youtism.team@gmail.com',
+                  pass: 'youtism4'
               }
           });
           let mailOptions = {
-              from: '"Youtism" <trivedishraddha99@gmail.com>', // sender address
+              from: '"Youtism" <youtism.team@gmail.com>', // sender address
               to: emailList, // list of receivers
               subject: 'You+ism has some new job opportunities added! ', // Subject line
               text: "A new job has been posted, please visit the site to get more details and we hope that turns out helpful for your kids", // plain text body

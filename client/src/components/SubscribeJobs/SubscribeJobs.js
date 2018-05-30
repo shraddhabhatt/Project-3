@@ -32,7 +32,7 @@ class SubscribeJobs extends Component {
           .catch(err => console.log(err));
       }
 
-      alert("Your email has been saved! Details: " + JSON.stringify(this.state));
+      alert("Thank you! your email has been registered for career notifications");
        
        this.setState({
             jobsemailid: ""

@@ -32,7 +32,7 @@ class SubscribeEvents extends Component {
           .catch(err => console.log(err));
       }
 
-      alert("Your email has been saved! Details: " + JSON.stringify(this.state));
+      alert("Thank you your email has been subscribed for event notifications");
        
        this.setState({
             emailid: ""
